@@ -13,13 +13,13 @@ typora-root-url: ..\00_阶段一-Java基础课件\5.Git\day10_Git\笔记\img
 
 # 2. Git特点
 
-![](https://github.com/Novak666/Learning-working-skill/blob/main/2021.01.04-2021.01.07/pics/1.png)
+![](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/1.png)
 
 
 
 # 3. Git操作
 
-![31_Git基本工作流程](/31_Git基本工作流程.png)
+![](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/2.png)
 
 先将代码添加到暂存区，再提交到本地仓库
 
@@ -35,7 +35,7 @@ git常用命令
 
 例子
 
-![例子](/例子.png)
+![](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/3.png)
 
 
 
@@ -70,7 +70,7 @@ git常用命令
 - Master: 指向提交的代码版本
 - Header: 指向当前所使用的的分支
 
-![45_分支工作流程介绍](/45_分支工作流程介绍.png)
+![](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/4.png)
 
 ## 4.3 分支操作
 
@@ -102,7 +102,7 @@ git常用命令
 
 ## 5.1 工作流程
 
-![46_远程仓库](/46_远程仓库.png)
+![](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/5.png)
 
 ## 5.2 远程仓库介绍
 
@@ -143,7 +143,7 @@ git常用命令
     - git config --global user.email “邮箱”（设置全局邮箱）
     - cd ~/.ssh（查看是否生成过SSH公钥）
 
-![53_配置SSH公钥](/53_配置SSH公钥.png)
+![](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/6.png)
 
 ​		2. 生成SSH公钥
 
@@ -153,7 +153,7 @@ git常用命令
 
 ​		3. 设置账户公钥
 
-![57_配置SSH公钥](/57_配置SSH公钥.png)
+![](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/7.png)
 
 ​		4. 公钥测试
 
@@ -170,9 +170,9 @@ git常用命令
   git remote add 远程仓库别名 远程仓库URL
   git push -u 远程仓库别名 分支名
 
-![59_配置SSH公钥](/59_配置SSH公钥.png)
+![](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/8.png)
 
-![60_配置SSH公钥](/60_配置SSH公钥.png)
+![](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/9.png)
 
 ### 5.3.2 先有远程仓库，本地项目为空
 
@@ -201,7 +201,7 @@ git常用命令
 1. 选择工程所在的目录（模块上一级）,这样就创建好本地仓库了
 2. 点击git后边的对勾,将当前项目代码提交到本地仓库
 
-![69_创建本地仓库](/69_创建本地仓库.png)
+![](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/10.png)
 
 其他操作包括版本切换 分支管理（创建 切换 合并 删除）向远程仓库推送 克隆到本地
 
