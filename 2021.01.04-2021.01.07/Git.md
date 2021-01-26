@@ -13,7 +13,7 @@ typora-root-url: ..\00_阶段一-Java基础课件\5.Git\day10_Git\笔记\img
 
 # 2. Git特点
 
-![07_svn和git的对比](/F:/%E9%BB%91%E9%A9%ACJava%EF%BC%88V10%E7%89%88%EF%BC%89%E5%90%AB%E8%BF%9B%E4%BF%AE/01_%E9%98%B6%E6%AE%B5%E4%B8%80%20Java%E5%9F%BA%E7%A1%80%EF%BC%88V10%E7%89%88%E6%9C%AC%EF%BC%89/00_%E9%98%B6%E6%AE%B5%E4%B8%80-Java%E5%9F%BA%E7%A1%80%E8%AF%BE%E4%BB%B6/5.Git/day10_Git/%E7%AC%94%E8%AE%B0/img/07_svn%E5%92%8Cgit%E7%9A%84%E5%AF%B9%E6%AF%94.png)
+![](https://github.com/Novak666/Learning-working-skill/blob/main/2021.01.04-2021.01.07/pics/1.png)
 
 
 
