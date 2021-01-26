@@ -33,6 +33,10 @@ git常用命令
 | git commit -m '提交信息' | 提交，将暂存区文件提交到历史仓库               |
 | git log                  | 查看日志（ git 提交的历史日志）                |
 
+<font color='red'>git --version    查看版本</font>
+
+<font color='red'>git config --global init.defaultBranch main   git在2.28.0上，重新设置git默认分支为main</font>
+
 例子
 
 ![](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/3.png)
@@ -149,7 +153,7 @@ git常用命令
 
 ​		生成命令: ssh-keygen –t rsa –C “邮箱” ( 注意：这里需要敲3次回车)
 
-​		查看命令: cat ~/.ssh/id-rsa.pub
+​		查看命令: cat ~/.ssh/id_rsa.pub
 
 ​		3. 设置账户公钥
 
