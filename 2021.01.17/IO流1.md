@@ -285,7 +285,7 @@ public class FileDemo02 {
   }
   ```
 
-![小节](/小节.png)
+![](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.17/pics/1.png)
 
 ## 2.6 字节流读数据(一次读一个字节数据)【应用】
 

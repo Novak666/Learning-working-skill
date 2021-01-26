@@ -117,7 +117,7 @@
   DOM(Document Object Model)文档对象模型:就是把文档的各个组成部分看做成对应的对象。
   会把xml文件全部加载到内存,在内存中形成一个树形结构,再获取对应的值
 
-  ![02_dom解析概述](F:/%E9%BB%91%E9%A9%ACJava%EF%BC%88V10%E7%89%88%EF%BC%89%E5%90%AB%E8%BF%9B%E4%BF%AE/01_%E9%98%B6%E6%AE%B5%E4%B8%80%20Java%E5%9F%BA%E7%A1%80%EF%BC%88V10%E7%89%88%E6%9C%AC%EF%BC%89/00_%E9%98%B6%E6%AE%B5%E4%B8%80-Java%E5%9F%BA%E7%A1%80%E8%AF%BE%E4%BB%B6/12.%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/day26-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA02/%E7%AC%94%E8%AE%B0/img/02_dom%E8%A7%A3%E6%9E%90%E6%A6%82%E8%BF%B0.png)
+  ![](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.25/pics/1.png)
 
 - 常见的解析工具
 
@@ -362,7 +362,7 @@ JUnit是一个 Java 编程语言的单元测试工具。JUnit 是一个非常重
 
 - 体系结构
 
-  ![06_日志体系结构](F:/%E9%BB%91%E9%A9%ACJava%EF%BC%88V10%E7%89%88%EF%BC%89%E5%90%AB%E8%BF%9B%E4%BF%AE/01_%E9%98%B6%E6%AE%B5%E4%B8%80%20Java%E5%9F%BA%E7%A1%80%EF%BC%88V10%E7%89%88%E6%9C%AC%EF%BC%89/00_%E9%98%B6%E6%AE%B5%E4%B8%80-Java%E5%9F%BA%E7%A1%80%E8%AF%BE%E4%BB%B6/12.%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/day27_%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA03/%E7%AC%94%E8%AE%B0/img/06_%E6%97%A5%E5%BF%97%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84.png)
+  ![](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.25/pics/1.png)
 
 - Log4J
 
@@ -467,7 +467,7 @@ JUnit是一个 Java 编程语言的单元测试工具。JUnit 是一个非常重
 
     设定以怎样的格式显示消息
 
-    ![07_PatternLayout常用的选项](F:/%E9%BB%91%E9%A9%ACJava%EF%BC%88V10%E7%89%88%EF%BC%89%E5%90%AB%E8%BF%9B%E4%BF%AE/01_%E9%98%B6%E6%AE%B5%E4%B8%80%20Java%E5%9F%BA%E7%A1%80%EF%BC%88V10%E7%89%88%E6%9C%AC%EF%BC%89/00_%E9%98%B6%E6%AE%B5%E4%B8%80-Java%E5%9F%BA%E7%A1%80%E8%AF%BE%E4%BB%B6/12.%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/day27_%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA03/%E7%AC%94%E8%AE%B0/img/07_PatternLayout%E5%B8%B8%E7%94%A8%E7%9A%84%E9%80%89%E9%A1%B9.png)
+    ![](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.25/pics/3.png)
 
 ## 3.5 在项目中的应用【应用】
 

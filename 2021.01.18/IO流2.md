@@ -294,7 +294,7 @@ public class BufferedStreamDemo01 {
 
 ## 1.9 IO流小结【理解】
 
-![01_IO流小结](/01_IO流小结.png)
+![](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.18/pics/1.png)
 
 # 2. 转换流
 
