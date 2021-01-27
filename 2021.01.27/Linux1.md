@@ -32,7 +32,7 @@ Linux的基本思想有两点：
 
 3)Linux系统工具链完整，简单操作就可以配置出合适的开发环境，可以简化开发过程，减少开发中仿真工具的障碍，使系统具有较强的移植性；
 
-![1](C:\Users\HASEE\Desktop\pics\1.png)
+![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.27/pics/1.png)
 
 # 2. Linux系统与设置命令
 
@@ -652,7 +652,7 @@ ls -l
 
 每个文件的属性由左边第一部分的10个字符来确定（如下图）。
 
-![2](C:\Users\HASEE\Desktop\pics\2.png)
+![2](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.27/pics/2.png)
 
 ## 3.3 Linux文件基本属性
 
@@ -697,7 +697,7 @@ Linux文件的基本权限就有九个，分别是owner/group/others三种身份
 
 各权限的数字对照表：[r]:4;[w]:2;[x]:1;[-]:**0
 
-![3](C:\Users\HASEE\Desktop\pics\3.png)
+![3](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.27/pics/3.png)
 
 每种身份(owner/group/others)各自的三个权限(r/w/x)分数是需要累加的，例如当权限为： [-rwxrwx---] 分数则是：
 
@@ -734,7 +734,7 @@ chmod  -R 770     档案或目录
 
 此外， **a** 则代表 **all**，即全部的身份。读写的权限可以写成 **r, w, x**，也就是可以使用下表的方式来看
 
-![4](C:\Users\HASEE\Desktop\pics\4.png)
+![4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.27/pics/4.png)
 
 如果我们需要将文件权限设置为 **-rwxr-xr--** ，可以使用 **chmod u=rwx,g=rx,o=r 文件名** 来设定:
 
