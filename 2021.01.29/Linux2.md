@@ -1192,4 +1192,5 @@ echo "输入的两个数字之和为 $? !"
 >
 > 函数返回值在调用该函数后通过 $? 来获得。
 
-![1](C:\Users\HASEE\Desktop\pics\1.jpg)
+![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.29/pics/1.jpg)
+
