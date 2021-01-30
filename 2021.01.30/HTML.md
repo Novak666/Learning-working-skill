@@ -145,7 +145,7 @@ HTML标签可以拥有[属性](https://developer.mozilla.org/zh-CN/docs/Web/HTML
 
 ## 3.1 效果
 
-![1](C:\Users\HASEE\Desktop\pics\1.png)
+![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.30/pics/1.png)
 
 ## 3.2 分析
 
