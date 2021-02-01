@@ -41,7 +41,7 @@ JavaEE规范是很多Java开发技术的总称。这些技术规范都是沿用�
 
 ### 2.1.2 Tomcat目录结构
 
-![1](C:\Users\HASEE\Desktop\pics\1.png)
+![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.01/pics/1.png)
 
 ## 2.2 Tomcat基本使用
 
@@ -131,11 +131,11 @@ WEB-INF：存放配置（web.xml）
 
 2. 访问路径，在右边的Application context设置
 
-![2](C:\Users\HASEE\Desktop\pics\2.jpg)
+![2](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.01/pics/2.jpg)
 
 3. 中间改成Update resources，下面设置好JRE
 
-![3](C:\Users\HASEE\Desktop\pics\3.jpg)
+![3](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.01/pics/3.jpg)
 
 4. 启动
 
@@ -212,7 +212,7 @@ HTTP的全称是：Hyper Text Transfer Protocol，意为 超文本传输协议�
 请求消息头： 从第二行开始，到第一个空行结束
 请求的正文： 从第一个空行后开始，到正文的结束
 
-![4](C:\Users\HASEE\Desktop\pics\4.jpg)
+![4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.01/pics/4.jpg)
 
 ### 3.2.2 响应部分
 
@@ -220,7 +220,7 @@ HTTP的全称是：Hyper Text Transfer Protocol，意为 超文本传输协议�
 响应消息头： 从第二行开始，到第一个空行结束
 响应的正文： 从第一个空行后开始，到正文的结束
 
-![5](C:\Users\HASEE\Desktop\pics\5.jpg)
+![5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.01/pics/5.jpg)
 
 ### 3.2.3 消息头比较
 
@@ -336,7 +336,7 @@ HTTP的全称是：Hyper Text Transfer Protocol，意为 超文本传输协议�
 
 添加一个<welcome-file-list>标签
 
-![6](C:\Users\HASEE\Desktop\pics\6.png)
+![6](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.01/pics/6.png)
 
 4. 启动tomcat，测试
 
@@ -360,7 +360,7 @@ Servlet是运行在Java服务器端的程序，用于接收和响应来自客户
 
 6. 在web.xml配置文件中，配置Servlet相关信息
 
-   ![7](C:\Users\HASEE\Desktop\pics\7.png)
+   ![7](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.01/pics/7.png)
 
 7. 启动tomcat，测试
 
