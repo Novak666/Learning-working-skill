@@ -674,7 +674,7 @@ chgrp [-cfhRv][--help][--version][所属群组][文件或目录...] 或 chgrp [-
 chgrp -v root aaa
 ```
 
-### 3.3.2 chown更改属主和属组**
+### 3.3.2 chown更改属主和属组
 
 使用权限 : 管理员账户
 
