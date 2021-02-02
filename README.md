@@ -56,4 +56,10 @@ CSS了解为主，Nginx配置
 
 # 2021.02.01
 
-Tomcat安装、配置、发布JavaWeb项目（静态资源和动态资源）、HTTP简介
+Tomcat安装、配置，发布JavaWeb项目（静态资源和动态资源），HTTP简介
+
+
+
+# 2021.02.02
+
+Servlet，ServletConfig，ServletContext，Servlet注解开发
