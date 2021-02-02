@@ -39,17 +39,17 @@ Servlet还可以提供配置
 
 6. 在web.xml配置文件中，配置Servlet相关信息
 
-   ![1](C:\Users\HASEE\Desktop\pics\1.png)
+   ![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.02/pics/1.png)
 
 7. 启动tomcat，测试
 
 ## 1.3 Servlet执行过程
 
-![2](C:\Users\HASEE\Desktop\pics\2.jpg)
+![2](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.02/pics/2.png)
 
 ## 1.4 Servlet类视图
 
-![3](C:\Users\HASEE\Desktop\pics\3.jpg)
+![3](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.02/pics/3.png)
 
 ## 1.5 Servlet实现方式
 
@@ -124,7 +124,7 @@ public class ServletDemo04 extends HttpServlet{
 
 启动两个浏览器，输入不同的参数，访问之后发现输出的结果都是一样，所以出现线程安全问题
 
-![4](C:\Users\HASEE\Desktop\pics\4.png)
+![4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.02/pics/4.png)
 
 分析产生这个问题的根本原因，其实就是因为<font color='red'>Servlet是单例</font>，单例对象的类成员只会随类实例化时初始化一次，之后的操作都是改变，而不会重新初始化。
 
@@ -241,7 +241,7 @@ public class ServletDemo8 extends HttpServlet {
 ```
 ## 2.5 常用方法
 
-![5](C:\Users\HASEE\Desktop\pics\5.png)
+![5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.02/pics/5.png)
 
 ```java
 @Override
@@ -272,7 +272,7 @@ public class ServletDemo8 extends HttpServlet {
 
 结果：
 
-![6](C:\Users\HASEE\Desktop\pics\6.png)
+![6](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.02/pics/6.png)
 
 # 3. ServletContext
 
@@ -285,7 +285,7 @@ ServletContext对象，它是应用上下文对象。每一个应用有且只有
 1. 它可以配置和获得应用的全局初始化参数。
 2. 实现让应用中所有Servlet间的数据共享。 
 
-![7](C:\Users\HASEE\Desktop\pics\7.png)
+![7](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.02/pics/7.png)
 
 ## 3.2 生命周期
 
@@ -383,7 +383,7 @@ Servlet2.5最明显的特征就是Servlet的配置要求配在web.xml中，Servl
 
 3. 添加WebServlet注解
 
-   ![8](C:\Users\HASEE\Desktop\pics\8.png)
+   ![8](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.02/pics/8.png)
 
 4. 启动tomcat，测试
 
@@ -468,7 +468,7 @@ public @interface WebServlet {
 
 5. 编写代码
 
-   ![9](C:\Users\HASEE\Desktop\pics\9.png)
+   ![9](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.02/pics/9.png)
 
 6. 启动tomcat，测试
 
