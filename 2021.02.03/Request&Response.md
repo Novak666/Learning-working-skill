@@ -8,7 +8,7 @@
 
 ## 1.2 获取路径的方法
 
-![1](C:\Users\HASEE\Desktop\pics\1.png)
+![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.03/pics/1.png)
 
 ```java
 /**
@@ -64,7 +64,7 @@ public class RequestDemo1 extends HttpServlet {
 
 ## 1.3 获取请求头信息的方法
 
-![2](C:\Users\HASEE\Desktop\pics\2.png)
+![2](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.03/pics/2.png)
 
 请求头可以在浏览器的检查中Network下查看
 
@@ -109,7 +109,7 @@ public class RequestDemo2 extends HttpServlet {
 
 ## 1.4 获取请求参数
 
-![3](C:\Users\HASEE\Desktop\pics\3.png)
+![3](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.03/pics/3.png)
 
 首先在web页面下准备一个html页面
 
@@ -361,7 +361,7 @@ public class ServletDemo08 extends HttpServlet {
 
 如下图所示，假设ServletA处理不了来自客户端的请求，那么就可以将请求转发到ServletB。相应的设置数据共享的方法也在图中。
 
-![4](C:\Users\HASEE\Desktop\pics\4.png)
+![4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.03/pics/4.png)
 
 ## 1.9 请求转发
 
@@ -374,7 +374,7 @@ public class ServletDemo08 extends HttpServlet {
 
 方法：
 
-![5](C:\Users\HASEE\Desktop\pics\5.png)
+![5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.03/pics/5.png)
 
 示例代码：
 
@@ -428,11 +428,11 @@ public class ServletDemo10 extends HttpServlet {
 2. 域对象中的数据不丢失
 3. 被包含的Servlet响应头会丢失
 
-![6](C:\Users\HASEE\Desktop\pics\6.png)
+![6](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.03/pics/6.png)
 
 方法：
 
-![7](C:\Users\HASEE\Desktop\pics\7.png)
+![7](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.03/pics/7.png)
 
 示例代码：
 
@@ -509,7 +509,7 @@ public class ServletDemo12 extends HttpServlet {
 
 ## 2.3 字节流响应消息和解决乱码
 
-![8](C:\Users\HASEE\Desktop\pics\8.png)
+![8](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.03/pics/8.png)
 
 示例代码：
 
@@ -539,7 +539,7 @@ public class ResponseDemo1 extends HttpServlet {
 
 ## 2.4 字符流响应消息和解决乱码
 
-![9](C:\Users\HASEE\Desktop\pics\9.png)
+![9](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.03/pics/9.png)
 
 示例代码：
 
@@ -611,7 +611,7 @@ public class ServletDemo03 extends HttpServlet {
 
 缓存：对于不经常变化的数据，我们可以设置合理的缓存时间，避免浏览器频繁请求服务器，提高效率
 
-![10](C:\Users\HASEE\Desktop\pics\10.png)
+![10](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.03/pics/10.png)
 
 示例代码：
 
@@ -643,7 +643,7 @@ public class ServletDemo04 extends HttpServlet {
 
 定时刷新：过了指定时间后，页面自动进行跳转
 
-![11](C:\Users\HASEE\Desktop\pics\11.png)
+![11](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.03/pics/11.png)
 
 示例代码：
 
@@ -676,7 +676,7 @@ public class ServletDemo05 extends HttpServlet {
 
 特点：浏览器的地址栏会发生改变，两次请求的请求域对象中不能共享数据，可以重定向到其他服务器<font color='red'>（区别于请求转发）</font>
 
-![12](C:\Users\HASEE\Desktop\pics\12.png)
+![12](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.03/pics/12.png)
 
 示例代码：
 
@@ -718,7 +718,7 @@ public class ServletDemo07 extends HttpServlet {
 }
 ```
 
-![13](C:\Users\HASEE\Desktop\pics\13.png)
+![13](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.03/pics/13.png)
 
 ## 2.9 文件下载
 
