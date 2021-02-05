@@ -34,9 +34,9 @@
 
 ## 2.2 常用方法
 
-![1](C:\Users\HASEE\Desktop\pics\1.png)
+![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.05/pics/1.png)
 
-![2](C:\Users\HASEE\Desktop\pics\2.png)
+![2](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.05/pics/2.png)
 
 ## 2.3 使用案例
 
@@ -186,25 +186,25 @@ HttpSession接口用于提供一种通过多个页面请求或访问网站来标
 
 ## 3.2 HttpSession常用方法
 
-![3](C:\Users\HASEE\Desktop\pics\3.png)
+![3](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.05/pics/3.png)
 
 ## 3.3 HttpSession的获取
 
 HttpSession是通过HttpServletRequest对象来获取的
 
-![4](C:\Users\HASEE\Desktop\pics\4.png)
+![4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.05/pics/4.png)
 
 情况1：带JSESSIONID，且服务器中已有
 
-![5](C:\Users\HASEE\Desktop\pics\5.png)
+![5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.05/pics/5.png)
 
 情况2：带JSESSIONID，但服务器中没有
 
-![6](C:\Users\HASEE\Desktop\pics\6.png)
+![6](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.05/pics/6.png)
 
 情况3：不带JSESSIONID
 
-![7](C:\Users\HASEE\Desktop\pics\7.png)
+![7](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.05/pics/7.png)
 
 getSession()默认为true，在服务器中没找到对象会自动创建
 
@@ -394,11 +394,11 @@ JSP部署在服务器上，可以处理客户端发送的请求，<font color='r
 
 ## 4.3 JSP执行过程
 
-![8](C:\Users\HASEE\Desktop\pics\8.png)
+![8](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.05/pics/8.png)
 
 JSP生成Java文件：
 
-![9](C:\Users\HASEE\Desktop\pics\9.png)
+![9](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.05/pics/9.png)
 
 Java文件的代码说明JSP就是一个HttpServlet。同时，我们在index_jsp.java文件中找到了输出页面的代码，并且在浏览器端查看源文件，看到的内容是一样的。这也就是说明，我们的浏览器上的内容，在通过jsp展示时，本质都是用out.write()输出出来的。
 
@@ -451,7 +451,7 @@ Java文件的代码说明JSP就是一个HttpServlet。同时，我们在index_js
 
 ### 4.5.1 page指令
 
-![10](C:\Users\HASEE\Desktop\pics\10.png)
+![10](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.05/pics/10.png)
 
 ### 4.5.2 include指令
 
@@ -459,7 +459,7 @@ Java文件的代码说明JSP就是一个HttpServlet。同时，我们在index_js
 
 属性：file，以/开头，就代表当前应用。
 
-![11](C:\Users\HASEE\Desktop\pics\11.png)
+![11](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.05/pics/11.png)
 
 ### 4.5.3 taglib指令
 
@@ -524,9 +524,9 @@ C：controller，通常用于处理请求和响应。目前指的是Servlet，�
 
 ## 5.1 案例效果
 
-![13](C:\Users\HASEE\Desktop\pics\13.png)
+![13](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.05/pics/13.png)
 
-![14](C:\Users\HASEE\Desktop\pics\14.png)
+![14](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.05/pics/14.png)
 
 ## 5.2 实现步骤
 
