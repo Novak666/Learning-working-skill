@@ -161,11 +161,11 @@ Map集合：${map}  <br>
 
 ## 1.5 运算符
 
-![1](C:\Users\HASEE\Desktop\pics\1.png)
+![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.10/pics/1.png)
 
-![2](C:\Users\HASEE\Desktop\pics\2.png)
+![2](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.10/pics/2.png)
 
-![3](C:\Users\HASEE\Desktop\pics\3.png)
+![3](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.10/pics/3.png)
 
 示例代码：
 
@@ -302,7 +302,7 @@ JSTL的全称是：JSP Standard Tag Libary。它是JSP中标准的标签库。�
 
 ## 2.2 核心标签库
 
-![4](C:\Users\HASEE\Desktop\pics\4.png)
+![4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.10/pics/4.png)
 
 ## 2.3 使用案例
 
@@ -382,7 +382,7 @@ Filter是一个接口，使用的前提是要实现接口
 
 方法：
 
-![5](C:\Users\HASEE\Desktop\pics\5.png)
+![5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.10/pics/5.png)
 
 配置方式：
 
@@ -396,9 +396,9 @@ FilterChain是一个接口，代表过滤器链对象。由Servlet容器提供�
 
 方法：
 
-![6](C:\Users\HASEE\Desktop\pics\6.png)
+![6](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.10/pics/6.png)
 
-![7](C:\Users\HASEE\Desktop\pics\7.png)
+![7](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.10/pics/7.png)
 
 ## 3.3 使用案例
 
@@ -552,7 +552,7 @@ FilterConfig是一个接口，代表过滤器的配置对象，可以加载一�
 
 方法：
 
-![8](C:\Users\HASEE\Desktop\pics\8.png)
+![8](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.10/pics/8.png)
 
 示例代码：
 
@@ -715,7 +715,7 @@ web.xml：
 
 方法：
 
-![9](C:\Users\HASEE\Desktop\pics\9.png)
+![9](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.10/pics/9.png)
 
 ServletContextEvent代表事件对象
 
@@ -729,7 +729,7 @@ ServletContextEvent代表事件对象
 
 方法：
 
-![10](C:\Users\HASEE\Desktop\pics\10.png)
+![10](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.10/pics/10.png)
 
 HttpSessionEvent代表事件对象
 
@@ -743,7 +743,7 @@ HttpSessionEvent代表事件对象
 
 方法：
 
-![11](C:\Users\HASEE\Desktop\pics\11.png)
+![11](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.10/pics/11.png)
 
 ServletRequestEvent代表事件对象
 
@@ -759,7 +759,7 @@ ServletRequestEvent代表事件对象
 
 方法：
 
-![12](C:\Users\HASEE\Desktop\pics\12.png)
+![12](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.10/pics/12.png)
 
 ServletContextAttributeEvent代表事件对象
 
@@ -773,7 +773,7 @@ ServletContextAttributeEvent代表事件对象
 
 方法：
 
-![13](C:\Users\HASEE\Desktop\pics\13.png)
+![13](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.10/pics/13.png)
 
 HttpSessionBindingEvent代表事件对象
 
@@ -787,7 +787,7 @@ HttpSessionBindingEvent代表事件对象
 
 方法：
 
-![14](C:\Users\HASEE\Desktop\pics\14.png)
+![14](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.10/pics/14.png)
 
 ServletRequestAttributeEvent代表事件对象
 
@@ -803,7 +803,7 @@ ServletRequestAttributeEvent代表事件对象
 
 方法：
 
-![15](C:\Users\HASEE\Desktop\pics\15.png)
+![15](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.10/pics/15.png)
 
 HttpSessionBindingEvent代表事件对象
 
@@ -817,7 +817,7 @@ HttpSessionBindingEvent代表事件对象
 
 方法：
 
-![16](C:\Users\HASEE\Desktop\pics\16.png)
+![16](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.10/pics/16.png)
 
 HttpSessionEvent代表事件对象
 
