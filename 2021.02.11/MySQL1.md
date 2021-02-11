@@ -6,11 +6,11 @@
 
 常见数据库：
 
-![01](C:\Users\HASEE\Desktop\pics\1.png)
+![01](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.11/pics/1.png)
 
 数据库、数据表、数据的关系
 
-![2](C:\Users\HASEE\Desktop\pics\2.png)
+![2](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.11/pics/2.png)
 
 # 2. MySQL安装
 
@@ -1068,7 +1068,7 @@ ALTER TABLE student4 MODIFY NAME VARCHAR(20) NOT NULL;
 + 建表时添加外键约束
   - 为什么要有外键约束
 
-![3](C:\Users\HASEE\Desktop\pics\3.png)
+![3](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.11/pics/3.png)
 
 ```mysql
 -- 创建db2数据库
