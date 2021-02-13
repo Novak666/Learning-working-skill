@@ -165,7 +165,7 @@ INSERT INTO card VALUES (NULL,'12345',1),(NULL,'56789',2);
 
 - 图解
 
-![1](C:\Users\HASEE\Desktop\pics\1.png)
+![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.12/pics/1.png)
 
 ## 2.2 一对多
 
@@ -221,7 +221,7 @@ INSERT INTO product VALUES (NULL,'华为P30',1),(NULL,'小米note3',1),
 
 - 图解
 
-![2](C:\Users\HASEE\Desktop\pics\2.png)
+![2](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.12/pics/2.png)
 
 ## 2.3 多对多
 
@@ -260,11 +260,11 @@ INSERT INTO stu_course VALUES (NULL,1,1),(NULL,1,2),(NULL,2,1),(NULL,2,2);
 
 - 图解
 
-![3](C:\Users\HASEE\Desktop\pics\3.png)
+![3](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.12/pics/3.png)
 
 架构设计图：
 
-![4](C:\Users\HASEE\Desktop\pics\4.png)
+![4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.12/pics/4.png)
 
 # 3. 多表查询
 
@@ -378,7 +378,7 @@ INSERT INTO us_pro VALUES (NULL,4,7);
 
 架构设计图：
 
-![5](C:\Users\HASEE\Desktop\pics\5.png)
+![5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.12/pics/5.png)
 
 ## 3.2 内连接查询
 
@@ -1004,14 +1004,14 @@ DROP VIEW IF EXISTS city_country2;
 
 ### 5.2.1 备份
 
-![6](C:\Users\HASEE\Desktop\pics\6.png)
+![6](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.12/pics/6.png)
 
-![7](C:\Users\HASEE\Desktop\pics\7.png)
+![7](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.12/pics/7.png)
 
 ### 5.2.2 还原
 
 create database 数据库名称
 
-![8](C:\Users\HASEE\Desktop\pics\8.png)
+![8](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.12/pics/8.png)
 
-![9](C:\Users\HASEE\Desktop\pics\9.png)
+![9](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.12/pics/9.png)
