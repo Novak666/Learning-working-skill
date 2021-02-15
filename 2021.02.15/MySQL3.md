@@ -1153,7 +1153,7 @@ COMMIT;
   - 多个客户端操作时 ,各个客户端的事务之间应该是隔离的，相互独立的 , 不受影响的
   - 而如果多个事务操作同一批数据时，则需要设置不同的隔离级别 , 否则就会产生问题
 
-![1](C:\Users\HASEE\Desktop\pics\1.png)
+![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.15/pics/1.png)
 
 - 可能引发的问题
 
