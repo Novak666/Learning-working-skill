@@ -123,7 +123,7 @@
 
   - JAXP: SUN公司提供的一套XML的解析的API
   - JDOM: 开源组织提供了一套XML的解析的API-jdom
-  - DOM4J: 开源组织提供了一套XML的解析的API-dom4j,全称：Dom For Java
+  - DOM4J: 开源组织提供了一套XML的解析的API-dom4j，全称：Dom For Java
   - pull: 主要应用在Android手机端解析XML
 
 - 解析的准备工作
