@@ -623,7 +623,7 @@ public class BufferedStreamDemo01 {
   public class PropertiesDemo03 {
       public static void main(String[] args) throws IOException {
           //把集合中的数据保存到文件
-  //        myStore();
+          //myStore();
   
           //把文件中的数据加载到集合
           myLoad();
