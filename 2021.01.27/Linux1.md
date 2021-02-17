@@ -26,11 +26,11 @@ Linux的基本思想有两点：
 
 **优点**
 
-1)Linux由众多微内核组成，其源代码完全开源；
+1)Linux由众多微内核组成，其源代码完全开源
 
-2)Linux继承了Unix的特性，具有非常强大的网络功能，其支持所有的因特网协议，包括TCP/[IPv4](https://baike.baidu.com/item/IPv4/422599)、 [TCP](https://baike.baidu.com/item/TCP/33012)/IPv6和链路层拓扑程序等，且可以利用Unix的网络特性开发出新的协议栈；
+2)Linux继承了Unix的特性，具有非常强大的网络功能，其支持所有的因特网协议，包括TCP/[IPv4](https://baike.baidu.com/item/IPv4/422599)、 [TCP](https://baike.baidu.com/item/TCP/33012)/IPv6和链路层拓扑程序等，且可以利用Unix的网络特性开发出新的协议栈
 
-3)Linux系统工具链完整，简单操作就可以配置出合适的开发环境，可以简化开发过程，减少开发中仿真工具的障碍，使系统具有较强的移植性；
+3)Linux系统工具链完整，简单操作就可以配置出合适的开发环境，可以简化开发过程，减少开发中仿真工具的障碍，使系统具有较强的移植性
 
 ![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.27/pics/1.png)
 
