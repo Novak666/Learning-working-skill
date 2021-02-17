@@ -71,7 +71,7 @@ public class RequestDemo1 extends HttpServlet {
 示例代码：
 
 ```java
-/**
+/*
  * 获取请求消息头
  * @author 黑马程序员
  * @Company http://www.itheima.com
