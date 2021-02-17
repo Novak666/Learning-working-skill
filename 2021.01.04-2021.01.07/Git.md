@@ -1,7 +1,3 @@
----
-typora-root-url: ..\00_阶段一-Java基础课件\5.Git\day10_Git\笔记\img
----
-
 # 1. Git作用
 
 1. 代码备份 (云端)
