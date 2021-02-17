@@ -390,7 +390,7 @@ Servlet2.5最明显的特征就是Servlet的配置要求配在web.xml中，Servl
 ## 4.3 注解解释
 
 ```java
-/**
+/*
  * WebServlet注解
  * @since Servlet 3.0 (Section 8.1.1)
  */
