@@ -1,7 +1,3 @@
----
-typora-root-url: ..\00_阶段一-Java基础课件\9.IO流\day19_IO流01\笔记\img
----
-
 # 1. File类
 
 ## 1.1 File概述
