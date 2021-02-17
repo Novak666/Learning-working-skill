@@ -340,7 +340,7 @@ public class ServletDemo03 extends HttpServlet{
 
 **什么是持久态**
 
-把长时间不用，但还不到过期时间的HttpSession进行序列化，写到磁盘上。我们把HttpSession持久态也叫做钝化。（与钝化相反的，我们叫活化。）
+把长时间不用，但还不到过期时间的HttpSession进行序列化，写到磁盘上。我们把HttpSession持久态也叫做钝化。（与钝化相反的，我们叫活化）
 
 **什么时候使用持久化**
 
