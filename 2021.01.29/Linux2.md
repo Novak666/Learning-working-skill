@@ -8,7 +8,7 @@ ls -l 可以显示档案的时间记录
 
 **使用 touch 创建一个空文件**
 
-在 Linux 系统上使用 `touch` 命令创建空文件，键入 `touch`，然后输入文件名。如下所示
+在 Linux 系统上使用 `touch` 命令创建空文件，键入 `touch`，然后输入文件名。如下所示：
 
 ```shell
 touch czbk-devops.txt
