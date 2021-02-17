@@ -514,7 +514,7 @@ V：view，通常用于展示数据。动态展示用jsp页面，静态数据展
 
 C：controller，通常用于处理请求和响应。目前指的是Servlet，以后还会有Spring，SpringMVC。
 
-![12](C:\Users\HASEE\Desktop\pics\12.png)**Servlet：**擅长处理业务逻辑，不擅长输出显示界面。在web开发中多用于控制程序逻辑（流程）。所以我们称之为：控制器。
+![12](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.05/pics/12.png)**Servlet：**擅长处理业务逻辑，不擅长输出显示界面。在web开发中多用于控制程序逻辑（流程）。所以我们称之为：控制器。
 
 **JSP：**擅长显示界面，不擅长处理程序逻辑。在web开发中多用于展示动态界面。所以我们称之为：视图。
 
