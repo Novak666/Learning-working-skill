@@ -9,7 +9,7 @@
 - ORM(Object Relational Mapping)： 对象关系映射
 - 指的是持久化数据和实体对象的映射模式，为了解决面向对象与关系型数据库存在的互不匹配的现象的技术。
 
-![1](C:\Users\HASEE\Desktop\pics\1.png)
+![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.19/pics/1.png)
 
 ## 1.3 对JDBC的分析
 
@@ -169,7 +169,7 @@ org.apache.ibatis.io.Resources：加载资源的工具类，Resources类帮助�
 
 核心方法
 
-![2](C:\Users\HASEE\Desktop\pics\2.png)
+![2](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.19/pics/2.png)
 
 ## 2.2 获取SqlSessionFactory
 
@@ -177,7 +177,7 @@ org.apache.ibatis.session.SqlSessionFactoryBuilder：获取SqlSessionFactory工�
 
 核心方法
 
-![3](C:\Users\HASEE\Desktop\pics\3.png)
+![3](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.19/pics/3.png)
 
 ```java
 String resource = "org/mybatis/builder/mybatis-config.xml"; 
@@ -192,7 +192,7 @@ org.apache.ibatis.session.SqlSessionFactory：获取SqlSession构建者对象的
 
 核心方法
 
-![4](C:\Users\HASEE\Desktop\pics\4.png)
+![4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.19/pics/4.png)
 
 ## 2.4 SqlSession
 
@@ -200,7 +200,7 @@ org.apache.ibatis.session.SqlSession：构建者对象接口。用于执行 SQL�
 
 核心方法
 
-![5](C:\Users\HASEE\Desktop\pics\5.png)
+![5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.19/pics/5.png)
 
 # 3. MyBatis映射配置文件
 
@@ -208,7 +208,7 @@ org.apache.ibatis.session.SqlSession：构建者对象接口。用于执行 SQL�
 
 映射配置文件包含了数据和对象之间的映射关系以及要执行的 SQL 语句
 
-![6](C:\Users\HASEE\Desktop\pics\6.png)
+![6](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.19/pics/6.png)
 
 id：唯一标识，配合名称空间使用
 
@@ -390,7 +390,7 @@ public void delete() throws Exception{
 
 ## 3.6 总结
 
-![7](C:\Users\HASEE\Desktop\pics\7.png)
+![7](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.19/pics/7.png)
 
 # 4. MyBatis核心配置文件
 
@@ -483,11 +483,11 @@ alias：指定别名
     </typeAliase
 ```
 
-![8](C:\Users\HASEE\Desktop\pics\8.png)
+![8](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.19/pics/8.png)
 
 ## 4.4 总结
 
-![9](C:\Users\HASEE\Desktop\pics\9.png)
+![9](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.19/pics/9.png)
 
 # 5. MyBatis传统方式实现Dao层
 
@@ -497,10 +497,10 @@ alias：指定别名
 
 调用流程
 
-![10](C:\Users\HASEE\Desktop\pics\10.png)
+![10](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.19/pics/10.png)
 
 ## 5.2 LOG4J的配置和使用
 
 在日常开发过程中，排查问题时难免需要输出 MyBatis 真正执行的 SQL 语句、参数、结果等信息，我们就可以借助 LOG4J 的功能来实现执行信息的输出。
 
-![11](C:\Users\HASEE\Desktop\pics\11.png)
+![11](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.19/pics/11.png)
