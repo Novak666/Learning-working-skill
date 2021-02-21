@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.itheima.table01.OneToOneMapper">
+    <!--配置字段和实体对象属性的映射关系-->
+    <resultMap id="oneToOne" type="card">
+        <id column="cid" property="id" />
+        <result column="number" property="number" />
+        <!--
+            association：配置被包含对象的映射关系
+            property：被包含对象的变量名
+            javaType：被包含对象的数据类型
+        -->
+        <association property="p" javaType="person">
+            <id column="pid" property="id" />
+            <result column="name" property="name" />
+            <result column="age" property="age" />
+        </association>
+    </resultMap>
+
+    <select id="selectAll" resultMap="oneToOne">
+        SELECT c.id cid,number,pid,NAME,age FROM card c,person p WHERE c.pid=p.id
+    </select>
+</mapper>

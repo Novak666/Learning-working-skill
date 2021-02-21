@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.itheima.table03.ManyToManyMapper">
+    <resultMap id="manyToMany" type="student">
+        <id column="sid" property="id"/>
+        <result column="sname" property="name"/>
+        <result column="sage" property="age"/>
+
+        <collection property="courses" ofType="course">
+            <id column="cid" property="id"/>
+            <result column="cname" property="name"/>
+        </collection>
+    </resultMap>
+    <select id="selectAll" resultMap="manyToMany">
+        SELECT sc.sid,s.name sname,s.age sage,sc.cid,c.name cname FROM student s,course c,stu_cr sc WHERE sc.sid=s.id AND sc.cid=c.id
+    </select>
+</mapper>

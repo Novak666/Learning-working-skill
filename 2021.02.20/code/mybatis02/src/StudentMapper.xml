@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--MyBatis的DTD约束-->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--
+    mapper：核心根标签
+    namespace属性：名称空间
+-->
+<mapper namespace="com.itheima.mapper.StudentMapper">
+
+    <sql id="select" >SELECT * FROM student</sql>
+
+    <!--
+        select：查询功能的标签
+        id属性：唯一标识
+        resultType属性：指定结果映射对象类型
+        parameterType属性：指定参数映射对象类型
+    -->
+    <select id="selectAll" resultType="student">
+        <include refid="select"/>
+    </select>
+
+    <select id="selectById" resultType="student" parameterType="int">
+        <include refid="select"/> WHERE id = #{id}
+    </select>
+
+    <insert id="insert" parameterType="student">
+        INSERT INTO student VALUES (#{id},#{name},#{age})
+    </insert>
+
+    <update id="update" parameterType="student">
+        UPDATE student SET name = #{name},age = #{age} WHERE id = #{id}
+    </update>
+
+    <delete id="delete" parameterType="int">
+        DELETE FROM student WHERE id = #{id}
+    </delete>
+
+    <select id="selectCondition" resultType="student" parameterType="student">
+        <include refid="select"/>
+        <where>
+            <if test="id != null">
+                id = #{id}
+            </if>
+            <if test="name != null">
+                AND name = #{name}
+            </if>
+            <if test="age != null">
+                AND age = #{age}
+            </if>
+        </where>
+    </select>
+
+    <select id="selectByIds" resultType="student" parameterType="list">
+        <include refid="select"/>
+        <where>
+            <foreach collection="list" open="id IN (" close=")" item="id" separator=",">
+                #{id}
+            </foreach>
+        </where>
+    </select>
+</mapper>
