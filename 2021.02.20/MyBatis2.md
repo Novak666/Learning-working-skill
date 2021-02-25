@@ -2,7 +2,7 @@
 
 ## 1.1 简介
 
-传统方式实现Dao层，我们既要编写接口，还要编写实现类。MyBatis框架可以帮助我们省略编写Dao层接口实现类的步骤。程序员只需要编写接口，由MyBatis框架根据接口的定义来创建该接口的动态代理对象
+传统方式实现Dao层，我们既要编写接口，还要编写实现类。MyBatis框架可以帮助我们省略编写Dao层接口实现类的步骤。程序员只需要编写接口，由MyBatis框架根据接口的定义来创建该接口的<font color='red'>**动态代理**</font>对象
 
 实现规则
 
@@ -118,7 +118,15 @@ public class StudentServiceImpl implements StudentService {
 
   通过动态代理开发模式，我们只编写一个接口，不写实现类，我们通过 getMapper() 方法最终获取到 org.apache.ibatis.binding.MapperProxy 代理对象，然后执行功能，而这个代理对象正是 MyBatis 使用了 JDK 的动态代理技术，帮助我们生成了代理实现类对象。从而可以进行相关持久化操作。 
 
+  ```java
+  StudentMapper mapper = sqlSession.getMapper(StudentMapper.class);
+  ```
+
+  mapper这个接口实现类对象，底层就是运用了JDK的动态代理，利用Proxy.newProxyInstance()生成代理对象
+
 - 分析方法是如何执行的？
+
+  <font color='red'>打断点查看，动态代理需要程序运行起来才能查看</font>
 
   动态代理实现类对象在执行方法的时候最终调用了 mapperMethod.execute() 方法，这个方法中通过 switch 语句根据操作类型来判断是新增、修改、删除、查询操作，最后一步回到了 MyBatis 最原生的 SqlSession 方式来执行增删改查。   
 
