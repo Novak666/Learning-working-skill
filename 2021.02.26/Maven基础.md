@@ -32,7 +32,7 @@ Maven说我们需要编写一个pom.xml文件，Maven通过加载这个配置文
 
 目录结构
 
-![1](C:\Users\HASEE\Desktop\pics\1.png)
+![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.26/pics/1.png)
 
 各目录结构说明：
 
@@ -89,7 +89,7 @@ src/main/webapp：页面资源，js，css，图片等
 
 仓库是用来存储jar包的
 
-![2](C:\Users\HASEE\Desktop\pics\2.png)
+![2](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.26/pics/2.png)
 
 **中央仓库**：在maven软件中内置一个远程仓库地址https://repo1.maven.org/maven2 ，它是中央仓库，服务于整个互联网，它是由Maven团队自己维护，里面存储了非常全的jar包，它包含了世界上大部分流行的开源项目构件
 
@@ -138,9 +138,9 @@ packaging：定义资源的打包方式，取值一般有如下三种
 
 Maven包含了一个项目对象模型 (Project Object Model)，一组标准集合，一个项目生命周期(Project Lifecycle)，一个依赖管理系统(Dependency Management System)，和用来运行定义在生命周期阶段(phase)中插件(plugin)目标(goal)的逻辑
 
-![3](C:\Users\HASEE\Desktop\pics\3.png)
+![3](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.26/pics/3.png)
 
-![4](C:\Users\HASEE\Desktop\pics\4.png)
+![4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.26/pics/4.png)
 
 ## 5.1 项目对象模型(Project Object Model)
 
@@ -174,15 +174,15 @@ Maven管理项目生命周期过程都是基于插件完成的
 
 ## 6.1 IDEA集成Maven插件
 
-![5](C:\Users\HASEE\Desktop\pics\5.png)
+![5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.26/pics/5.png)
 
 ## 6.2 使用原型创建Maven的Java项目
 
-![6](C:\Users\HASEE\Desktop\pics\6.png)
+![6](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.26/pics/6.png)
 
 手动补齐目录结构
 
-![7](C:\Users\HASEE\Desktop\pics\7.png)
+![7](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.26/pics/7.png)
 
 ## 6.3 不使用原型创建Maven的Java项目
 
@@ -190,7 +190,7 @@ Maven管理项目生命周期过程都是基于插件完成的
 
 ## 6.4 使用原型创建Maven的web项目
 
-![8](C:\Users\HASEE\Desktop\pics\8.png)
+![8](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.26/pics/8.png)
 
 后面补齐java目录，Mark Directory as Sources Root
 
