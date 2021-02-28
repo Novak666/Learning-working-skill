@@ -16,7 +16,7 @@ NoSQL：即 Not-Only SQL（ 泛指非关系型的数据库），作为关系型�
 
 以电商为例
 
-![1](C:\Users\HASEE\Desktop\pics\1.png)
+![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.28/pics/1.png)
 
 我们的基础数据都存MySQL,在它的基础之上，我们把它连在一块儿，同时对外提供服务。向上走，有一些信息加载完以后,要放到我们的MongoDB中。还有一类信息，我们放到我们专用的文件系统中（比如图片），就放到我们的这个搜索专用的，如Lucene、solr及集群里边，或者用ES的这种技术里边。那么剩下来的热点信息，放到我们的redis里面。
 
@@ -317,7 +317,7 @@ user:id:3506728370    →	{“fans”：12210947，“blogs”：6164，“ focu
 
 为了对数据更方便的进行管理，衍生出了Hash类型
 
-![2](C:\Users\HASEE\Desktop\pics\2.png)
+![2](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.28/pics/2.png)
 
 值得注意的是：
 
@@ -466,7 +466,7 @@ brpoplpush source destination timeout
 
 set类型：与hash存储结构完全相同，仅存储键，不存储值（nil），并且值是不允许重复的
 
-![3](C:\Users\HASEE\Desktop\pics\3.png)
+![3](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.28/pics/3.png)
 
 ### 4.4.2 基本操作
 
@@ -634,7 +634,7 @@ keys pattern
 
 查询模式规则
 
-![4](C:\Users\HASEE\Desktop\pics\4.png)
+![4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.28/pics/4.png)
 
 ## 5.2 数据库指令
 
@@ -843,7 +843,7 @@ rdbchecksum yes|no
 
 **save指令工作原理**
 
-![5](C:\Users\HASEE\Desktop\pics\5.png)
+![5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.28/pics/5.png)
 
 ### 7.2.2 bgsave指令
 
@@ -874,7 +874,7 @@ rdbchecksum yes|no
 
 **bgsave指令工作原理**
 
-![6](C:\Users\HASEE\Desktop\pics\6.png)
+![6](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.28/pics/6.png)
 
 ### 7.2.3 自动执行
 
@@ -910,7 +910,7 @@ stop-writes-on-bgsave-error yes|no
 
 **save配置工作原理**
 
-![7](C:\Users\HASEE\Desktop\pics\7.png)
+![7](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.28/pics/7.png)
 
 ### 7.2.4 3种方案对比
 
@@ -964,7 +964,7 @@ AOF的主要作用是解决了数据持久化的实时性，目前已经是Redis
 
 **AOF写数据过程**
 
-![8](C:\Users\HASEE\Desktop\pics\8.png)
+![8](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.28/pics/8.png)
 
 **启动AOF相关配置**
 
@@ -1002,7 +1002,7 @@ appendfsync always|everysec|no
 
 问题
 
-![9](C:\Users\HASEE\Desktop\pics\9.png)
+![9](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.28/pics/9.png)
 
 Redis引入了AOF重写机制压缩文件体积。AOF文件重写是将Redis进程内的数据转化为写命令同步到新AOF文件的过程。简单说就是将对同一个数据的若干个条命令执行结 果转化成最终结果数据对应的指令进行记录。
 
@@ -1038,7 +1038,7 @@ bgrewriteaof
 
 手动重写原理
 
-![10](C:\Users\HASEE\Desktop\pics\10.png)
+![10](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.28/pics/10.png)
 
 自动重写
 
@@ -1063,11 +1063,11 @@ aof_base_size
 
  自动重写触发条件公式
 
-![11](C:\Users\HASEE\Desktop\pics\11.png)
+![11](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.28/pics/11.png)
 
 **工作流程**
 
-![12](C:\Users\HASEE\Desktop\pics\12.png)
+![12](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.28/pics/12.png)
 
 ## 7.4 RDB和AOF对比
 
