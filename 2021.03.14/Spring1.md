@@ -12,11 +12,11 @@
 
 Spring是分层的JavaSE/EE应用full-stack轻量级开源框架
 
-![1](C:\Users\HASEE\Desktop\pics\1.png)
+![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.03.14/pics/1.png)
 
 ## 1.3 体系结构
 
-![2](C:\Users\HASEE\Desktop\pics\2.png)
+![2](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.03.14/pics/2.png)
 
 ## 1.4 Spring优点
 
@@ -34,7 +34,7 @@ Spring是分层的JavaSE/EE应用full-stack轻量级开源框架
 
 ## 2.1 需要优化的代码
 
-![3](C:\Users\HASEE\Desktop\pics\3.png)
+![3](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.03.14/pics/3.png)
 
 ## 2.2 耦合与内聚
 
@@ -48,26 +48,26 @@ Spring是分层的JavaSE/EE应用full-stack轻量级开源框架
 
 第一阶段：
 
-![4](C:\Users\HASEE\Desktop\pics\4.png)
+![4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.03.14/pics/4.png)
 
 第二阶段：
 
-![5](C:\Users\HASEE\Desktop\pics\5.png)
+![5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.03.14/pics/5.png)
 
 第三阶段：
 
-![6](C:\Users\HASEE\Desktop\pics\6.png)
+![6](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.03.14/pics/6.png)
 
 小节：
 
-![7](C:\Users\HASEE\Desktop\pics\7.png)
+![7](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.03.14/pics/7.png)
 
 ## 2.4 IoC
 
 - IoC（Inversion Of Control）控制反转，Spring反向控制应用程序所需要使用的外部资源
 - Spring控制的资源全部放置在Spring容器(Core Container)中，该容器称为IoC容器
 
-![8](C:\Users\HASEE\Desktop\pics\8.png)
+![8](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.03.14/pics/8.png)
 
 # 3. 简单案例
 
@@ -274,7 +274,7 @@ public class UserApp {
 - IoC（Inversion Of Control）控制翻转，Spring反向控制应用程序所需要使用的外部资源
 - DI（Dependency Injection）依赖注入，应用程序运行依赖的资源由Spring为其提供，资源进入应用程序的方式称为注入
 
-![9](C:\Users\HASEE\Desktop\pics\9.png)
+![9](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.03.14/pics/9.png)
 
 IoC与DI的关系
 
@@ -636,7 +636,7 @@ https://www.springframework.org/schema/context/spring-context.xsd
 
 可以加载文件系统中任意位置的配置文件，而ClassPathXmlApplicationContext只能加载类路径下的配置文件
 
-![10](C:\Users\HASEE\Desktop\pics\10.png)
+![10](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.03.14/pics/10.png)
 
 **BeanFactory使用**
 
