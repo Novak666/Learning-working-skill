@@ -2,7 +2,7 @@
 
 ## 1.1 原始注解概览
 
-![1](C:\Users\HASEE\Desktop\pics\1.png)
+![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.03.18/pics/1.png)
 
 ## 1.2 注解扫描
 
@@ -154,7 +154,7 @@
 3. 组件扫描的配置：<context:component-scan>
 4. 引入其他文件：<import>
 
-![2](C:\Users\HASEE\Desktop\pics\2.png)
+![2](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.03.18/pics/2.png)
 
 ## 2.2 @Configuration和@ComponentScan
 
@@ -356,7 +356,7 @@
 
 ## 4.1 注解整合MyBatis说明
 
-![3](C:\Users\HASEE\Desktop\pics\3.png)
+![3](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.03.18/pics/3.png)
 
 ## 4.2 注解整合MyBatis步骤
 
@@ -585,7 +585,7 @@ public class UserServiceTest {
 
 开发过程中，需要根据需求加载必要的bean，排除指定bean
 
-![4](C:\Users\HASEE\Desktop\pics\4.png)
+![4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.03.18/pics/4.png)
 
 ## 5.3 设定组件扫描加载过滤器
 
@@ -751,7 +751,7 @@ public class UserServiceTest {
 
 ## 5.7 bean初始化过程解析
 
-![5](C:\Users\HASEE\Desktop\pics\5.png)
+![5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.03.18/pics/5.png)
 
 - BeanFactoryPostProcessor
   - 作用：定义了在bean工厂对象创建后，bean对象创建前执行的动作，用于对工厂进行创建后业务处理
@@ -821,7 +821,7 @@ public class EquipmentDaoImpl implements EquipmentDao,InitializingBean {
 //@Import({CustomeImportBeanDefinitionRegistrar.class,MyBeanFactory.class, MyBean.class})
 ```
 
-![6](C:\Users\HASEE\Desktop\pics\6.png)
+![6](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.03.18/pics/6.png)
 
 + FactoryBean
   + 对单一的bean的初始化过程进行封装，达到简化配置的目的
