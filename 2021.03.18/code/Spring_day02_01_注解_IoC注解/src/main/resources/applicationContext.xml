@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--启动注解驱动，指定对应扫描的路径，也就是资源所在的包-->
+    <context:component-scan base-package="com.itheima"/>
+
+    <!--<bean id="userService" class="com.itheima.service.impl.UserServiceImpl" />-->
+
+    <!--<bean id="userDao" class="com.itheima.dao.impl.UserDaoImpl" />-->
+
+    <!--<bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl" />-->
+
+    <!--<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        &lt;!&ndash;......&ndash;&gt;
+    </bean>-->
+</beans>
