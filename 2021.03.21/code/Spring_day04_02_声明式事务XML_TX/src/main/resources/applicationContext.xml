@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx
+        https://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <context:property-placeholder location="classpath:*.properties"/>
+
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+
+    <bean class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="typeAliasesPackage" value="com.itheima.domain"/>
+    </bean>
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.itheima.dao"/>
+    </bean>
+
+    <bean id="accountService" class="com.itheima.service.impl.AccountServiceImpl">
+        <property name="accountDao" ref="accountDao"/>
+    </bean>
+
+    <!--                  AOP格式                  -->
+    <!--                  AOP格式                  -->
+    <!--                  AOP格式                  -->
+
+    <!--<bean id="txAdvice" class="com.itheima.aop.TxAdvice">-->
+    <!--<property name="dataSource" ref="dataSource"/>-->
+    <!--</bean>-->
+
+    <!--<aop:config>-->
+    <!--<aop:pointcut id="pt" expression="execution(* *..transfer(..))"/>-->
+    <!--<aop:aspect ref="txAdvice">-->
+    <!--<aop:around method="tx" pointcut-ref="pt"/>-->
+    <!--</aop:aspect>-->
+    <!--</aop:config>-->
+
+    <!--                  TX格式                  -->
+    <!--                  TX格式                  -->
+    <!--                  TX格式                  -->
+
+    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!--定义事务管理的通知类-->
+    <tx:advice id="txAdvice" transaction-manager="txManager">
+        <!--定义控制的事务-->
+        <tx:attributes>
+            <tx:method name="*" read-only="false"/>
+            <tx:method name="get*" read-only="true"/>
+            <tx:method name="find*" read-only="true"/>
+            <tx:method name="a" read-only="false" propagation="REQUIRED"/>
+            <tx:method name="b" read-only="false" propagation="NEVER"/>
+
+            <tx:method
+                name="transfer"
+                read-only="false"
+                timeout="-1"
+                isolation="DEFAULT"
+                no-rollback-for=""
+                rollback-for=""
+                propagation="REQUIRED"
+                />
+            <!--<tx:method name="transfer" read-only="false"/>-->
+        </tx:attributes>
+    </tx:advice>
+
+    <aop:config>
+        <aop:pointcut id="pt" expression="execution(* com.itheima.service.*Service.*(..))"/>
+        <aop:pointcut id="pt2" expression="execution(* com.itheima.dao.*.b(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="pt"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="pt2"/>
+    </aop:config>
+
+
+</beans>
