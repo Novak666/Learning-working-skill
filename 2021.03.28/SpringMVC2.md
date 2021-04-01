@@ -313,7 +313,7 @@ public void afterCompletion(HttpServletRequest request,
 
 ## 4.1 异常处理器
 
-自定义一个类实现HandlerExceptionResolver接口
+自定义一个类实现HandlerExceptionResolver接口(只要加上@Component注解，出现异常时程序会自动调用该异常处理器)
 
 ```java
 @Component
@@ -514,7 +514,7 @@ public class UserController {
             throw new BusinessException("对不起，年龄必须是0到100之间的数字！");
         }
         if(user.getAge() > 100){
-            throw  new SystemException("服务器连接失败，请尽快检查处理！");
+            throw new SystemException("服务器连接失败，请尽快检查处理！");
         }
         User u1 = new User();
         u1.setName("Tom");
