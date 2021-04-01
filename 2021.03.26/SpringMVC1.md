@@ -543,10 +543,9 @@ http://localhost:8080/itheima_springmvc1/quick11?username=zhangsan&age=12
 
 ```java
 @RequestMapping(value="/quick11")
-    @ResponseBody
-    public void save11(String username,int age) throws IOException {
-        System.out.println(username);
-        System.out.println(age);
+public void save11(String username,int age) throws IOException {
+     System.out.println(username);
+     System.out.println(age);
 }
 ```
 
