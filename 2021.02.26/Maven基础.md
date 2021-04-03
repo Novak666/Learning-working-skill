@@ -124,11 +124,9 @@ mvn test除了编译，还能执行src/test/java下的测试代码
 
 packaging：定义资源的打包方式，取值一般有如下三种
 
-（1）jar：该资源打成jar包，默认是jar
-
-（2）war：该资源打成war包
-
-（3）pom：该资源是一个父资源（表明使用maven分模块管理），打包时只生成一个pom.xml不生成jar或其他包结构
+1. jar：该资源打成jar包，默认是jar
+2. war：该资源打成war包
+3. pom：该资源是一个父资源（表明使用maven分模块管理），打包时只生成一个pom.xml不生成jar或其他包结构
 
 ## 4.5 install
 
