@@ -1,0 +1,9 @@
+port 6501
+dir "/redis/data"
+dbfilename "dump-6501.rdb"
+cluster-enabled yes
+cluster-config-file "cluster-6501.conf"
+cluster-node-timeout 5000
+
+
+其他配置文件参照上面的修改端口即可，内容完全一样

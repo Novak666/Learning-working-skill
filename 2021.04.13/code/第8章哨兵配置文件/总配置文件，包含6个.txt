@@ -1,0 +1,49 @@
+port 6401
+dir "/redis/data"
+dbfilename "dump-6401.rdb"
+
+
+port 6402
+dir "/redis/data"
+dbfilename "dump-6402.rdb"
+slaveof 127.0.0.1 6401
+
+
+port 6403
+dir "/redis/data"
+dbfilename "dump-6403.rdb"
+slaveof 127.0.0.1 6401
+
+
+port 26401
+dir "/redis/data"
+sentinel monitor mymaster 127.0.0.1 6401 2
+sentinel down-after-milliseconds mymaster 5000
+sentinel failover-timeout mymaster 20000
+sentinel parallel-sync mymaster 1
+sentinel deny-scripts-reconfig yes
+
+
+port 26402
+dir "/redis/data"
+sentinel monitor mymaster 127.0.0.1 6401 2
+sentinel down-after-milliseconds mymaster 5000
+sentinel failover-timeout mymaster 20000
+sentinel parallel-sync mymaster 1
+sentinel deny-scripts-reconfig yes
+
+
+port 26403
+dir "/redis/data"
+sentinel monitor mymaster 127.0.0.1 6401 2
+sentinel down-after-milliseconds mymaster 5000
+sentinel failover-timeout mymaster 20000
+sentinel parallel-sync mymaster 1
+sentinel deny-scripts-reconfig yes
+
+
+
+
+
+
+
