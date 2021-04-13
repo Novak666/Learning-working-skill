@@ -835,7 +835,7 @@ dir path
 rdbcompression yes|no
 ```
 
-设置读写文件过程是否进行RDB格式校验，默认yes，设置为no，节约读写10%时间消耗，单存在数据损坏的风险
+设置读写文件过程是否进行RDB格式校验，默认yes，设置为no，节约读写10%时间消耗，但存在数据损坏的风险
 
 ```
 rdbchecksum yes|no
