@@ -219,3 +219,9 @@ ZooKeeper命令操作，JavaAPI操作，分布式锁，集群搭建，角色
 # 2021.04.13
 
 Redis数据删除与淘汰策略，主从复制，哨兵
+
+
+
+# 2021.04.14
+
+SpringBoot构建工程，配置，整合Junit、Redis、MyBatis

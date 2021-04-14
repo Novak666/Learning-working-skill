@@ -1,0 +1,19 @@
+server:
+  port: 8082
+
+name: abc
+
+person:
+  name: zhangsan
+  age: 20
+  address:
+    - beijing
+    - shanghai
+
+
+address:
+  - beijing
+  - shanghai
+
+msg1: 'hello \n world'  # 单引忽略转义字符
+msg2: "hello \n world"  # 双引识别转义字符
