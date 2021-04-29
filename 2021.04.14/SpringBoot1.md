@@ -110,7 +110,7 @@ public class HelloApplication {
 SpringBoot是基于约定的，所以很多配置都有默认值，但如果想使用自己的配置替换默认配置的话，就可以使用application.properties或者application.yml(application.yaml)进行配置
 
 1. 默认配置文件名称：application
-2. 在同一级目录下优先级为：properties>yml > yaml
+2. 在同一级目录下优先级为：properties > yml > yaml
 
 例如：配置内置Tomcat的端口
 
@@ -142,9 +142,9 @@ server:
 - 大小写敏感
 - 数据值前边必须有空格，作为分隔符
 - 使用缩进表示层级关系
-- 缩进时不允许使用Tab键，只允许使用空格（各个系统 Tab对应的 空格数目可能不同，导致层次混乱）。
+- 缩进时不允许使用Tab键，只允许使用空格（各个系统 Tab对应的空格数目可能不同，导致层次混乱）。
 - 缩进的空格数目不重要，只要相同层级的元素左侧对齐即可
-- ''#" 表示注释，从这个字符一直到行尾，都会被解析器忽略。
+- ''#" 表示注释，从这个字符一直到行尾，都会被解析器忽略
 
 ```yaml
 server: 
@@ -155,7 +155,7 @@ name: abc
 
 ## 5.3 yaml数据格式
 
-**对象(map)**：键值对的集合。
+**对象(map)**：键值对的集合
 
 ```yaml
 person:  
@@ -271,7 +271,7 @@ public class Person {
 
 ## 5.5 profile
 
-在开发SpringBoot应用时，通常同一套程序会被安装到不同环境，比如开发、测试、生产等。其中数据库地址、服务器端口等配置都不同，如果每次打包时，都要修改配置文件，那么会非常麻烦。profile就是进行动态配置切换的。
+在开发SpringBoot应用时，通常同一套程序会被安装到不同环境，比如开发、测试、生产等。其中数据库地址、服务器端口等配置都不同，如果每次打包时，都要修改配置文件，那么会非常麻烦。profile就是进行动态配置切换的
 
 **配置方式**
 
@@ -539,8 +539,6 @@ public class User {
 
 5. 编写dao和mapper文件/纯注解开发
 
-o和mapper文件/纯注解开发
-
 编写dao
 
 ```java
@@ -603,3 +601,5 @@ public class SpringbootMybatisApplicationTests {
 
 }
 ```
+
+注意：@SpringBootTest没有跟参数是因为在test下的目录结构和src下的目录结构一样
