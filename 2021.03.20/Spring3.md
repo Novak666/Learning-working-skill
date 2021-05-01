@@ -186,7 +186,7 @@ public class AopTest {
 
 - 归属：aop:config标签
 
-- 作用：设置具体的AOP通知对应的切入点所在类
+- 作用：设置具体的AOP通知对应的切入点所在类(<font color='red'>配置切面</font>)
 
 - 格式：
 
@@ -332,7 +332,7 @@ execution(* *..*.*(..))
 </aop:config>
 ```
 
-## 2.7 通知的类型
+## 2.7 通知类型
 
 ![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.03.20/pics/1.png)
 
@@ -346,7 +346,7 @@ execution(* *..*.*(..))
 
 - 归属：aop:aspect标签
 
-- 作用：最终通知
+- 作用：前置通知
 
 - 格式：
 
@@ -485,7 +485,7 @@ execution(* *..*.*(..))
   - 方法需在第一个参数位置设定ProceedingJoinPoint对象，通过该对象调用proceed()方法，实现对原始方法的调用。如省略该参数，原始方法将无法执行
   - 使用proceed()方法调用原始方法时，因无法预知原始方法运行过程中是否会出现异常，强制抛出Throwable对象，封装原始方法中可能出现的异常信息
 
-## 2.8 通知的类型
+## 2.8 通知获取数据
 
 ### 2.8.1 通知获取参数数据
 
@@ -548,7 +548,7 @@ execution(* *..*.*(..))
   }
   ```
 
-- AOP配置l
+- AOP配置
 
   ```xml
   <aop:aspect ref="myAdvice">
@@ -633,7 +633,7 @@ execution(* *..*.*(..))
   }
   ```
 
-- 适用于返回后通知（after-throwing）
+- 适用于异常通知（after-throwing）
 
 # 3. AOP配置—基于注解
 
