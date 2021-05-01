@@ -525,7 +525,7 @@ public class UserServiceImpl implements UserService {
 - 所有格式统一使用  value=“********”
 
   - 常量  #{10}  #{3.14}  #{2e5}  #{‘itcast’}
-  - 引用bean  #{beanId}    
+  - 引用bean  #{beanId}
   - 引用bean属性  #{beanId.propertyName}
   - 引用bean方法  beanId.methodName().method2()
   - 引用静态方法  T(java.lang.Math).PI
