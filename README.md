@@ -225,3 +225,9 @@ Redis数据删除与淘汰策略，主从复制，哨兵
 # 2021.04.14
 
 SpringBoot构建工程，配置，整合Junit、Redis、MyBatis
+
+
+
+# 2021.05.15
+
+SpringBoot的Condition接口，加载第三方Bean，@import，自定义starter
