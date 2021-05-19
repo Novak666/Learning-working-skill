@@ -231,3 +231,9 @@ SpringBoot构建工程，配置，整合Junit、Redis、MyBatis
 # 2021.05.15
 
 SpringBoot的Condition接口，加载第三方Bean，@import，自定义starter
+
+
+
+# 2021.05.19
+
+Spring Cloud服务治理(注册中心)，包括Eureka、Consul、Nacos，Ribbon负载均衡

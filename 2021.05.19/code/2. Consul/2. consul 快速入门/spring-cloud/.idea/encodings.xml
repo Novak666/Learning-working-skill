@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/spring-cloud-parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-parent/consul-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-parent/consul-provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-parent/eureka-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-parent/eureka-provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-parent/eureka-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-parent/eureka-server-1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-parent/eureka-server-2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-parent/eureka-server-ha" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-parent/eureka-server-ha1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-parent/eureka-server-ha1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-parent/eureka-server-ha2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-parent/eureka-server1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-parent/eureka-server2" charset="UTF-8" />
+  </component>
+</project>
