@@ -237,3 +237,9 @@ SpringBoot的Condition接口，加载第三方Bean，@import，自定义starter
 # 2021.05.19
 
 Spring Cloud服务治理(注册中心)，包括Eureka、Consul、Nacos，Ribbon负载均衡
+
+
+
+# 2021.05.20
+
+Spring Cloud之声明式服务调用Feign，熔断器Hystrix，网关Gateway
