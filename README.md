@@ -242,4 +242,10 @@ Spring Cloud服务治理(注册中心)，包括Eureka、Consul、Nacos，Ribbon�
 
 # 2021.05.20
 
-Spring Cloud之声明式服务调用Feign，熔断器Hystrix，网关Gateway
+Spring Cloud声明式服务调用Feign，熔断器Hystrix，网关Gateway
+
+
+
+# 2021.05.22
+
+Spring Cloud分布式配置中心Config，消息总线Bus，消息驱动Stream，链路追踪Sleuth+Zipkin
