@@ -249,3 +249,9 @@ Spring Cloud声明式服务调用Feign，熔断器Hystrix，网关Gateway
 # 2021.05.22
 
 Spring Cloud分布式配置中心Config，消息总线Bus，消息驱动Stream，链路追踪Sleuth+Zipkin
+
+
+
+# 2021.05.25
+
+RabbitMQ的模式，包括简单模式、工作模式、广播模式、路由模式和通配符模式，SpringBoot整合RabbitMQ
