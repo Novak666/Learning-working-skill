@@ -1,0 +1,12 @@
+spring:
+  rabbitmq:
+    virtual-host: /pay
+    username: lisi
+    password: lisi
+    port: 5672
+    publisher-confirms: true # 开启confirm 模式
+    publisher-returns: true # 开启return模式
+    listener:
+      simple:
+        acknowledge-mode: manual  # 手动模式 需要消费端自己自定义ack
+        prefetch: 1 # 设置每一个消费端 最多处理的未确认的消息的数量

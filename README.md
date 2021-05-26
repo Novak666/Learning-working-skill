@@ -255,3 +255,9 @@ Spring Cloud分布式配置中心Config，消息总线Bus，消息驱动Stream�
 # 2021.05.25
 
 RabbitMQ的模式，包括简单模式、工作模式、广播模式、路由模式和通配符模式，SpringBoot整合RabbitMQ
+
+
+
+# 2021.05.26
+
+RabbitMQ生产者可靠性投递，消费者确认机制(ACK)，消费限流，TTL，死信队列，延迟队列，幂等性
