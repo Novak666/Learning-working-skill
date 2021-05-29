@@ -261,3 +261,9 @@ RabbitMQ的模式，包括简单模式、工作模式、广播模式、路由模
 # 2021.05.26
 
 RabbitMQ生产者可靠性投递，消费者确认机制(ACK)，消费限流，TTL，死信队列，延迟队列，幂等性
+
+
+
+# 2021.05.29
+
+Elasticsearch相关概念，Java操作Elasticsearch，分词器简介
