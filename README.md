@@ -267,3 +267,10 @@ RabbitMQ生产者可靠性投递，消费者确认机制(ACK)，消费限流，T
 # 2021.05.29
 
 Elasticsearch相关概念，Java操作Elasticsearch，分词器简介
+
+
+
+# 2021.06.05
+
+Elasticsearch操作索引，映射，文档，Spring Data Elasticsearch
+

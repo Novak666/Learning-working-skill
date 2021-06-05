@@ -1,0 +1,5 @@
+spring:
+  data:
+    elasticsearch:
+      cluster-name: elasticsearch # 集群的名称和es集群名匹配
+      cluster-nodes: 127.0.0.1:9300 # 节点的地址（ip：port）
