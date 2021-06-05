@@ -633,7 +633,6 @@ public interface ArticleDao extends ElasticsearchRepository<Article,Long> {
     //更新文档@Highlight
     //查询文档
     //删除文档
-
     //自定义查询
     List<Article> findByTitle(String title);
 
