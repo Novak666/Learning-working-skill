@@ -560,7 +560,6 @@ SpringBoot集成spring data elasticsearch的方式来开发更加的方便和快
  * 3.设置文档的唯一标识
  * 4.手动创建映射
  *
- *
  * @Document(indexName = "blog03",type = "article")
  *
  * document 注解修饰类 标识该POJO和es文档建立映射关系
