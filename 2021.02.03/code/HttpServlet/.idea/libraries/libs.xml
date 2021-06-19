@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/request_demo/web/WEB-INF/libs/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/request_demo/web/WEB-INF/libs/commons-beanutils-1.9.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ideaLibSources/commons-beanutils-1.9.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
