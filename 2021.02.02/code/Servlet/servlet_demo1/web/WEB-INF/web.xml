@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <!--配置快速入门1Servlet-->
+    <servlet>
+        <servlet-name>servletDemo01</servlet-name>
+        <servlet-class>com.itheima.servlet.ServletDemo01</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servletDemo01</servlet-name>
+        <url-pattern>/servletDemo01</url-pattern>
+    </servlet-mapping>
+
+    <!--配置快速入门2Servlet-->
+    <servlet>
+        <servlet-name>servletDemo02</servlet-name>
+        <servlet-class>com.itheima.servlet.ServletDemo02</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servletDemo02</servlet-name>
+        <url-pattern>/servletDemo02</url-pattern>
+    </servlet-mapping>
+
+    <!--演示Servlet生命周期的配置-->
+    <servlet>
+        <servlet-name>servletDemo03</servlet-name>
+        <servlet-class>com.itheima.servlet.ServletDemo03</servlet-class>
+        <!--配置Servlet启动时机 正整数代表服务器启动时创建，负数或不写代表第一次访问时创建-->
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servletDemo03</servlet-name>
+        <url-pattern>/servletDemo03</url-pattern>
+    </servlet-mapping>
+
+    <!--演示Servlet线程安全的配置-->
+    <servlet>
+        <servlet-name>servletDemo04</servlet-name>
+        <servlet-class>com.itheima.servlet.ServletDemo04</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servletDemo04</servlet-name>
+        <url-pattern>/servletDemo04</url-pattern>
+    </servlet-mapping>
+
+    <!--演示Servlet不同映射方式-->
+    <!--具体名称的方式-->
+    <!--<servlet>
+        <servlet-name>servletDemo05</servlet-name>
+        <servlet-class>com.itheima.servlet.ServletDemo05</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servletDemo05</servlet-name>
+        <url-pattern>/servletDemo05</url-pattern>
+    </servlet-mapping>-->
+    <!--/开头+通配符的方式-->
+    <!--<servlet>
+        <servlet-name>servletDemo05</servlet-name>
+        <servlet-class>com.itheima.servlet.ServletDemo05</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servletDemo05</servlet-name>
+        <url-pattern>/servlet/*</url-pattern>
+    </servlet-mapping>-->
+    <!--通配符+固定格式结尾的方式-->
+    <!--<servlet>
+        <servlet-name>servletDemo05</servlet-name>
+        <servlet-class>com.itheima.servlet.ServletDemo05</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servletDemo05</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>-->
+
+    <!--演示Servlet多路径映射-->
+    <servlet>
+        <servlet-name>vip</servlet-name>
+        <servlet-class>com.itheima.servlet.ServletDemo06</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>vip</servlet-name>
+        <url-pattern>/vip</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>vvip</servlet-name>
+        <servlet-class>com.itheima.servlet.ServletDemo06</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>vvip</servlet-name>
+        <url-pattern>/vvip</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>other</servlet-name>
+        <servlet-class>com.itheima.servlet.ServletDemo06</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>other</servlet-name>
+        <url-pattern>/other</url-pattern>
+    </servlet-mapping>
+</web-app>

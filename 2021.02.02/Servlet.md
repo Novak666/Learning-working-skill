@@ -305,7 +305,7 @@ ServletContext对象，它是应用上下文对象。每一个应用有且只有
 
 ## 3.4 配置
 
-ServletContext既然被称之为应用上下文对象，所以它的配置是针对整个应用的配置，而非某个特定Servlet的配置。它的配置被称为应用的初始化参数配置。
+ServletContext既然被称之为应用上下文对象，所以它的配置是针对<font color='red'>整个web应用项目</font>的配置，而非某个特定Servlet的配置。它的配置被称为应用的初始化参数配置。
 
 配置的方式，需要在`<web-app>`根标签中使用`<context-param>`来配置初始化参数。具体代码如下：
 
@@ -472,3 +472,17 @@ public @interface WebServlet {
 
 6. 启动tomcat，测试
 
+# 5. IDEA导入Servlet项目
+
+1. 生成Empty Project，命名为Servlet
+
+2. 复制Modules到Servlet文件夹内
+
+3. 在Project Structure中引入Module，选择Create module from existing sources，reuse，Dependencies中选择Module SDK，+上Tomcat依赖Libraries
+
+   ![a1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.02/pics/a1.png)
+
+4. 在Project Structure的Artifacts，生成war包
+5. 配置Tomcat启动参数
+
+6. 测试

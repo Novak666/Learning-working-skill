@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <!--配置Servlet-->
+    <servlet>
+        <servlet-name>servletConfigDemo</servlet-name>
+        <servlet-class>com.itheima.servlet.ServletConfigDemo</servlet-class>
+        <!--配置ServletConfig初始化参数-->
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>desc</param-name>
+            <param-value>This is ServletConfig</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servletConfigDemo</servlet-name>
+        <url-pattern>/servletConfigDemo</url-pattern>
+    </servlet-mapping>
+
+    <!--配置Servlet-->
+    <servlet>
+        <servlet-name>servletContextDemo</servlet-name>
+        <servlet-class>com.itheima.servlet.ServletContextDemo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servletContextDemo</servlet-name>
+        <url-pattern>/servletContextDemo</url-pattern>
+    </servlet-mapping>
+
+
+    <!--配置ServletContext-->
+    <context-param>
+        <param-name>globalEncoding</param-name>
+        <param-value>UTF-8</param-value>
+    </context-param>
+    <context-param>
+        <param-name>globalDesc</param-name>
+        <param-value>This is ServletContext</param-value>
+    </context-param>
+</web-app>
