@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="session_demo:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/session_demo_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="session_demo" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="session_demo/web/Web" />
+    </root>
+  </artifact>
+</component>
