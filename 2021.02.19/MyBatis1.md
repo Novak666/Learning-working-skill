@@ -210,7 +210,7 @@ org.apache.ibatis.session.SqlSession：构建者对象接口。用于执行 SQL�
 
 ![6](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.02.19/pics/6.png)
 
-id：唯一标识，配合名称空间使用
+id：<font color='red'>唯一标识，配合名称空间，在代码中使用</font>
 
 parameterType：指定参数映射的对象类型    
 
@@ -266,6 +266,8 @@ StudentMapper.xml文件中添加标签
     INSERT INTO student VALUES (#{id},#{name},#{age})
 </insert>
 ```
+
+<font color='red'>id，name，age分别对应student的属性字段，反射实现</font>
 
 示例代码
 

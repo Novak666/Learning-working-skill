@@ -1,0 +1,15 @@
+CREATE DATABASE db1;
+
+USE db1;
+
+CREATE TABLE student(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	NAME VARCHAR(20),
+	age INT
+);
+
+INSERT INTO student VALUES (NULL,'张三',23);
+INSERT INTO student VALUES (NULL,'李四',24);
+INSERT INTO student VALUES (NULL,'王五',25);
+
+SELECT * FROM student;

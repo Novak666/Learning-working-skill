@@ -56,7 +56,7 @@ public class StudentTest01 {
         //SqlSession sqlSession = sqlSessionFactory.openSession(true);
 
         //4.执行映射配置文件中的sql语句，并接收结果
-        Student stu = new Student(5,"周七",37);
+        Student stu = new Student(5,"周五",37);
         int result = sqlSession.update("StudentMapper.update",stu);
 
         //5.提交事务
@@ -131,7 +131,7 @@ public class StudentTest01 {
     @Test
     public void selectAll() throws Exception{
         //1.加载核心配置文件
-        //InputStream is = Resources.getResourceAsStream("MyBatisConfig.xml");
+//        InputStream is = Resources.getResourceAsStream("MyBatisConfig.xml");
         InputStream is = StudentTest01.class.getClassLoader().getResourceAsStream("MyBatisConfig.xml");
 
         //2.获取SqlSession工厂对象
