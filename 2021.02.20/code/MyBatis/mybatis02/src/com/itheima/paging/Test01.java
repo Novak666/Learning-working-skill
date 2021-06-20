@@ -34,7 +34,7 @@ public class Test01 {
         // 第二页：显示3条数据
         //PageHelper.startPage(2,3);
         // 第三页：显示3条数据
-        PageHelper.startPage(3,3);
+        PageHelper.startPage(1,3);
 
         //5.调用实现类的方法，接收结果
         List<Student> list = mapper.selectAll();

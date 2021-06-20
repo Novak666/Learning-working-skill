@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.itheima.table02.OneToManyMapper">
+    <resultMap id="oneToMany" type="classes">
+        <id column="cid" property="id"/>
+        <result column="cname" property="name"/>
+
+        <!--
+            collection：配置被包含的集合对象映射关系
+            property：被包含对象的变量名
+            ofType：被包含对象的实际数据类型
+        -->
+        <collection property="students" ofType="student">
+            <id column="sid" property="id"/>
+            <result column="sname" property="name"/>
+            <result column="sage" property="age"/>
+        </collection>
+    </resultMap>
+    <select id="selectAll" resultMap="oneToMany">
+        SELECT c.id cid,c.name cname,s.id sid,s.name sname,s.age sage FROM classes c,student s WHERE c.id=s.cid
+    </select>
+</mapper>

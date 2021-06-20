@@ -6,10 +6,10 @@
 
 实现规则
 
-1. 映射配置文件中的名称空间必须和Dao层接口的全类名相同
-2. 映射配置文件中的增删改查标签的id属性必须和Dao层接口的方法名相同
-3. 映射配置文件中的增删改查标签的parameterType属性必须和Dao层接口方法的参数相同
-4. 映射配置文件中的增删改查标签的resultType属性必须和Dao层接口方法的返回值相同
+1. <font color='red'>映射配置文件中的名称空间必须和Dao层接口的全类名相同</font>
+2. <font color='red'>映射配置文件中的增删改查标签的id属性必须和Dao层接口的方法名相同</font>
+3. <font color='red'>映射配置文件中的增删改查标签的parameterType属性必须和Dao层接口方法的参数相同</font>
+4. <font color='red'>映射配置文件中的增删改查标签的resultType属性必须和Dao层接口方法的返回值相同</font>
 
 ## 1.2 代码实现
 
@@ -64,6 +64,8 @@ StudentMapper.xml
 ```
 
 业务层
+
+<font color='red'>接口实现与之前的区别在于：测试代码是主要写在service层的，而持久层的实例mapper是通过接口代理实现的</font>
 
 ```java
 public class StudentServiceImpl implements StudentService {
@@ -327,10 +329,10 @@ StudentMapper.xml
 
 ```xml
 <!-- 注意：分页助手的插件  配置在通用mapper之前 -->
-<plugin interceptor="com.github.pagehelper.PageHelper">
-    <!-- 指定方言 -->
-    <property name="dialect" value="mysql"/>
-</plugin>
+<!--集成分页助手插件-->
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+    </plugins>
 ```
 
 3. 示例代码
@@ -542,7 +544,7 @@ public class Test01 {
 小节
 
 ```xml
-<resultMap>：配置字段和对象属性的映射关系标签。
+<resultMap>：配置字段和对象属性的映射关系标签，自定义复杂结构。
     id 属性：唯一标识
     type 属性：实体对象类型
 <id>：配置主键映射关系标签。
