@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <!--加载properties文件属性实验-->
+    <!--1.加载context命名空间的支持-->
+    <!--xmlns:context="http://www.springframework.org/schema/context"-->
+
+    <!--2.加载配置文件-->
+    <context:property-placeholder location="classpath:*.properties"/>
+
+    <!--<bean id="userDao" class="com.itheima.dao.impl.UserDaoImpl">-->
+        <!--<property name="userName" value="${username}"/>-->
+        <!--<property name="password" value="${pwd}"/>-->
+    <!--</bean>-->
+    <!--<bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl"/>-->
+
+    <!--<bean id="userService" class="com.itheima.service.impl.UserServiceImpl">-->
+        <!--<property name="userDao" ref="userDao"/>-->
+        <!--<property name="bookDao" ref="bookDao"/>-->
+    <!--</bean>-->
+
+
+
+
+    <!--团队合作import实验-->
+    <import resource="applicationContext-user.xml"/>
+    <import resource="applicationContext-book.xml"/>
+    <import resource="applicationContext-book2.xml"/>
+
+    <!--<bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl">-->
+        <!--<property name="num" value="3"/>-->
+    <!--</bean>-->
+
+
+
+    <!--加载第三方类库资源实验-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/db1"/>
+        <property name="username" value="root"/>
+        <property name="password" value="root"/>
+    </bean>
+
+
+</beans>

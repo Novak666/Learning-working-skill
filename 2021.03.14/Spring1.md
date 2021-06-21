@@ -765,6 +765,7 @@ public class UserApp {
   - 映射Mapper扫描工作交由spring处理
   - 类型别名交由spring处理
 - 业务发起使用spring上下文对象获取对应的bean
+- <font color='red'>service层不需要再写sqlSession的代码</font>
 
 applicationContext.xml
 

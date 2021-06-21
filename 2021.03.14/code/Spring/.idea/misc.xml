@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Spring_day01_01_ioc入门程序/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring_day01_02_ioc配置/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring_day01_03_di配置/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring_day01_04_实用开发相关配置/pom.xml" />
+        <option value="$PROJECT_DIR$/综合案例制作前基础环境/Spring_day01_05_综合案例spring整合mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring_day01_05_综合案例spring整合mybatis/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_9" default="false" project-jdk-name="9.0" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

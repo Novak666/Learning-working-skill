@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--bean基本属性id,name,class实验-->
+    <!-- bean可以定义多个名称，使用name属性完成，中间使用,分割-->
+    <!--<bean id="userService" name="userService1,userService2" class="com.itheima.service.impl.UserServiceImpl"/>-->
+
+
+
+    <!--bean作用范围实验-->
+    <!--scope用于控制bean创建后的对象是否是单例的 -->
+    <!--<bean id="userService3" scope="prototype" class="com.itheima.service.impl.UserServiceImpl"/>-->
+
+
+
+    <!--bean生命周期实验-->
+    <!--inti-method与destroy-method用于控制bean的生命周期-->
+    <!--<bean id="userService3" scope="prototype" init-method="init" destroy-method="destroy" class="com.itheima.service.impl.UserServiceImpl"/>-->
+
+
+
+    <!--静态工厂创建bean实验-->
+    <!--静态工厂创建bean-->
+    <bean id="userService4" class="com.itheima.service.UserServiceFactory" factory-method="getService"/>
+
+
+
+    <!--实例工厂创建bean实验-->
+    <!--实例工厂对应的bean-->
+    <bean id="factoryBean" class="com.itheima.service.UserServiceFactory2"/>
+    <!--实例工厂创建bean，依赖工厂对象对应的bean-->
+    <bean id="userService5" factory-bean="factoryBean" factory-method="getService" />
+
+</beans>
