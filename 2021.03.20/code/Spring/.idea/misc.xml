@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Spring_day03_01_AOP入门案例/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring_day03_02_AOPXML/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring_day03_03_AOP注解/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring_day03_04_综合案例/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring_day03_05_AOP底层原理/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_9" default="false" project-jdk-name="9.0" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
