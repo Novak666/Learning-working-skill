@@ -203,7 +203,7 @@ public class TxAdvice {
 <aop:config>
     <aop:pointcut id="pt" expression="execution(* *..transfer(..))"/>
     <aop:aspect ref="txAdvice">
-        <aop:around method="tx" pointcut-ref="pt"/>
+        <aop:around method="transactionManager" pointcut-ref="pt"/>
     </aop:aspect>
 </aop:config>
 ```

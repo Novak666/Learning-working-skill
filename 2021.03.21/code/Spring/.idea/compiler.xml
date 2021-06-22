@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Spring_day04_01_编程式事务控制" />
+        <module name="Spring_day04_02_声明式事务XML_TX" />
+        <module name="Spring_day04_03_声明式事务_注解" />
+        <module name="Spring_day04_04_声明式事务_注解驱动" />
+        <module name="Spring_day04_05_JDBCTemplate" />
+        <module name="Spring_day04_06_RedisTemplate" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Spring_day04_01_编程式事务控制" target="1.5" />
+      <module name="Spring_day04_02_声明式事务XML_TX" target="1.5" />
+      <module name="Spring_day04_03_声明式事务_注解" target="1.5" />
+      <module name="Spring_day04_04_声明式事务_注解驱动" target="1.5" />
+      <module name="Spring_day04_05_JDBCTemplate" target="1.5" />
+      <module name="Spring_day04_06_RedisTemplate" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
