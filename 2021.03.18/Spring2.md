@@ -625,7 +625,7 @@ public class UserServiceTest {
 
 - 范例：
 
-  <font color='red'>false表示不拦截</font>
+  <font color='red'>false表示不拦截，不过滤</font>
 
   ```java
   public class MyTypeFilter implements TypeFilter {
@@ -747,7 +747,7 @@ public class UserServiceTest {
   @Import(MyImportBeanDefinitionRegistrar.class)
   ```
 
-  本例子中自定义注册器的作用相当于@ComponentScan("com.itheima")
+  <font color='red'>本例子中自定义注册器的作用相当于@ComponentScan("com.itheima")</font>
 
   ```java
   public class CustomeImportBeanDefinitionRegistrar implements ImportBeanDefinitionRegistrar {

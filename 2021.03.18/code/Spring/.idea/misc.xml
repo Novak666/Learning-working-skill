@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/IoC注解制作前基础环境/Spring_day02_01_注解_IoC注解/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring_day02_01_注解_IoC注解/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring_day02_02_注解整合mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring_day02_03_bean加载过滤/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_9" default="false" project-jdk-name="9.0" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

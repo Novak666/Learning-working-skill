@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Spring_day02_01_注解_IoC注解" />
+        <module name="Spring_day02_01_注解_IoC注解 (1)" />
+        <module name="Spring_day02_02_注解整合MyBatis" />
+        <module name="Spring_day02_03_bean加载过滤" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Spring_day02_01_注解_IoC注解" target="1.5" />
+      <module name="Spring_day02_01_注解_IoC注解 (1)" target="1.5" />
+      <module name="Spring_day02_02_注解整合MyBatis" target="1.5" />
+      <module name="Spring_day02_03_bean加载过滤" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
