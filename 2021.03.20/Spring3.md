@@ -186,7 +186,7 @@ public class AopTest {
 
 - 归属：aop:config标签
 
-- 作用：设置具体的AOP通知对应的切入点所在类(<font color='red'>配置切面</font>)
+- 作用：设置具体的AOP通知所在类(<font color='red'>配置切面</font>)
 
 - 格式：
 
