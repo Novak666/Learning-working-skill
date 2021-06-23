@@ -11,6 +11,7 @@
         <module name="springmvc_restful" />
         <module name="springmvc_test_ajax" />
         <module name="springmvc_test_interceptor" />
+        <module name="springmvc_validator" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,6 +20,7 @@
       <module name="springmvc_restful" target="1.8" />
       <module name="springmvc_test_ajax" target="1.8" />
       <module name="springmvc_test_interceptor" target="1.8" />
+      <module name="springmvc_validator" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
