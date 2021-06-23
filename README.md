@@ -188,13 +188,13 @@ SpringMVC基本配置，响应，请求
 
 # 2021.03.28
 
-SpringMVC异步调用，拦截器，异常处理，文件上传和Restful
+SpringMVC异步调用，拦截器，异常处理，文件上传，Restful和校验框架
 
 
 
 # 2021.04.01
 
-校验框架，SSM整合，包括Spring整合MyBatis和SpringMVC、表现层数据封装、自定义异常，纯注解SSM整合
+SSM整合，包括Spring整合MyBatis和SpringMVC、表现层数据封装、自定义异常，纯注解SSM整合
 
 
 
