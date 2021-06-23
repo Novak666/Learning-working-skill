@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/springmvc_base" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springmvc_base_config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springmvc_request" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springmvc_response" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springmvc_servlet" charset="UTF-8" />
+  </component>
+</project>

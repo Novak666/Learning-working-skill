@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="springmvc_validator:war">
+    <output-path>$PROJECT_DIR$/../springmvc_validator/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>springmvc_validator</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="springmvc_validator-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="springmvc_validator:war exploded" />
+    </root>
+  </artifact>
+</component>

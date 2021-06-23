@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.itheima"/>
+
+
+    <!--    自定义格式转换器案例，配合不带@DateTimeFormat的requestParam11使用-->
+    <!--开启注解驱动，加载自定义格式化转换器对应的类型转换服务-->
+    <!--<mvc:annotation-driven conversion-service="conversionService"/>-->
+    <!--自定义格式化转换器-->
+    <!--<bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">-->
+        <!--&lt;!&ndash;覆盖格式化转换器定义规则，该规则是一个set集合，对格式化转换器来说是追加和替换的思想，而不是覆盖整体格式化转换器&ndash;&gt;-->
+        <!--<property name="formatters">-->
+            <!--<set>-->
+                <!--&lt;!&ndash;具体的日期格式化转换器&ndash;&gt;-->
+                <!--<bean class="org.springframework.format.datetime.DateFormatter">-->
+                    <!--&lt;!&ndash;具体的规则，不具有通用性，仅适用于当前的日期格式化转换器&ndash;&gt;-->
+                    <!--<property name="pattern" value="yyyy-MM-dd"/>-->
+                <!--</bean>-->
+            <!--</set>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+
+    <!--    自定义格式转换器案例，配合带@DateTimeFormat的requestParam11使用-->
+    <!--<mvc:annotation-driven/>-->
+
+
+    <!--&lt;!&ndash;    自定义格数据类型转换器案例，配合requestParam12使用&ndash;&gt;-->
+    <mvc:annotation-driven conversion-service="conversionService"/>
+    <!--自定义类型转换器-->
+    <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <!--覆盖类型转换器定义规则，该规则是一个set集合，对类型转换器来说是追加和替换的思想，而不是覆盖整体格式化转换器-->
+        <property name="converters">
+            <set>
+                <!--添加自定义的类型转换器，会根据定义的格式覆盖系统中默认的格式-->
+                <!--当前案例中是将String转换成Date的类型转换器进行了自定义，所以添加后，系统中原始自带的String——>Date的类型转换器失效-->
+                <bean class="com.itheima.converter.MyDateConverter"/>
+            </set>
+        </property>
+    </bean>
+
+</beans>
