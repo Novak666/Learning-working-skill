@@ -26,18 +26,17 @@
 类型： 形参注解
 位置：处理器类中的方法形参之前
 作用：将异步提交数据组织成标准请求参数格式，并赋值给形参
-范例：
 
 ```java
 @RequestMapping("/ajaxController")
+//使用@RequestBody注解，可以将请求体内容封装到指定参数中
 public String ajaxController(@RequestBody String message){
-    System.out.println(message);
+    System.out.println("ajax request is running..."+message);
     return "page.jsp";
-}  
+}
 ```
 
-- 注解添加到Pojo参数前方时，封装的异步提交数据按照Pojo的属性格式进行关系映射
-- 注解添加到集合参数前方时，封装的异步提交数据按照集合的存储结构进行关系映射 
+注解添加到Pojo参数前方时，封装的异步提交数据按照Pojo的属性格式进行关系映射
 
 ```java
 @RequestMapping("/ajaxPojoToController")
@@ -47,7 +46,11 @@ public String  ajaxPojoToController(@RequestBody User user){
     System.out.println("controller pojo :"+user);
     return "page.jsp";
 }
+```
 
+注解添加到集合参数前方时，封装的异步提交数据按照集合的存储结构进行关系映射 
+
+```java
 @RequestMapping("/ajaxListToController")
 //如果处理参数是List集合且封装了POJO，且页面发送的数据是JSON格式的对象数组，数据将自动映射到集合参数中
 public String  ajaxListToController(@RequestBody List<User> userList){
@@ -58,21 +61,32 @@ public String  ajaxListToController(@RequestBody List<User> userList){
 
 ## 1.3 接收异步请求并响应数据
 
-- 方法返回值为Pojo时，自动封装数据成json对象数据
+```java
+//使用注解@ResponseBody可以将返回的页面不进行解析，直接返回字符串，该注解可以添加到方法上方或返回值前面
+    @RequestMapping("/ajaxReturnString")
+//    @ResponseBody
+    public @ResponseBody String ajaxReturnString(){
+        System.out.println("controller return string ...");
+        return "page.jsp";
+    }
+```
+
+方法返回值为Pojo时，自动封装数据成json对象数据
 
 ```java
 @RequestMapping("/ajaxReturnJson")
 @ResponseBody
+//基于jackon技术，使用@ResponseBody注解可以将返回的POJO对象转成json格式数据
 public User ajaxReturnJson(){
     System.out.println("controller return json pojo...");
     User user = new User();
     user.setName("Jockme");
-    user.setAge(40);
+    user.setAge(39);
     return user;
-}  
+}
 ```
 
-- 方法返回值为List时，自动封装数据成json对象数组数据  
+方法返回值为List时，自动封装数据成json对象数组数据  
 
 ```java
 @RequestMapping("/ajaxReturnJsonList")
@@ -115,7 +129,6 @@ public List ajaxReturnJsonList(){
 类型： 方法注解 、 类注解
 位置：处理器类中的方法上方 或 类上方
 作用：设置当前处理器方法/处理器类中所有方法支持跨域访问
-范例：  
 
 ```java
 @RequestMapping("/cross")
@@ -358,14 +371,43 @@ public class ExceptionResolver implements HandlerExceptionResolver {
 }
 ```
 
+Controller
+
+```java
+@Controller
+public class UserController {
+    @RequestMapping("/save")
+    @ResponseBody
+    public List<User> save(@RequestBody User user) {
+        System.out.println("user controller save is running ...");
+
+        //模拟业务层发起调用产生了异常
+//        int i = 1/0;
+        String str = null;
+        str.length();
+
+        User u1 = new User();
+        u1.setName("Tom");
+        u1.setAge(3);
+        User u2 = new User();
+        u2.setName("Jerry");
+        u2.setAge(5);
+        ArrayList<User> al = new ArrayList<User>();
+        al.add(u1);
+        al.add(u2);
+
+        return al;
+    }
+}
+```
+
 ## 4.2 注解开发异常处理器
 
-- 使用注解实现异常分类管理
-  名称： @ControllerAdvice
-  类型： 类注解
-  位置：异常处理器类上方
-  作用：设置当前类为异常处理器类
-  范例：
+使用注解实现异常分类管理
+名称： @ControllerAdvice
+类型： 类注解
+位置：异常处理器类上方
+作用：设置当前类为异常处理器类
 
 ```java
 @Component
@@ -374,13 +416,12 @@ public class ExceptionAdvice {
 }  
 ```
 
-- 使用注解实现异常分类管理
-  名称： @ExceptionHandler
-  类型： 方法注解
-  位置：异常处理器类中针对指定异常进行处理的方法上方
-  作用：设置指定异常的处理方式
-  范例：
-  说明：处理器方法可以设定多个
+使用注解实现异常分类管理
+名称： @ExceptionHandler
+类型： 方法注解
+位置：异常处理器类中针对指定异常进行处理的方法上方
+作用：设置指定异常的处理方式
+说明：处理器方法可以设定多个
 
 ```java
 @ExceptionHandler(Exception.class)
@@ -390,7 +431,33 @@ public String doOtherException(Exception ex){
 }  
 ```
 
-注意：注解处理器可以拦截到入参类型转换异常，非注解不可以(Controller之后加载)
+```java
+@ControllerAdvice
+public class ExceptionAdvice {
+
+    //类中定义的方法携带@ExceptionHandler注解的会被作为异常处理器，后面添加实际处理的异常类型
+    @ExceptionHandler(NullPointerException.class)
+    @ResponseBody
+    public String doNullException(Exception ex){
+        return "空指针异常";
+    }
+
+    @ExceptionHandler(Exception.class)
+    @ResponseBody
+    public String doException(Exception ex){
+        return "all";
+    }
+
+    @ExceptionHandler(ArithmeticException.class)
+    @ResponseBody
+    public String doArithmeticException(Exception ex){
+        return "ArithmeticException";
+    }
+
+}
+```
+
+<font color='red'>注意：注解处理器可以拦截到入参类型转换异常，非注解不可以(Controller之后加载)</font>
 
 ## 4.3 异常处理解决方案
 
@@ -410,6 +477,8 @@ public String doOtherException(Exception ex){
     记录日志 
 
 ## 4.4 自定义异常
+
+用户行为异常
 
 ```java
 //自定义异常继承RuntimeException，覆盖父类所有的构造方法
@@ -435,6 +504,8 @@ public class BusinessException extends RuntimeException {
 }
 ```
 
+系统异常
+
 ```java
 //自定义异常继承RuntimeException，覆盖父类所有的构造方法
 public class SystemException extends RuntimeException {
@@ -459,8 +530,25 @@ public class SystemException extends RuntimeException {
 }
 ```
 
+模拟业务类异常
+
 ```java
-@Component
+public class UserServlceImpl {
+    public void save(){
+        //业务层中如果出现了异常，就对出现异常的代码进行try...catch...处理
+        //在catch中将出现的异常包装成自定义异常，同时务必将当前异常对象传入自定义异常，避免真正的异常信息消失
+        try {
+            throw new SQLException();
+        } catch (SQLException e) {
+            throw new SystemException("数据库连接超时！",e);
+        }
+    }
+}
+```
+
+项目异常(包括三类异常：用户异常、系统异常、其他异常)
+
+```java
 @ControllerAdvice
 public class ProjectExceptionAdvice {
 
@@ -491,7 +579,7 @@ public class ProjectExceptionAdvice {
 }
 ```
 
-触发
+Controller
 
 ```java
 @Controller
@@ -514,8 +602,10 @@ public class UserController {
             throw new BusinessException("对不起，年龄必须是0到100之间的数字！");
         }
         if(user.getAge() > 100){
-            throw new SystemException("服务器连接失败，请尽快检查处理！");
+            throw  new SystemException("服务器连接失败，请尽快检查处理！");
         }
+
+
         User u1 = new User();
         u1.setName("Tom");
         u1.setAge(3);
@@ -531,7 +621,7 @@ public class UserController {
 }
 ```
 
-# 5. 实用技术
+# 5. 实用技术-文件
 
 ## 5.1 文件上传和下载
 
@@ -626,9 +716,9 @@ public String fileupload(MultipartFile file,MultipartFile file1,MultipartFile fi
 }
 ```
 
-## 5.3 Restful风格配置
+# 6. 实用技术-Restful风格配置
 
-### 5.3.1 Rest
+## 6.1 Rest简介
 
 - Rest（ REpresentational State Transfer）一种网络资源的访问风格，定义了网络资源的访问方式
   - 传统风格访问路径
@@ -638,18 +728,22 @@ public String fileupload(MultipartFile file,MultipartFile file1,MultipartFile fi
     http://localhost/user/1
 - Restful是按照Rest风格访问网络资源
 - 优点
-  隐藏资源的访问行为，通过地址无法得知做的是何种操作
-  书写简化
+  + 隐藏资源的访问行为，通过地址无法得知做的是何种操作
+  + 书写简化
 
-### 5.3.2 Rest行为约定方式
+## 6.2 Rest行为约定方式
 
 GET（查询） http://localhost/user/1 GET
-POST（保存） http://localhost/user POST
+POST（新增） http://localhost/user POST
 PUT（更新） http://localhost/user PUT
 DELETE（删除） http://localhost/user DELETE
 **注意：**上述行为是约定方式，约定不是规范，可以打破，所以称Rest风格，而不是Rest规范
 
-### 5.3.3 Restful开发入门
+## 6.3 Restful开发入门
+
+### 6.3.1 注解@RestController，@PathVariable
+
+注解@RestController，@PathVariable
 
 ```java
 //设置rest风格的控制器
@@ -711,6 +805,35 @@ public class UserController {
 }
 ```
 
+### 6.3.2 GET访问
+
+默认是GET访问
+
+### 6.3.3 POST访问
+
+page.jsp
+
+```jsp
+<form action="/user/1" method="post">
+    <input type="submit"/>
+</form>
+```
+
+### 6.3.4 PUT访问
+
+page.jsp
+
+```jsp
+<form action="/user/1" method="post">
+    <%--当添加了name为_method的隐藏域时，可以通过设置该隐藏域的值，修改请求的提交方式，切换为PUT请求或DELETE请求，但是form表单的提交方式method属性必须填写post--%>
+    <%--该配置需要配合HiddenHttpMethodFilter过滤器使用，单独使用无效，请注意检查web.xml中是否配置了对应过滤器--%>
+    <input type="hidden" name="_method" value="PUT"/>
+    <input type="submit"/>
+</form>
+```
+
+web.xml
+
 ```xml
 <!--配置拦截器，解析请求中的参数_method，否则无法发起PUT请求与DELETE请求，配合页面表单使用-->
 <filter>
@@ -723,25 +846,27 @@ public class UserController {
 </filter-mapping>
 ```
 
-开启SpringMVC对Restful风格的访问支持过滤器，即可通过页面表单提交PUT与DELETE请求
-页面表单使用隐藏域提交请求类型，参数名称固定为_method，必须配合提交类型method=post使用
+### 6.3.5 DELETE访问
 
-```xml
-<form action="/user/1" method="post">
-    <input type="hidden" name="_method" value="PUT"/>
-    <input type="submit"/>
-</form>  
+同上
+
+## 6.4 简化@RequestMapping配置
+
+@GetMapping
+
+```java
+//接收GET请求配置方式
+    //@RequestMapping(value = "{id}",method = RequestMethod.GET)
+    //接收GET请求简化配置方式
+    @GetMapping("{id}")
+    public String get(@PathVariable Integer id){
+        System.out.println("restful is running ....get:"+id);
+        return "success.jsp";
+    }
 ```
 
-- Restful请求路径简化配置方式  
+@PostMapping、@PutMapping、@DeleteMapping……
 
-  ```java
-  @RestController
-  public class UserController {
-      @RequestMapping(value = "/user/{id}",method = RequestMethod.DELETE)
-      public String restDelete(@PathVariable String id){
-          System.out.println("restful is running ....delete:"+id);
-          return "success.jsp";
-      }
-  }  
-  ```
+## 6.5 Postman
+
+一款发送Restful风格请求的工具，可以在开发时快速进行测试

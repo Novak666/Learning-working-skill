@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/springmvc_exception" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc_fileupload" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc_restful" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc_test_ajax" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc_test_interceptor" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/springmvc_test_ajax/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_test_interceptor/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_exception/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_fileupload/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_restful/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_9" default="false" project-jdk-name="9.0" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/springmvc_exception/springmvc_exception.iml" filepath="$PROJECT_DIR$/springmvc_exception/springmvc_exception.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springmvc_fileupload/springmvc_fileupload.iml" filepath="$PROJECT_DIR$/springmvc_fileupload/springmvc_fileupload.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springmvc_restful/springmvc_restful.iml" filepath="$PROJECT_DIR$/springmvc_restful/springmvc_restful.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springmvc_test_ajax/springmvc_test_ajax.iml" filepath="$PROJECT_DIR$/springmvc_test_ajax/springmvc_test_ajax.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springmvc_test_interceptor/springmvc_test_interceptor.iml" filepath="$PROJECT_DIR$/springmvc_test_interceptor/springmvc_test_interceptor.iml" />
+    </modules>
+  </component>
+</project>

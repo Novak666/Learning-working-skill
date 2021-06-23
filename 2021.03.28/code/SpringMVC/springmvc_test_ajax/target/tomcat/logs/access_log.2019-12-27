@@ -1,0 +1,7 @@
+0:0:0:0:0:0:0:1 - - [27/Dec/2019:10:34:42 +0800] "GET /ajax.jsp HTTP/1.1" 200 4089 http-bio-80-exec-1 100
+0:0:0:0:0:0:0:1 - - [27/Dec/2019:10:34:45 +0800] "POST /ajaxReturnJson HTTP/1.1" 200 37 http-bio-80-exec-3 1083
+0:0:0:0:0:0:0:1 - - [27/Dec/2019:10:34:47 +0800] "POST /ajaxReturnJsonList HTTP/1.1" 200 60 http-bio-80-exec-4 7
+0:0:0:0:0:0:0:1 - - [27/Dec/2019:10:35:19 +0800] "GET /ajax.jsp HTTP/1.1" 200 4123 http-bio-80-exec-5 496
+0:0:0:0:0:0:0:1 - - [27/Dec/2019:10:35:21 +0800] "POST /ajaxReturnJsonList HTTP/1.1" 200 60 http-bio-80-exec-7 4
+0:0:0:0:0:0:0:1 - - [27/Dec/2019:10:35:35 +0800] "GET /ajax.jsp HTTP/1.1" 200 4121 http-bio-80-exec-8 132
+0:0:0:0:0:0:0:1 - - [27/Dec/2019:10:35:36 +0800] "POST /ajaxReturnJson HTTP/1.1" 200 37 http-bio-80-exec-10 4
