@@ -1,231 +1,6 @@
-# 1. 校验框架
+# 1. SSM整合
 
-## 1.1 校验框架简介
-
-### 1.1.1 表单校验作用
-
-数据可以随意输入，导致错误的结果。后端表单校验的重要性
-
-表单校验保障了数据有效性、安全性
-
-### 1.1.2 表单校验分类
-
-- 校验位置：
-  - 客户端校验
-  - 服务端校验
-- 校验内容与对应方式：
-  - 格式校验
-    - 客户端：使用Js技术，利用正则表达式校验
-    - 服务端：使用校验框架 
-  - 逻辑校验
-    - 客户端：使用ajax发送要校验的数据，在服务端完成逻辑校验，返回校验结果
-    - 服务端：接收到完整的请求后，在执行业务操作前，完成逻辑校验
-
-### 1.1.3 表单校验规则
-
-- 长度：例如用户名长度，评论字符数量
-- 非法字符：例如用户名组成
-- 数据格式：例如Email格式、 IP地址格式
-- 边界值：例如转账金额上限，年龄上下限
-- 重复性：例如用户名是否重复
-
-### 1.1.4 表单校验框架
-
-- JSR（Java Specification Requests）：Java 规范提案  
-
-  303：提供bean属性相关校验规则  
-
-- JSR规范列表
-
-  - 企业应用技术
-    Contexts and Dependency Injection for Java (Web Beans 1.0) (JSR 299)
-    Dependency Injection for Java 1.0 (JSR 330)@postConstruct, @PreDestroy
-    Bean Validation 1.0 (JSR 303)
-    Enterprise JavaBeans 3.1 (includes Interceptors 1.1) (JSR 318)
-    Java EE Connector Architecture 1.6 (JSR 322)
-    Java Persistence 2.0 (JSR 317)
-    Common Annotations for the Java Platform 1.1 (JSR 250)
-    Java Message Service API 1.1 (JSR 914)
-    Java Transaction API (JTA) 1.1 (JSR 907)
-    JavaMail 1.4 (JSR 919)
-  - Web应用技术
-    Java Servlet 3.0 (JSR 315)
-    JavaServer Faces 2.0 (JSR 314)
-    JavaServer Pages 2.2/Expression Language 2.2 (JSR 245)
-    Standard Tag Library for JavaServer Pages (JSTL) 1.2 (JSR 52)
-    Debugging Support for Other Languages 1.0 (JSR 45)
-    模块化 (JSR 294)
-    Swing应用框架 (JSR 296)
-    JavaBeans Activation Framework (JAF) 1.1 (JSR 925)
-    Streaming API for XML (StAX) 1.0 (JSR 173)
-  - 管理与安全技术
-    Java Authentication Service Provider Interface for Containers (JSR 196)
-    Java Authorization Contract for Containers 1.3 (JSR 115)
-    Java EE Application Deployment 1.2 (JSR 88)
-    J2EE Management 1.1 (JSR 77)
-    Java SE中与Java EE有关的规范
-    JCache API (JSR 107)
-    Java Memory Model (JSR 133)
-    Concurrency Utilitie (JSR 166)
-    Java API for XML Processing (JAXP) 1.3 (JSR 206)
-    Java Database Connectivity 4.0 (JSR 221)
-    Java Management Extensions (JMX) 2.0 (JSR 255)
-    Java Portlet API (JSR 286)
-
-- Web Service技术
-  Java Date与Time API (JSR 310)
-  Java API for RESTful Web Services (JAX-RS) 1.1 (JSR 311)
-  Implementing Enterprise Web Services 1.3 (JSR 109)
-  Java API for XML-Based Web Services (JAX-WS) 2.2 (JSR 224)
-  Java Architecture for XML Binding (JAXB) 2.2 (JSR 222)
-  Web Services Metadata for the Java Platform (JSR 181)
-  Java API for XML-Based RPC (JAX-RPC) 1.1 (JSR 101)
-  Java APIs for XML Messaging 1.3 (JSR 67)
-  Java API for XML Registries (JAXR) 1.0 (JSR 93)
-
-- JCP（Java Community Process）：Java社区
-
-- Hibernate框架中包含一套独立的校验框架hibernate-validator  
-
-  导入坐标
-
-  ```xml
-  <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-validator</artifactId>
-      <version>6.1.0.Final</version>
-  </dependency>
-  ```
-
-  **注意：**
-  tomcat7 ：搭配hibernate-validator版本5.*.*.Final
-  tomcat8.5↑ ：搭配hibernate-validator版本6.*.*.Final
-
-## 1.2 快速入门
-
-**1. 开启校验**
-
-名称：@Valid 、 @Validated
-类型：形参注解
-位置：处理器类Controller中的实体类类型的方法形参前方
-作用：设定对当前实体类类型参数进行校验
-范例：  
-
-```java
-@RequestMapping(value = "/addemployee")
-public String addEmployee(@Valid Employee employee) {
-    System.out.println(employee);
-}
-```
-
-**2.设置校验规则**
-
-名称：@NotNull
-类型：属性注解 等
-位置：实体类属性上方
-作用：设定当前属性校验规则
-范例：
-    每个校验规则所携带的参数不同，根据校验规则进行相应的调整
-    具体的校验规则查看对应的校验框架进行获取
-
-```java
-public class Employee{
-    @NotNull(message = "姓名不能为空")
-    private String name;//员工姓名
-}  
-```
-
-**3.获取错误信息**
-
-通过形参Errors获取校验结果数据，通过Model接口将数据封装后传递到页面显示
-
-```java
-@RequestMapping(value = "/addemployee")
-public String addEmployee(@Valid Employee employee, Errors errors, Model model){
-    System.out.println(employee);
-    if(errors.hasErrors()){
-        for(FieldError error : errors.getFieldErrors()){
-            model.addAttribute(error.getField(),error.getDefaultMessage());
-        }
-        return "addemployee.jsp";
-    }
-    return "success.jsp";
-}  
-```
-
-jsp页面获取后台封装的校验结果信息
-
-```html
-<form action="/addemployee" method="post">
-    员工姓名：<input type="text" name="name"><span style="color:red">${name}</span><br/>
-    员工年龄：<input type="text" name="age"><span style="color:red">${age}</span><br/>
-    <input type="submit" value="提交">
-</form>
-```
-
-## 1.3 多规则校验
-
-- 同一个属性可以添加多个校验器
-
-```java
-@NotNull(message = "请输入您的年龄")
-@Max(value = 60,message = "年龄最大值不允许超过60岁")
-@Min(value = 18,message = "年龄最小值不允许低于18岁")
-private Integer age;//员工年龄
-```
-
-- 3种判定空校验器的区别
-
-![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.04.01/pics/1.png)
-
-## 1.4 嵌套校验
-
-名称：@Valid
-类型：属性注解
-位置：实体类中的引用类型属性上方
-作用：设定当前应用类型属性中的属性开启校验
-范例：
-
-```java
-public class Employee {
-    //实体类中的引用类型通过标注@Valid注解，设定开启当前引用类型字段中的属性参与校验
-    @Valid
-    private Address address;
-}
-```
-
-注意：开启嵌套校验后，被校验对象内部需要添加对应的校验规则
-
-## 1.5 分组校验
-
-- 同一个模块，根据执行的业务不同，需要校验的属性会有不同
-  - 新增用户
-  - 修改用户
-- 对不同种类的属性进行分组，在校验时可以指定参与校验的字段所属的组类别
-  - 定义组（通用）
-  - 为属性设置所属组，可以设置多个
-  - 开启组校验
-
-用@Validated注解
-
-```java
-public interface GroupOne {
-}
-```
-
-```java
-public String addEmployee(@Validated({GroupOne.class}) Employee employee){
-}  
-```
-
-```java
-@NotEmpty(message = "姓名不能为空",groups = {GroupOne.class})
-private String name;//员工姓名
-```
-
-# 2. SSM整合
-
-## 2.1 整合流程简介
+## 1.1 整合流程简介
 
 最重要的5个步骤
 
@@ -256,9 +31,9 @@ SSM（Spring+SpringMVC+MyBatis）
 
 案例的表结构：
 
-![2](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.04.01/pics/2.png)
+![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.04.01/pics/1.png)
 
-## 2.2 项目结构搭建
+## 1.2 项目结构搭建
 
 - 创建项目，组织项目结构，创建包
 
@@ -273,9 +48,9 @@ SSM（Spring+SpringMVC+MyBatis）
 
 搭建完的结构如下：
 
-![3](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.04.01/pics/3.png)
+![2](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.04.01/pics/2.png)
 
-## 2.3 Spring整合MyBatis
+## 1.3 Spring整合MyBatis
 
 + 创建Spring配置文件
   + 组件扫描
@@ -501,7 +276,7 @@ public interface UserService {
 }
 ```
 
-## 2.4 整合junit
+## 1.4 整合junit
 
 单元测试整合junit
 
@@ -520,7 +295,7 @@ public class UserServiceTest {
 }
 ```
 
-## 2.5 SpringMVC准备工作
+## 1.5 SpringMVC准备工作
 
 + web.xml加载SpringMVC
 + rest风格
@@ -629,7 +404,7 @@ public class UserController {
 }
 ```
 
-## 2.6 Spring整合SpringMVC
+## 1.6 Spring整合SpringMVC
 
 web.xml加载Spring环境
 
@@ -688,7 +463,7 @@ public class UserController {
 }
 ```
 
-## 2.7 表现层的数据封装
+## 1.7 表现层的数据封装
 
 + 前端接收到表现层返回的数据类型
   + 操作单个是否成功  true/false
@@ -698,7 +473,7 @@ public class UserController {
 
 统一返回数据的格式
 
-![4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.04.01/pics/4.png)
+![3](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.04.01/pics/3.png)
 
 ```java
 public class Result {
@@ -825,7 +600,7 @@ public class UserController {
 }
 ```
 
-## 2.8 自定义异常
+## 1.8 自定义异常
 
 - 设定自定义异常，封装程序执行过程中出现的问题，便于表现层进行统一的异常拦截并进行处理
   - BusinessException
@@ -915,7 +690,7 @@ public class ProjectExceptionAdivce {
 }
 ```
 
-# 3. 纯注解整合SSM
+# 2. 纯注解整合SSM
 
 web.xml
 
@@ -927,7 +702,7 @@ UserDao.xml
 
 jdbc.properties
 
-## 3.1 替换UserDao.xml
+## 2.1 替换UserDao.xml
 
 UserDao.java
 
@@ -985,7 +760,7 @@ public interface UserDao {
 }
 ```
 
-## 3.2 替换applicationContext.xml
+## 2.2 替换applicationContext.xml
 
 创建config下的SpringConfig配置类，现将applicationContext.xml中的关于JDBC和MyBatis的内容各自放入新创建的JdbcConfig和MyBatisConfig配置类中
 
@@ -1091,7 +866,7 @@ public class SpringConfig {
 }
 ```
 
-## 3.3 替换spring-mvc.xml  
+## 2.3 替换spring-mvc.xml  
 
 SpringMvcConfig类
 
@@ -1113,7 +888,7 @@ public class SpringMvcConfig {
 4. 支持@Valid的参数校验(需要导入JSR-303规范)
 5. 配合第三方jar包和SpringMVC提供的注解读写XML和JSON格式数据  
 
-## 3.4 替换web.xml
+## 2.4 替换web.xml
 
 ServletContainersInitConfig
 
@@ -1160,4 +935,4 @@ public class ServletContainersInitConfig extends AbstractDispatcherServletInitia
 }
 ```
 
-![5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.04.01/pics/5.png)
+![4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.04.01/pics/4.png)
