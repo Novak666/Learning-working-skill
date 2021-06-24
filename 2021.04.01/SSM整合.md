@@ -130,9 +130,7 @@ public User getByUserNameAndPassword(@Param("userName") String userName,@Param("
 
 注意：
 
-在不使用@Param注解的时候，函数的参数只能为一个，并且在查询语句取值时只能用#{}。如果想传递多个参数，parameterType参数类型为map（此处为别名）或者为JavaBean。
-
-而使用@Param注解则可以使用多个参数，无需再设置parameterType，并且在查询语句中使用时可以使用#{}或者${}
+<font color='red'>在不使用@Param注解的时候，函数的参数只能为一个，并且在查询语句取值时只能用#{}。如果想传递多个参数，parameterType参数类型为map（此处为别名）或者为JavaBean。而使用@Param注解则可以使用多个参数，无需再设置parameterType，并且在查询语句中使用时可以使用#{}或者${}</font>
 
 修改业务层UserServiceImpl.java
 
@@ -295,6 +293,8 @@ public class UserServiceTest {
 }
 ```
 
+<font color='red'>测试part2代码</font>
+
 ## 1.5 SpringMVC准备工作
 
 + web.xml加载SpringMVC
@@ -341,7 +341,7 @@ web.xml配置
 
 spring-mvc.xml配置
 
-```java
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:context="http://www.springframework.org/schema/context"
@@ -404,6 +404,8 @@ public class UserController {
 }
 ```
 
+<font color='red'>postman测试part3代码</font>
+
 ## 1.6 Spring整合SpringMVC
 
 web.xml加载Spring环境
@@ -463,7 +465,9 @@ public class UserController {
 }
 ```
 
-## 1.7 表现层的数据封装
+<font color='red'>postman测试part4代码</font>
+
+## 1.7 表现层返回数据的封装
 
 + 前端接收到表现层返回的数据类型
   + 操作单个是否成功  true/false
@@ -600,6 +604,8 @@ public class UserController {
 }
 ```
 
+<font color='red'>postman测试part5-1代码</font>
+
 ## 1.8 自定义异常
 
 - 设定自定义异常，封装程序执行过程中出现的问题，便于表现层进行统一的异常拦截并进行处理
@@ -689,6 +695,8 @@ public class ProjectExceptionAdivce {
 
 }
 ```
+
+<font color='red'>postman测试part5-2代码</font>
 
 # 2. 纯注解整合SSM
 

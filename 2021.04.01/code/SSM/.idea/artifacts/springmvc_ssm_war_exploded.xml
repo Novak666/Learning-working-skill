@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="springmvc_ssm:war exploded">
+    <output-path>$PROJECT_DIR$/SSM整合/part0/springmvc_ssm/target/springmvc_ssm</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="springmvc_ssm" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/SSM整合/part0/springmvc_ssm/target/springmvc_ssm/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="springmvc_ssm/web/Web" />
+    </root>
+  </artifact>
+</component>

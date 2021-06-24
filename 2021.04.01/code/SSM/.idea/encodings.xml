@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/SSM整合/part0/springmvc_ssm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SSM整合/part1/springmvc_ssm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SSM整合/part2/springmvc_ssm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SSM整合/part3/springmvc_ssm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SSM整合/part4/springmvc_ssm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SSM整合/part5-1/springmvc_ssm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SSM整合/part5-2/springmvc_ssm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springmvc_ssm_annotation" charset="UTF-8" />
+  </component>
+</project>

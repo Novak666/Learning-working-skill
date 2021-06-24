@@ -1,0 +1,7 @@
+0:0:0:0:0:0:0:1 - - [24/Jun/2021:10:18:12 +0800] "GET /user/6 HTTP/1.1" 200 116 http-bio-80-exec-2 879
+0:0:0:0:0:0:0:1 - - [24/Jun/2021:10:18:40 +0800] "GET /user/2/2 HTTP/1.1" 200 524 http-bio-80-exec-3 43
+0:0:0:0:0:0:0:1 - - [24/Jun/2021:10:19:17 +0800] "POST /user/login?userName=lili&password=123456 HTTP/1.1" 200 - http-bio-80-exec-4 9
+0:0:0:0:0:0:0:1 - - [24/Jun/2021:10:19:39 +0800] "POST /user/login?userName=Jockme&password=root HTTP/1.1" 200 116 http-bio-80-exec-5 4
+0:0:0:0:0:0:0:1 - - [24/Jun/2021:10:19:59 +0800] "POST /user?realName=lili&gender=1&birthday=1994/07/16 HTTP/1.1" 200 14 http-bio-80-exec-6 106
+0:0:0:0:0:0:0:1 - - [24/Jun/2021:10:20:49 +0800] "PUT /user?realName=lili&gender=1&birthday=1994/07/16&uuid=11 HTTP/1.1" 200 14 http-bio-80-exec-7 18
+0:0:0:0:0:0:0:1 - - [24/Jun/2021:10:21:14 +0800] "DELETE /user/11 HTTP/1.1" 200 14 http-bio-80-exec-8 20

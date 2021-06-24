@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SSM整合/part0/springmvc_ssm/springmvc_ssm.iml" filepath="$PROJECT_DIR$/SSM整合/part0/springmvc_ssm/springmvc_ssm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSM整合/part1/springmvc_ssm/springmvc_ssm (1).iml" filepath="$PROJECT_DIR$/SSM整合/part1/springmvc_ssm/springmvc_ssm (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSM整合/part2/springmvc_ssm/springmvc_ssm (2).iml" filepath="$PROJECT_DIR$/SSM整合/part2/springmvc_ssm/springmvc_ssm (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSM整合/part3/springmvc_ssm/springmvc_ssm (3).iml" filepath="$PROJECT_DIR$/SSM整合/part3/springmvc_ssm/springmvc_ssm (3).iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSM整合/part4/springmvc_ssm/springmvc_ssm (4).iml" filepath="$PROJECT_DIR$/SSM整合/part4/springmvc_ssm/springmvc_ssm (4).iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSM整合/part5-1/springmvc_ssm/springmvc_ssm (5).iml" filepath="$PROJECT_DIR$/SSM整合/part5-1/springmvc_ssm/springmvc_ssm (5).iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSM整合/part5-2/springmvc_ssm/springmvc_ssm (6).iml" filepath="$PROJECT_DIR$/SSM整合/part5-2/springmvc_ssm/springmvc_ssm (6).iml" />
+      <module fileurl="file://$PROJECT_DIR$/springmvc_ssm_annotation/springmvc_ssm_annotation.iml" filepath="$PROJECT_DIR$/springmvc_ssm_annotation/springmvc_ssm_annotation.iml" />
+    </modules>
+  </component>
+</project>
