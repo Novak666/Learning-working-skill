@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.itheima</groupId>
+    <artifactId>ssm</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <!--定义该工程用于进行构建管理-->
+    <packaging>pom</packaging>
+
+    <!--管理的工程列表-->
+    <modules>
+        <!--具体的工程名称-->
+        <module>../../项目拆分/ssm_controller</module>
+        <module>../../项目拆分/ssm_service</module>
+        <module>../../项目拆分/ssm_dao</module>
+        <module>../../项目拆分/ssm_pojo</module>
+    </modules>
+
+</project>

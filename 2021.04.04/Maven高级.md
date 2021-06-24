@@ -65,12 +65,12 @@
 
 ## 2.2 ssm_pojo
 
-1. 新建模块，可删除resources和test目录
+1. 新建Maven模块(不用选模板)，可删除resources和test目录
 2. 将原项目的pojo内容复制到ssm_pojo模块中，compile编译成功即可
 
 ## 2.3 ssm_dao
 
-1. 新建模块
+1. 新建Maven模块(不用选模板)
 2. 复制的内容有如下
    + dao层接口UserDao
    + 配置文件，与dao相关的有3个：UserDao.xml、applicationContext.xml、jdbc.properties
@@ -89,7 +89,7 @@
 
 ## 2.4 ssm_service
 
-1. 新建模块
+1. 新建Maven模块(不用选模板)
 2. 复制的内容有如下
    + 业务层接口UserService与实现类UserServiceImpl
    + 配置文件，与service相关的有1个：applicationContext.xml
@@ -100,7 +100,7 @@
    + 直接依赖ssm_dao(对ssm_dao模块执行install指令，将其安装到本地仓库)
    + 间接依赖ssm_pojo(由ssm_dao模块负责依赖关系的建立)
 
-4. applicationContext.xml修改，只保留注解扫描和事务相关内容，并且将该配置文件改名为applicationContext-service.xml(dao模块改为applicationContext-dao.xml)
+4. applicationContext.xml修改，只保留注解扫描和事务相关内容，并且将该配置文件改名为applicationContext-service.xml(dao模块改为applicationContext-dao.xml，ref="dataSource"报红正常)
 5. 修改单元测试test下引入的配置文件名称，由单个文件修改为多个文件
 
 ## 2.5 ssm_controller
@@ -109,7 +109,6 @@
 2. 复制的内容有如下
    + 表现层控制器类UserController与相关设置类(异常)
    + 配置文件，与controller相关的有2个：spring-mvc.xml、web.xml
-
 3. pom.xml文件中引入controller层相关的坐标
    + spring(被springmvc所依赖)
    + springmvc
@@ -118,8 +117,8 @@
    + tomcat插件
    + 直接依赖ssm_service(对ssm_service模块执行install指令，将其安装到本地仓库)
    + 间接依赖ssm_dao、ssm_pojo
-
 4. 修改web.xml配置文件中加载spring环境的配置文件名称，使用*通配，加载所有applicationContext-开始的配置文件
+5. <font color='red'>最终测试ssm_controller，相当于整个项目</font>
 
 ## 2.6 小节
 
@@ -171,7 +170,7 @@ Maven中的继承与java中的继承相似，可以在子工程中配置继承�
 
 ## 4.2 父模块
 
-在父模块中要声明依赖管理
+在父模块中要声明依赖管理，dependencyManagement和pluginManagement标签
 
 ```xml
 <!--声明此处进行依赖管理-->
@@ -425,9 +424,9 @@ mvn help:system
 
 ## 7.2 配置文件引用pom.xml属性
 
-在任意配置文件中加载pom文件中定义的属性，即pom.xml集中管理配置文件
+在任意配置文件中加载pom文件中定义的属性，即Maven管理模块的pom.xml集中管理配置文件
 
-自定义属性值
+自定义属性值(以jdbc.properties文件中的jdbc.url属性为例)
 
 ```xml
 <!--定义自定义属性-->
@@ -438,13 +437,13 @@ mvn help:system
 </properties>
 ```
 
-调用格式
+jdbc.properties文件中调用格式
 
-```
+```properties
 ${jdbc.url} 
 ```
 
-开启配置文件加载pom属性(build标签中)
+pom.xml中开启配置文件加载pom文件中定义的属性(build标签中)
 
 ```xml
 <!--配置资源文件对应的信息-->
@@ -475,6 +474,8 @@ ${jdbc.url}
 ![11](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.04.04/pics/11.png)
 
 ## 8.2 多环境配置
+
+pom.xml文件中
 
 ```xml
 <!--创建多环境-->

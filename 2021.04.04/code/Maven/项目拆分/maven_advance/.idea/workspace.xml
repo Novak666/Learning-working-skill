@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3a8fe06e-dfe8-43e3-a1ce-cb986898e0c3" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/soft/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="D:\soft\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YKMe9GRMBvhyOYcWuljqlZERc5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ssm_controller/src/main/webapp/WEB-INF" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.16171876" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.itheima.domain" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\ssm_controller\src\main\webapp\WEB-INF" />
+      <recent name="D:\workspace\ssm_controller\src\main" />
+      <recent name="D:\workspace\ssm_controler" />
+      <recent name="D:\workspace\ssm_service\src\test\resources" />
+      <recent name="D:\workspace\ssm_service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Maven.新项目">
+    <configuration name="原始项目" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/../ssm_controller" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="新项目" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/../ssm_controller" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Maven.原始项目" />
+      <item itemvalue="Maven.新项目" />
+    </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3a8fe06e-dfe8-43e3-a1ce-cb986898e0c3" name="Default Changelist" comment="" />
+      <created>1582686924381</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582686924381</updated>
+      <workItem from="1582686925665" duration="4308000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="175" y="0" key="#Project_Structure" timestamp="1582686931739">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="175" y="0" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1582686931739" />
+    <state x="137" y="16" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582705140557">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="16" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1582705140557" />
+    <state x="350" y="57" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582704984678">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="350" y="57" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1582704984678" />
+    <state x="413" y="0" key="FileChooserDialogImpl" timestamp="1582687014835">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="0" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582687014835" />
+    <state width="1313" height="166" key="GridCell.Tab.0.bottom" timestamp="1582705237201">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1313" height="166" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582705237201" />
+    <state width="1313" height="166" key="GridCell.Tab.0.center" timestamp="1582705237200">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1313" height="166" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582705237200" />
+    <state width="1313" height="166" key="GridCell.Tab.0.left" timestamp="1582705237200">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1313" height="166" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582705237200" />
+    <state width="1313" height="166" key="GridCell.Tab.0.right" timestamp="1582705237200">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1313" height="166" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582705237200" />
+    <state x="258" y="3" key="NewModule_or_Project.wizard" timestamp="1582687017101">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="258" y="3" key="NewModule_or_Project.wizard/0.0.1366.728@0.0.1366.728" timestamp="1582687017101" />
+    <state x="35" y="0" key="SettingsEditor" timestamp="1582704761048">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="35" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1582704761048" />
+    <state x="0" y="0" key="new project wizard" timestamp="1582704757557">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="0" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1582704757557" />
+    <state x="362" y="0" key="spring file set editor" timestamp="1582689028229">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="362" y="0" key="spring file set editor/0.0.1366.728@0.0.1366.728" timestamp="1582689028229" />
+  </component>
+</project>

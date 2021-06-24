@@ -1,0 +1,5 @@
+0:0:0:0:0:0:0:1 - - [26/Feb/2020:16:19:26 +0800] "POST /user?userName=Jock&password=1234&realName=JockisSuperMan&gender=1&birthday=1999/09/09 HTTP/1.1" 200 52 http-bio-80-exec-2 1224
+0:0:0:0:0:0:0:1 - - [26/Feb/2020:16:19:35 +0800] "GET /user/1/211 HTTP/1.1" 200 2191 http-bio-80-exec-3 115
+0:0:0:0:0:0:0:1 - - [26/Feb/2020:16:19:43 +0800] "POST /user?userName=Jock&password=1234&realName=JockisSuperMan&gender=1&birthday=1999/09/09 HTTP/1.1" 200 52 http-bio-80-exec-4 10
+0:0:0:0:0:0:0:1 - - [26/Feb/2020:16:19:47 +0800] "GET /user/1/211 HTTP/1.1" 200 2302 http-bio-80-exec-5 17
+0:0:0:0:0:0:0:1 - - [26/Feb/2020:18:13:45 +0800] "POST /user?userName=Jock&password=1234&realName=JockisSuperMan&gender=1&birthday=1999/09/09 HTTP/1.1" 200 52 http-bio-80-exec-2 1293

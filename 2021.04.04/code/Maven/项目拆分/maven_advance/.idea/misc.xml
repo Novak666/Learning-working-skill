@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/../springmvc_ssm" />
+    <file type="web" url="file://$PROJECT_DIR$/../ssm_controller" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../springmvc_ssm/pom.xml" />
+        <option value="$PROJECT_DIR$/../ssm_pojo/pom.xml" />
+        <option value="$PROJECT_DIR$/../ssm_dao/pom.xml" />
+        <option value="$PROJECT_DIR$/../ssm_service/pom.xml" />
+        <option value="$PROJECT_DIR$/../ssm_controller/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

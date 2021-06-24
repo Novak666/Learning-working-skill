@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/项目拆分/springmvc_ssm/springmvc_ssm.iml" filepath="$PROJECT_DIR$/项目拆分/springmvc_ssm/springmvc_ssm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/聚合/ssm/ssm.iml" filepath="$PROJECT_DIR$/聚合/ssm/ssm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/继承/ssm/ssm (1).iml" filepath="$PROJECT_DIR$/继承/ssm/ssm (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/项目拆分/ssm_controller/ssm_controller.iml" filepath="$PROJECT_DIR$/项目拆分/ssm_controller/ssm_controller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/继承/ssm_controller/ssm_controller (1).iml" filepath="$PROJECT_DIR$/继承/ssm_controller/ssm_controller (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/项目拆分/ssm_dao/ssm_dao.iml" filepath="$PROJECT_DIR$/项目拆分/ssm_dao/ssm_dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/继承/ssm_dao/ssm_dao (1).iml" filepath="$PROJECT_DIR$/继承/ssm_dao/ssm_dao (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/项目拆分/ssm_pojo/ssm_pojo.iml" filepath="$PROJECT_DIR$/项目拆分/ssm_pojo/ssm_pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/继承/ssm_pojo/ssm_pojo (1).iml" filepath="$PROJECT_DIR$/继承/ssm_pojo/ssm_pojo (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/项目拆分/ssm_service/ssm_service.iml" filepath="$PROJECT_DIR$/项目拆分/ssm_service/ssm_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/继承/ssm_service/ssm_service (1).iml" filepath="$PROJECT_DIR$/继承/ssm_service/ssm_service (1).iml" />
+    </modules>
+  </component>
+</project>
