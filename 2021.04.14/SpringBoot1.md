@@ -22,11 +22,13 @@ SpringBoot功能
 
 # 2. SpringBoot简单案例
 
+代码见springboot-helloworld模块
+
 需求：搭建SpringBoot工程，定义HelloController.hello()方法，返回”Hello SpringBoot!”
 
 实现步骤：
 
-1. 创建Maven工程
+1. 创建Maven工程(不用选择模板)
 2. 导入SpringBoot起步依赖
 
 ```xml
@@ -96,6 +98,10 @@ public class HelloApplication {
 3. 导入坐标
 
 ![3](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.04.14/pics/3.png)
+
+<font color='red'>IDEA可以帮忙生成pom.xml坐标，启动类，resources文件，test文件</font>
+
+代码见springboot-init模块
 
 # 4. SpringBoot起步依赖原理分析
 
@@ -275,12 +281,12 @@ public class Person {
 
 **配置方式**
 
-1. 多配置文件方式
+1. 多配置文件方式，主配置文件申明用哪一个
    + application-dev.properties/yml 开发环境
    + application-pro.properties/yml 生产环境
    + application-test.properties/yml 测试环境
 
-2. 在一个yml文件中用---分隔不同配置
+2. 在一个配置文件中用---分隔不同配置
 
 ```yaml
 ---
@@ -310,17 +316,19 @@ spring:
 **激活方式**
 
 - 配置文件：在配置文件中配置：spring.profiles.active=dev
-- 虚拟机参数：在VM options 指定：-Dspring.profiles.active=dev
-- 命令行参数：java –jar xxx.jar  --spring.profiles.active=dev
+- (IDEA中)虚拟机参数：在Edit Configurations(Spring Boot)的VM options 指定：-Dspring.profiles.active=dev或者命令行参数：--spring.profiles.active=dev
+- 命令行参数：java –jar xxx.jar  --spring.profiles.active=dev(项目经过Maven打成jar所在目录)
 
 ## 5.6 项目内部配置文件加载顺序
 
  加载顺序为下面的排列顺序，高优先级配置的属性会生效
 
-- file:./config/：当前项目下的/config目录下
-- file:./           ：当前项目的根目录
-- classpath:/config/：classpath的/config目录
-- classpath:/  ：classpath的根目录
+- file:./config/：当前项目(project)下的/config目录下
+- file:./           ：当前项目(project)的根目录
+- classpath:/config/：classpath的/config目录(Resources/config)
+- classpath:/  ：classpath的根目录(一般我们放的Resources目录下)
+
+代码见springboot-config模块
 
 ## 5.7 项目外部配置加载顺序
 
@@ -331,7 +339,7 @@ https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-featu
 1.命令行
 
 ```cmd
-java -jar app.jar --name="Spring“ --server.port=9000
+java -jar xxx.jar --name="Spring“ --server.port=9000
 ```
 
 2.指定配置文件位置
@@ -388,7 +396,7 @@ public class UserServiceTest {
 
 ## 6.2 SpringBoot整合Redis
 
-1. 创建SpringBoot工程
+1. 创建SpringBoot工程(模板加上NoSQL的Redis)
 2. 引入redis起步依赖
 
 ```xml
@@ -543,7 +551,7 @@ public class User {
 
 ```java
 @Mapper
-@Repository
+@Repository(此处不一定要加)
 public interface UserXmlMapper {
 
     public List<User> findAll();
