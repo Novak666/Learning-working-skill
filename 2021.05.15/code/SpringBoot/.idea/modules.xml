@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/itheima-actuator/itheima-actuator.iml" filepath="$PROJECT_DIR$/itheima-actuator/itheima-actuator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itheima-redis-springboot-starter/itheima-redis-springboot-starter.iml" filepath="$PROJECT_DIR$/itheima-redis-springboot-starter/itheima-redis-springboot-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itheima-springboot-demo01/itheima-springboot-demo01.iml" filepath="$PROJECT_DIR$/itheima-springboot-demo01/itheima-springboot-demo01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itheima-springboot-demo02/itheima-springboot-demo02.iml" filepath="$PROJECT_DIR$/itheima-springboot-demo02/itheima-springboot-demo02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itheima-springboot-demo02-enable/itheima-springboot-demo02-enable.iml" filepath="$PROJECT_DIR$/itheima-springboot-demo02-enable/itheima-springboot-demo02-enable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itheima-springboot-demo03-enable/itheima-springboot-demo03-enable.iml" filepath="$PROJECT_DIR$/itheima-springboot-demo03-enable/itheima-springboot-demo03-enable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itheima-test-starter/itheima-test-starter.iml" filepath="$PROJECT_DIR$/itheima-test-starter/itheima-test-starter.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="itheima-actuator" />
+        <module name="itheima-redis-springboot-starter" />
+        <module name="itheima-springboot-demo01" />
+        <module name="itheima-springboot-demo02" />
+        <module name="itheima-springboot-demo02-enable" />
+        <module name="itheima-springboot-demo03-enable" />
+        <module name="itheima-test-starter" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="itheima-actuator" target="1.8" />
+      <module name="itheima-redis-springboot-starter" target="1.8" />
+      <module name="itheima-springboot-demo01" target="1.8" />
+      <module name="itheima-springboot-demo02" target="1.8" />
+      <module name="itheima-springboot-demo02-enable" target="1.8" />
+      <module name="itheima-springboot-demo03-enable" target="1.8" />
+      <module name="itheima-test-starter" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

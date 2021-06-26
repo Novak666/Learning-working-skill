@@ -1,0 +1,13 @@
+management:
+  endpoint:
+    health:
+      enabled: true
+      show-details: always # 显示所有的信息
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+info:
+  age: 18
+  name: zhangsan

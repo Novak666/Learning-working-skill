@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/itheima-actuator" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/itheima-redis-springboot-starter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/itheima-springboot-demo01" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/itheima-springboot-demo02" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/itheima-springboot-demo02-enable" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/itheima-springboot-demo03-enable" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/itheima-test-starter" charset="UTF-8" />
+  </component>
+</project>

@@ -8,6 +8,8 @@
 
 我们来演示下，是否加入依赖就可以获取redisTemplate，不加依赖就不会获取到redisTemplate
 
+代码见itheima-springboot-demo01模块
+
 1. 创建工程添加依赖
 
 ```xml
@@ -166,6 +168,7 @@ public class UserConfig {
     @Bean
     //conditinal 用于指定当某一个条件满足并返回true时则执行该方法创建bean交给spring容器
     @Conditional(value = OnClassCondition.class)
+    //@ConditionalOnClass(name={"redis.clients.jedis.Jedis"}) SpringBoot自带注解
     public User user() {
         return new User();
     }
@@ -182,11 +185,19 @@ public class UserConfig {
 
 jedis坐标注释与不注释
 
+```xml
+<dependency>
+    <groupId>redis.clients</groupId>
+    <artifactId>jedis</artifactId>
+    <version>3.2.0</version>
+</dependency>
+```
+
 ## 1.3 优化
 
 问题：
 
-我们希望这个类注解可以进行动态的加载某一个类的全路径，不能写死为redis，将来可以进行重用
+我们希望这个类注解可以进行动态的加载某一个类的全路径，不能写死为redis(硬编码)，将来可以进行重用
 
 需求：
 
@@ -220,7 +231,7 @@ import java.lang.annotation.*;
 @Target({ ElementType.TYPE, ElementType.METHOD })
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Conditional(OnClassCondition.class)
+@Conditional(OnClassCondition.class)  //注意
 public @interface ConditionalOnClass {
     /**
      * 指定所有的类全路径的字符数组
@@ -306,9 +317,11 @@ ConditionalOnProperty 当配置文件中有某一个key value的时候才使用
 
 condition用于自定义某一写条件类，用于当达到某一个条件时使用。关联的注解为@conditional结合起来使用。当然我们springboot本身已经提供了一系列的注解供我们使用
 
-# 2. 切换内置的web容器
+# 2. 切换内置的web容器(修改依赖坐标即可)
 
 我们知道在springboot启动的时候如果我们使用web起步依赖，那么我们默认就加载了tomcat的类嵌入了tomcat了，不需要额外再找tomcat
+
+代码见itheima-springboot-demo02模块
 
 加载配置tomcat的原理：
 
@@ -369,6 +382,8 @@ web起步依赖依赖于spring-boot-starter-tomcat，这个为嵌入式的tomcat
 
 @ComponentScan注解作用类似于组件扫描包xml中的context-componet-scan，如果不指定扫描路径，那么就扫描该注解修饰的启动类所在的<font color='red'>包以及子包</font>
 
+@EnableAutoConfiguration，那么这种@Enable*开头就是springboot中定义的一些动态启用某些功能的注解，他的底层实现原理实际上用的就是@import注解导入一些配置，自动进行配置，加载Bean
+
 # 4. 加载第三方Bean
 
 需求：
@@ -377,13 +392,13 @@ web起步依赖依赖于spring-boot-starter-tomcat，这个为嵌入式的tomcat
 2. demo2依赖了demo3
 3. 我们希望demo2直接获取加载demo3中的bean
 
-demo2和demo3见代码
+demo2和demo3见代码itheima-springboot-demo02-enable模块和itheima-springboot-demo03-enable模块
 
 1. 修改demo2工程的pom.xml，加入demo3的依赖
 
 ![8](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.05.15/pics/8.png)
 
-加载第三方的依赖中的bean
+demo2加载第三方的依赖中的bean
 
 ```java
 package com.itheima;
@@ -404,7 +419,7 @@ public class DemoEnable2Application {
 }
 ```
 
-测试发现出错
+测试发现出错，因为2个项目的包名不一样，扫描不到
 
 2. 解决该错误的方式
 
@@ -416,7 +431,7 @@ public class DemoEnable2Application {
 
 **优化：**
 
-1. 在demo03中com.config下                  创建一个自定义注解@EnableUser：
+1. 在demo03中com.config下，创建一个自定义注解@EnableUser(非常直观)：
 
 ```java
 package com.config；
@@ -439,7 +454,9 @@ import注解用于导入其他的配置，让spring容器进行加载和初始�
 - 直接导入Bean
 - 导入配置类
 - 导入ImportSelector的实现类，通常用于加载配置文件中的Bean
-- 导入ImportBeanDefinitionRegistrar实现类
+- 导入ImportBeanDefinitionRegistrar实现类(将一个类放到Spring容器中)
+
+代码见itheima-springboot-demo03-enable模块
 
 ImportSelector
 
@@ -449,7 +466,7 @@ public class MyImportSelector implements ImportSelector {
     //返回的是类的全路径的字符串数组  用来从例如：properties  xml 等其他的配置文件中加载 配置好的一些类的全路径 这些类交给spring容器进行管理 并进行配置
     @Override
     public String[] selectImports(AnnotationMetadata importingClassMetadata) {
-        //将来这个数据是从配置文件中读取到的
+        //将来这个数据是从配置文件中读取到的，Spring容器根据类的全路径反射生成新对象
         return new String[]{"com.itheima.pojo.Role","com.itheima.pojo.User"};
     }
 }
@@ -511,12 +528,12 @@ public class Demo2EnableApplication {
 
 ## 6.1 需求
 
-当(itheima-test-starter)加入redis客户端的坐标的时候，自动配置jedis的bean加载到spring容器中
+当一个测试工程(itheima-test-starter)加入redis客户端的坐标的时候，自动配置jedis的bean加载到spring容器中
 
 ## 6.2 总体步骤
 
 1. 自定义一个工程作为起步依赖，itheima-redis-springboot-starter
-2. 创建一个工程itheima-test-starter依赖上面的工程，自动配置jedis
+2. 创建一个工程itheima-test-starter依赖上面的工程，自动配置jedis，直接可以使用
 
 ## 6.3 具体步骤
 
@@ -559,11 +576,11 @@ public class Demo2EnableApplication {
 </project>
 ```
 
-2. 创建自动配置类
+2. 创建自动配置类(读取配置文件，和@ComponentScan不一样)
 
 ```java
 @Configuration
-//启用 POJO 和配置yaml的映射关系 自动进行映射
+//启用 POJO 和配置yaml的映射关系 自动进行映射 
 @EnableConfigurationProperties(RedisProperties.class)
 @ConditionalOnClass(Jedis.class)
 public class RedisAutoConfiguration {
@@ -680,6 +697,8 @@ public Jedis jedis(){
 ```
 
 # 7. SpringBoot的监控
+
+时常我们在使用的项目的时候，想知道相关项目的一些参数和调用状态，而SpringBoot自带监控功能Actuator，可以帮助实现对程序内部运行情况监控，比如监控状况、Bean加载情况、配置属性、日志信息等
 
 ## 7.1 Actuator
 
@@ -1148,6 +1167,28 @@ public class DemoApplication extends SpringBootServletInitializer{
 
 https://www.processon.com/view/link/59812124e4b0de2518b32b6e
 
-# 10. 小节
+# 10. 自动配置原理
+
+源码分析流程截图：
 
 ![11](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.05.15/pics/11.png)
+
+![12](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.05.15/pics/12.png)
+
+![13](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.05.15/pics/13.png)
+
+![14](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.05.15/pics/14.png)
+
+![15](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.05.15/pics/15.png)
+
+![16](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.05.15/pics/16.png)
+
+![17](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.05.15/pics/17.png)
+
+1. @import注解 导入配置
+2. selectImports导入类中的方法中加载配置返回Bean定义的字符数组
+3. 加载META-INF/spring.factories 中获取Bean定义的全路径名返回
+
+# 11. 小节
+
+![18](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.05.15/pics/18.png)
