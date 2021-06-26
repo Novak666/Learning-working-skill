@@ -6,11 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="springboot-config" />
+        <module name="springboot-config (1)" />
         <module name="springboot-helloworld" />
+        <module name="springboot-mybatis" />
+        <module name="springboot-profiles" />
+        <module name="springboot-redis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="springboot-helloworld" target="1.5" />
+      <module name="springboot-config" target="1.8" />
+      <module name="springboot-config (1)" target="1.8" />
+      <module name="springboot-helloworld" target="1.8" />
+      <module name="springboot-mybatis" target="1.8" />
+      <module name="springboot-profiles" target="1.8" />
+      <module name="springboot-redis" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
