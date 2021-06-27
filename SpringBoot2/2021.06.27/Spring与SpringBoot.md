@@ -1,8 +1,8 @@
 # 1. 基础入门-SpringBoot2课程介绍
 
-![1](C:\Users\HASEE\Desktop\pics\1.png)
+![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.06.27/pics/1.png)
 
-![2](C:\Users\HASEE\Desktop\pics\2.png)
+![2](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.06.27/pics/2.png)
 
 + 学习要求
   + 熟悉Spring基础
@@ -24,7 +24,7 @@
 
 ## 2.1 Spring的能力
 
-![3](C:\Users\HASEE\Desktop\pics\3.png)
+![3](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.06.27/pics/3.png)
 
 - web开发
 - 数据访问
@@ -38,7 +38,7 @@
 
 + 响应式编程
 
-![4](C:\Users\HASEE\Desktop\pics\4.png)
+![4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.06.27/pics/4.png)
 
 + 内部源码设计
 
@@ -111,7 +111,7 @@ In short, the **microservice architectural style** is an approach to developing 
 
 - SpringBoot + SpringCloud
 
-![5](C:\Users\HASEE\Desktop\pics\5.png)
+![5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.06.27/pics/5.png)
 
 ## 3.3 云原生
 
@@ -129,15 +129,15 @@ In short, the **microservice architectural style** is an approach to developing 
 
 上云的解决：
 
-![6](C:\Users\HASEE\Desktop\pics\6.png)
+![6](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.06.27/pics/6.png)
 
 # 4. 基础入门-SpringBoot官方文档架构
 
 官方参考文档学习：https://docs.spring.io/spring-boot/docs/current/reference/html/index.html
 
-![7](C:\Users\HASEE\Desktop\pics\7.png)
+![7](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.06.27/pics/7.png)
 
 版本新特性：https://spring.io/projects/spring-boot#overview
 
-![8](C:\Users\HASEE\Desktop\pics\8.png)
+![8](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.06.27/pics/8.png)
 
