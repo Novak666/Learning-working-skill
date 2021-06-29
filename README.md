@@ -301,3 +301,10 @@ SpringBoot入门工程，特点包括依赖管理和自动配置，一些注解�
 + 组件添加@Configuration，@Conditional
 + 原生配置文件引入@ImportResource
 + 配置绑定@ConfigurationProperties
+
+
+
+# 2021.06.29
+
+自动配置原理入门(三个注解)，开发小技巧，yaml配置
+

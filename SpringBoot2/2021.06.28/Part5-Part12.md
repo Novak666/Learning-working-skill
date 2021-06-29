@@ -1,5 +1,3 @@
-# Part5. 基础入门-SpringBoot-HelloWorld
-
 # 1. 系统要求
 
 - [Java 8](https://www.java.com/) & 兼容java14
@@ -123,8 +121,6 @@ pom.xml
 
 注意点：取消掉cmd的快速编辑模式
 
-# Part6. 基础入门-SpringBoot-依赖管理特性
-
 # 4. 依赖管理
 
 ## 4.1 父项目做依赖管理
@@ -181,8 +177,6 @@ pom.xml
 </properties>
 ```
 
-# Part7. 基础入门-SpringBoot-自动配置特性
-
 # 5. 自动配置
 
 ## 5.1 自动配置好Tomcat，SpringMVC，Web等
@@ -238,9 +232,9 @@ pom.xml
   + 引入了哪些场景这个场景的自动配置才会开启
   + SpringBoot所有的自动配置功能都在 spring-boot-autoconfigure 包里面
 
-# Part8. 底层注解-@Configuration详解
+# 6. 组件添加
 
-# 6. @Configuration
+## 6.1 @Configuration
 
 Full模式与Lite模式
 
@@ -325,9 +319,7 @@ public class MainApplication {
 }
 ```
 
-# Part9. 底层注解-@Import导入组件
-
-# 7. @Import
+## 6.2 @Import
 
 @Bean、@Component、@Controller、@Service、@Repository，它们是Spring的基本标签，在Spring Boot中并未改变它们原来的功能
 
@@ -361,9 +353,7 @@ DBHelper bean1 = run.getBean(DBHelper.class);
 System.out.println(bean1);
 ```
 
-# Part10. 底层注解-@Conditional条件装配
-
-# 8. @Conditional
+## 6.3 @Conditional
 
 条件装配：满足Conditional指定的条件，则进行组件注入
 
@@ -406,9 +396,9 @@ boolean tom22 = run.containsBean("tom22");
 System.out.println("容器中tom22组件："+tom22);
 ```
 
-# Part11. 底层注解-@ImportResource导入Spring配置文件
+# 7. 原生配置文件引入
 
-# 9. @ImportResource
+## 7.1 @ImportResource
 
 比如，公司使用bean.xml文件生成配置bean，然而你为了省事，想继续复用bean.xml，@ImportResource粉墨登场
 
@@ -450,13 +440,13 @@ System.out.println("haha："+haha);
 System.out.println("hehe："+hehe);
 ```
 
-# Part12. 底层注解-@ConfigurationProperties配置绑定
+# 8. 配置绑定
 
-# 10. @ConfigurationProperties
+@ConfigurationProperties
 
 绑定配置文件
 
-## 10.1 @ConfigurationProperties + @Component
+## 8.1 @ConfigurationProperties + @Component
 
 application.properties
 
@@ -487,7 +477,7 @@ public Car car(){
 }
 ```
 
-## 10.2 @EnableConfigurationProperties + @ConfigurationProperties
+## 8.2 @EnableConfigurationProperties + @ConfigurationProperties
 
 car
 

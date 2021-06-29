@@ -1,10 +1,10 @@
-# Part1. 基础入门-SpringBoot2课程介绍
+# 1. SpringBoot2课程介绍
 
 ![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.06.27/pics/1.png)
 
 ![2](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.06.27/pics/2.png)
 
-# 1. 前期准备
+## 1.1 前期准备
 
 + 学习要求
   + 熟悉Spring基础
@@ -21,8 +21,6 @@
 + 课程文档地址1：https://blog.csdn.net/u011863024/article/details/113667634
 + 课程文档地址2：https://www.yuque.com/atguigu/springboot
 + 课程源码地址：https://gitee.com/leifengyang/springboot2
-
-# Part2. 基础入门-Spring生态圈
 
 # 2. Spring能做什么
 
@@ -76,8 +74,6 @@ SpringBoot是简化Spring技术栈的快速开发脚手架
 
 + 人称版本帝，迭代快，需要时刻关注变化
 + 封装太深，内部原理复杂，不容易精通
-
-# Part3. 基础入门-SpringBoot的大时代背景
 
 # 3. 时代背景
 
@@ -137,7 +133,7 @@ In short, the **microservice architectural style** is an approach to developing 
 
 ![6](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.06.27/pics/6.png)
 
-# Part4. 基础入门-SpringBoot官方文档架构
+# 4. SpringBoot官方文档架构
 
 官方参考文档学习：https://docs.spring.io/spring-boot/docs/current/reference/html/index.html
 
