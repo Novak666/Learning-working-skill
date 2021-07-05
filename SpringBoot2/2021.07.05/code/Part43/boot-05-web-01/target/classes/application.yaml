@@ -1,0 +1,14 @@
+spring:
+#  mvc:
+#    static-path-pattern: /res/**
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+    contentnegotiation:
+      favor-parameter: true
+
+
+
+  resources:
+    static-locations: [classpath:/haha/]
