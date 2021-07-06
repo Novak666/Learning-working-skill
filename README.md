@@ -320,3 +320,8 @@ SpringBoot的Web开发，包括静态资源访问，请求和响应
 
 模板引擎Thymeleaf，拦截器，文件上传，异常处理，Web原生组件注入，切换Tomcat，定制化原理总结
 
+
+
+# 2021.07.06
+
+SpringBoot结合JDBC，Druid数据源，MyBatis，Redis
