@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/db
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+
+    druid:
+          aop-patterns: com.atguigu.admin.*  #springbean监控
+          filters: stat,wall,slf4j  #所有开启的功能
+
+          stat-view-servlet:  #监控页配置
+            enabled: true
+            login-username: admin
+            login-password: admin
+            resetEnable: false
+
+          web-stat-filter:  #web监控
+            enabled: true
+            urlPattern: /*
+            exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+
+
+          filter:
+            stat: #sql监控
+              slow-sql-millis: 1000
+              logSlowSql: true
+              enabled: true
+            wall: #防火墙
+              enabled: true
+              config:
+                drop-table-allow: false
