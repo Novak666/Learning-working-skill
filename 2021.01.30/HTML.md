@@ -375,7 +375,7 @@ a {
 
 ## 5.2 表单内元素
 
-![7](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.30/pics/5=7.png)
+![7](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.30/pics/7.png)
 
 代码见03案例三：表单项标签演示.html
 
@@ -471,7 +471,7 @@ HTML5新增的type值
 
 效果：
 
-![8](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.30/pics/5=8.png)
+![8](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.30/pics/8.png)
 
 代码见04案例三：表单项标签type属性演示.html
 
@@ -508,8 +508,9 @@ HTML5新增的type值
 </form>
 ```
 
-![9](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.30/pics/5=9.png)
+![9](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.30/pics/9.png)
 
 代码见05案例三：其他常用表单项标签演示.html
 
 登录页面见代码06案例三：注册页面.html
+
