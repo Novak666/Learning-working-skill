@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>样式演示</title>
+    <style>
+        /*背景图片重复  no-repeat：不重复  repeat-x：水平重复  repeat-y：垂直重复   repeat：水平+垂直重复*/
+        body{
+            background: url("../img/bg.jpg");
+
+            background-repeat: repeat;
+        }
+
+        /*轮廓控制 double：双实线   dotted：圆点   dashed：虚线   none：无*/
+        input{
+            outline: none;
+        }
+
+        /*元素显示  inline：内联元素(无换行、无长宽)   block：块级元素(有换行)  inline-block：内联元素(有长宽)  none：隐藏元素*/
+        div{
+            display: inline-block;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    用户名：<input type="text"/> <br/>
+
+    <div>春季</div>
+    <div>夏季</div>
+    <div>秋季</div>
+    <div>冬季</div>
+</body>
+</html>

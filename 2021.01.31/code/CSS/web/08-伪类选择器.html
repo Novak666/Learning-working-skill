@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器</title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+
+        /*未访问的状态*/
+        a:link{
+            color: black;
+        }
+
+        /*已访问的状态*/
+        a:visited{
+            color: blue;
+        }
+
+        /*鼠标悬浮的状态*/
+        a:hover{
+            color: red;
+        }
+
+        /*已选中的状态*/
+        a:active{
+           color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.baidu.com" target="_blank">百度一下</a>
+</body>
+</html>

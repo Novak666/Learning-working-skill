@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格标签演示</title>
+</head>
+<body>
+    <!--
+        表格标签：<table>
+        属性：
+            width-宽度
+            height-高度
+            border-边框
+            align-对齐方式
+
+        行标签：<tr>
+        属性：
+            align-对齐方式
+
+        单元格标签：<td>
+        属性：
+            rowspan-合并行
+            colspan-和并列
+
+        表头标签：<th> 自带居中和加粗效果
+
+        表头语义标签：<thead>
+        表体语义标签：<tbody>
+        表脚语义标签：<tfoot>
+    -->
+    <table width="400px" border="1px" align="center">
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>年龄</th>
+                <th>数学</th>
+                <th>语文</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr align="center">
+                <td>张三</td>
+                <td rowspan="2">男</td>
+                <td>23</td>
+                <td colspan="2">90</td>
+                <!--<td>90</td>-->
+            </tr>
+
+            <tr align="center">
+                <td>李四</td>
+                <!--<td>男</td>-->
+                <td>24</td>
+                <td>95</td>
+                <td>98</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="4">总分数：</td>
+                <!--<td></td>
+                <td></td>
+                <td></td>-->
+                <td>373</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

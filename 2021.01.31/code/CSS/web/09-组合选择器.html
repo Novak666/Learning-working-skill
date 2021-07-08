@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组合选择器</title>
+    <style>
+        /*后代选择器*/
+        .center li{
+            color: red;
+        }
+
+        /*分组选择器*/
+        span,p{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <ol>
+            <li>aa</li>
+            <li>bb</li>
+        </ol>
+    </div>
+
+    <div class="center">
+        <ol>
+            <li>cc</li>
+            <li>dd</li>
+        </ol>
+    </div>
+
+    <span>span</span> <br/>
+    <p>段落</p>
+</body>
+</html>
