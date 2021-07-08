@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>type属性演示</title>
+</head>
+<body>
+    <!--
+        type属性
+        <input type="text"/>       普通文本输入框
+        <input type="password"/>   密码输入框
+        <input type="email"/>      邮箱输入框
+        <input type="radio"/>      单选框。必须有相同的name属性值，value属性真实提交的数据，checked属性默认选中
+        <input type="checkbox"/>   多选框。必须有相同的name属性值，value属性真实提交的数据，checked属性默认选中
+
+
+        <input type="date"/>       日期框
+        <input type="time"/>       时间框
+        <input type="datetime-local"/>  本地日期时间框
+        <input type="number"/>     数字框
+        <input type="range"/>      滚动条数值框  min-最小值   max-最大值  step-步进值
+        <input type="search"/>     可清除文本框
+        <input type="tel"/>        电话框
+        <input type="url"/>        网址框
+        <input type="file"/>       文件上传框
+        <input type="hidden"/>     隐藏域   value属性设置实际提交的值
+    -->
+    <form action="#" method="get" autocomplete="off">
+        <label for="username">用户名：</label>
+        <input type="text" id="username" name="username"/>  <br/>
+
+        <label for="password">密码：</label>
+        <input type="password" id="password" name="password"/> <br/>
+
+        <label for="email">邮箱：</label>
+        <input type="email" id="email" name="email"/> <br/>
+
+        <label for="gender">性别：</label>
+        <input type="radio" id="gender" name="gender" value="men"/>男
+        <input type="radio" name="gender" value="women"/>女
+        <input type="radio" name="gender" value="other"/>其他<br/>
+
+        <label for="hobby">爱好：</label>
+        <input type="checkbox" id="hobby" name="hobby" value="music" checked/>音乐
+        <input type="checkbox" name="hobby" value="game"/>游戏 <br/>
+
+        <label for="birthday">生日：</label>
+        <input type="date" id="birthday" name="birthday"/> <br/>
+
+        <label for="time">当前时间：</label>
+        <input type="time" id="time" name="time"/> <br/>
+
+        <label for="insert">注册时间：</label>
+        <input type="datetime-local" id="insert" name="insert"/> <br/>
+
+        <label for="age">年龄：</label>
+        <input type="number" id="age" name="age"/> <br/>
+
+        <label for="range">心情值(1~10)：</label>
+        <input type="range" id="range" name="range" min="1" max="10" step="1"/> <br/>
+
+        <label for="search">可全部清除文本：</label>
+        <input type="search" id="search" name="search"/> <br/>
+
+        <label for="tel">电话：</label>
+        <input type="tel" id="tel" name="tel"/> <br/>
+
+        <label for="url">个人网站：</label>
+        <input type="url" id="url" name="url"/> <br/>
+
+        <label for="file">文件上传：</label>
+        <input type="file" id="file" name="file"/> <br/>
+
+        <label for="hidden">隐藏信息：</label>
+        <input type="hidden" id="hidden" name="hidden" value="itheima"/> <br/>
+
+        <button type="submit">提交</button>
+        <button type="reset">重置</button>
+    </form>
+</body>
+</html>

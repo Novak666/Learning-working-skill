@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单项标签</title>
+</head>
+<body>
+    <!--
+        表单项标签：<label>  表单元素说明
+        属性：for属性，属性值必须和表单项标签id属性值一致
+
+        表单项标签：<input>   多种类型数据
+        属性：
+            type-数据类型
+            id-唯一标识
+            name-提交服务器的标识
+            value-默认的数据值
+            placeholder-默认的提示信息
+            required-是否必须
+
+        按钮标签：<button>
+        属性：
+            type-按钮的类型(submit提交、reset重置、button普通按钮)
+    -->
+    <form action="#" method="get" autocomplete="off">
+        <label for="username">用户名：</label>
+        <input type="text" id="username" name="username" value="" placeholder=" 请在此处输入用户名" required/>
+        <button type="submit">提交</button>
+        <button type="reset">重置</button>
+        <button type="button">按钮</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <style>
+        body{
+            background: url("../img/bg.png");
+        }
+
+        .center{
+            /*背景颜色*/
+            background: white;
+            /*宽度*/
+            width: 400px;
+            /*文本对齐方式*/
+            text-align: center;
+            /*外边距*/
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <!--顶部-公司图标-->
+    <div>
+        <img src="../img/logo.png"/>
+    </div>
+
+    <!--中间-注册信息-->
+    <div class="center">
+        <div>注册详情</div>
+        <hr/>
+
+        <!--表单标签-->
+        <form action="#" method="get" autocomplete="off">
+            <div>
+                <label for="username">姓名：</label>
+                <input type="text" id="username" name="username" value="" placeholder=" 在此输入姓名" required/>
+            </div>
+
+            <div>
+                <label for="password">密码：</label>
+                <input type="password" id="password" name="password" value="" placeholder=" 在此输入密码" required/>
+            </div>
+
+            <div>
+                <label for="email">邮箱：</label>
+                <input type="email" id="email" name="email" value="" placeholder=" 在此输入邮箱" required/>
+            </div>
+
+            <div>
+                <label for="tel">手机：</label>
+                <input type="tel" id="tel" name="tel" value="" placeholder=" 在此输入手机" required/>
+            </div>
+            <hr/>
+
+            <div>
+                <label for="gender">性别：</label>
+                <input type="radio" id="gender" name="gender" value="men"/>男 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="gender" value="women"/>女 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+
+            <div>
+                <label for="hobby">爱好：</label>
+                <input type="checkbox" id="hobby" name="hobby" value="music"/>音乐
+                <input type="checkbox" name="hobby" value="movie"/>电影
+                <input type="checkbox" name="hobby" value="game"/>游戏
+            </div>
+
+            <div>
+                <label for="birthday">出生日期：</label>
+                <input type="date" id="birthday" name="birthday" value=""/>
+            </div>
+
+            <div>
+                <label for="city">所在城市：</label>
+                <select id="city" name="city">
+                    <option>---请选择所在城市---</option>
+                    <optgroup label="直辖市">
+                        <option>北京</option>
+                        <option>上海</option>
+                        <option>广州</option>
+                        <option>深圳</option>
+                    </optgroup>
+                    <optgroup label="省会市">
+                        <option>西安</option>
+                        <option>杭州</option>
+                        <option>郑州</option>
+                        <option>武汉</option>
+                    </optgroup>
+                </select>
+            </div>
+            <hr/>
+            <div>
+                <label for="desc">个性签名：</label>
+                <textarea id="desc" name="desc" rows="5" cols="40" placeholder=" 请写下您的与众不同"></textarea>
+            </div>
+            <hr/>
+            <button type="submit">注册</button>
+            <button type="reset">重置</button>
+        </form>
+    </div>
+</body>
+</html>
