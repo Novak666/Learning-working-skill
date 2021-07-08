@@ -40,8 +40,6 @@ HTML标签可以拥有[属性](https://developer.mozilla.org/zh-CN/docs/Web/HTML
 
 ## 1.3 入门案例
 
-见代码
-
 ### 页面说明
 
 1. '<!DOCTYPE html>'**声明文档类型**。规定了HTML页面必须遵从的良好规则，从HTML5后，`<!DOCTYPE html>`是最短的有效的文档声明。
