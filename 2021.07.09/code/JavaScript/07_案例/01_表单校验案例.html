@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>验证注册页面</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+            line-height: 20px;
+        }
+        .main {
+            width: 525px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hr_1 {
+            font-size: 14px;
+            font-weight: bold;
+            color: #3275c3;
+            height: 35px;
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+            border-bottom-color: #3275c3;
+            vertical-align: bottom;
+            padding-left: 12px;
+        }
+        .left {
+            text-align: right;
+            width: 80px;
+            height: 25px;
+            padding-right: 5px;
+        }
+        .center {
+            width: 280px;
+        }
+        .in {
+            width: 130px;
+            height: 16px;
+            border: solid 1px #79abea;
+        }
+
+        .red {
+            color: #cc0000;
+            font-weight: bold;
+        }
+
+        div {
+            color: #F00;
+        }
+    </style>
+    <script type="text/javascript">
+    </script>
+</head>
+
+<body>
+<form action="#" method="post" id="myform" onsubmit="return checkForm()">
+    <table class="main" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td><img src="../img/logo.jpg" alt="logo" /><img src="../img/banner.jpg" alt="banner" /></td>
+        </tr>
+        <tr>
+            <td class="hr_1">新用户注册</td>
+        </tr>
+        <tr>
+            <td style="height:10px;"></td>
+        </tr>
+        <tr>
+            <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td class="left">用户名：</td>
+                        <td class="center">
+                            <!--给用户名输入框绑定失去焦点事件-->
+                            <input id="username" name="user" type="text"
+                                   class="in" onblur="checkUsername(this.value)"/>
+                            <span id="usernamespan" style="color: red">
+
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">密码：</td>
+                        <td class="center">
+                            <input id="pwd" name="pwd" type="password" class="in" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">确认密码：</td>
+                        <td class="center">
+                            <input id="repwd" name="repwd" type="password" class="in"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">电子邮箱：</td>
+                        <td class="center">
+                            <input id="email" name="email" type="text" class="in"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- 以1开头, 第二为是3,4,5,7,8的11位数字-->
+                        <td class="left">手机号码：</td>
+                        <td class="center">
+                            <!--手机号输入框绑定失去焦点事件-->
+                            <input id="mobile" name="mobile" type="text" class="in" onblur="checkPhone(this.value)"/>
+                            <span id="mobilespan" style="color: red"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">生日：</td>
+                        <td class="center">
+                            <input id="birth" name="birth" type="text" class="in"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">&nbsp;</td>
+                        <td class="center">
+                            <input name="" type="image" src="../img/register.jpg" />
+                        </td>
+                    </tr>
+                </table></td>
+        </tr>
+    </table>
+</form>
+<script>
+    //校验用户名的方法
+    function checkUsername(username) {
+        //1. 编写一个校验用户名的正则表达式
+        //只能由英文字母和数字组成，长度为4～16个字符，并且以英文字母开头
+        var reg = /^[a-zA-Z][a-zA-Z0-9]{3,15}$/
+        //2. 使用正则表达式校验用户名输入框中的值
+        //var username = document.getElementById("username").value;
+
+        if (reg.test(username)) {
+            //校验通过
+            document.getElementById("usernamespan").innerHTML = "<img src=\"../img/gou.png\" width=\"40\" height=\"20\">"
+        }else {
+            //校验不通过
+            document.getElementById("usernamespan").innerHTML = "用户名格式不正确"
+        }
+    }
+</script>
+</body>
+</html>

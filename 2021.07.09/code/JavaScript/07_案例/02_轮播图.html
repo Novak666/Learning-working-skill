@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+</head>
+<body>
+    <div style="text-align: center">
+        <img id="tu" src="../img/banner_1.jpg" width="750" height="200"
+             onmouseover="pauseMove()" onmouseout="startMove()">
+    </div>
+    <script>
+        var imgs = ["../img/banner_1.jpg","../img/banner_2.jpg","../img/banner_3.jpg"]
+        var i = 0
+        //每隔三秒钟切换一张轮播图图片
+        var id
+        //1. 定时器: 每隔三秒钟做一件事情
+        function startMove(){
+            id = setInterval(function () {
+                i ++
+                if (i == 3) {
+                    i = 0
+                }
+                //2. 切换img的图片:重新设置img标签的src
+                document.getElementById("tu").setAttribute("src",imgs[i])
+            },3000);
+        }
+
+        //页面加载的时候开启轮播
+        startMove()
+
+        //要求: 当鼠标悬停在轮播图上的时候，停止轮播，鼠标移开，恢复轮播
+        //给轮播图绑定鼠标移入和移出事件
+        function pauseMove() {
+            //暂停轮播: 清除定时器
+            clearInterval(id)
+        }
+    </script>
+</body>
+</html>

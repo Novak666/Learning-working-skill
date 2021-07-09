@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js的数组对象</title>
+</head>
+<body>
+    <script>
+        // var arr1 = [1,2,3,4,"hello",true]
+        //
+        // var arr2 = ["a","b","c"]
+        //
+        // //将arr1和arr2进行合并，合并成为一个新的数组赋值给arr1
+        // arr1 = arr1.concat(arr2)
+        //
+        // //for循环遍历数组
+        // for (var i = 0; i < arr1.length; i++) {
+        //     var arrElement = arr1[i];
+        //     console.log(arrElement)
+        // }
+        //
+        // //将数组中的元素拼接成一个字符串
+        // console.log(arr1.join("#"))
+        //
+        // //reverse()方法，反转数组
+        // console.log(arr1.reverse())
+        var citys = new Array(3);
+        citys[0] = ["深圳", "广州", "东莞", "惠州"];
+        citys[1] = ["武汉", "黄冈", "黄石", "鄂州", "荆州"];
+        citys[2] = ["济南", "青岛", "烟台", "淄博", "聊城"];
+
+        var citys02 = [
+            ["深圳", "广州", "东莞", "惠州"],
+            ["武汉", "黄冈", "黄石", "鄂州", "荆州"],
+            ["济南", "青岛", "烟台", "淄博", "聊城"]
+        ];
+        for (var i = 0; i < citys02.length; i++) {
+            var cityArray = citys02[i];
+
+            console.log(cityArray);
+
+            for(var j = 0;j<=cityArray.length;j++){
+                console.log(cityArray[j]);
+            }
+        }
+    </script>
+</body>
+</html>

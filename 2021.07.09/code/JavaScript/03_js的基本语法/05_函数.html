@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js的函数</title>
+</head>
+<body>
+    <script>
+        //定义一个函数:计算俩数据之和
+        //形参: a,b
+        function total(a,b) {
+            console.log(arguments)
+            return a+b
+        }
+
+        function total(a,b,c) {
+            console.log(arguments)
+            return a+b+c
+        }
+
+
+        //调用total函数:计算2和3的总和
+        var sum = total(2,3);
+        console.log(sum)
+
+        //js的函数方法定义时候的参数个数和方法调用时候的参数个数可以不一致
+        //原因就是js的函数中，有一个内置的变量arguments是一个数组，该数组可以存放你传入的所有参数
+
+        //js是没有方法重载的，同名方法后定义的会覆盖先定义的
+    </script>
+</body>
+</html>

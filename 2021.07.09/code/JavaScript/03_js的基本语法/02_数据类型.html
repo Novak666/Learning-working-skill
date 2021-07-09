@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js的数据类型</title>
+</head>
+<body>
+    <script>
+        var i = 10
+
+        i = "hello"
+
+        i = true
+
+        i = new Date()
+
+        var a;
+
+        console.log(typeof a)
+
+        //数据类型之间的相互转换
+        var j = 10
+        //目标: 将number类型的j，转换成字符串类型，可以在j后面拼接一个"",或者是调用toString()方法
+
+        console.log(typeof j.toString())
+
+        var str = "3.14"
+        //目标: 将string类型的str，转换成数字(number类型)，既可以转成整数(parseInt)，又可以转成小数parseFloat()
+        console.log(typeof parseFloat(str))
+
+        //将字符串或者是str转换成布尔值: new Boolean(字符串/数字),空字符串或者0表示false，非空字符串或者非零表示true
+        console.log(new Boolean(str))
+    </script>
+</body>
+</html>

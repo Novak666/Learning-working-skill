@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js的常用事件的介绍</title>
+</head>
+<body>
+    <!--
+        给输入框绑定获取焦点事件onfocus:当输入框获取焦点的时候，在控制台输出一句: 获取焦点
+
+        给输入框绑定失去焦点事件onblur: 当输入框失去焦点的时候，在控制台输出一句：失去焦点
+
+        给输入框绑定鼠标移入事件onmouseover: 当输入框鼠标移入的时候，在控制台输出一句：鼠标移入
+
+        给输入框绑定鼠标移出事件onmouseout: 当输入框鼠标移出的时候，在控制台输出一句：鼠标移出
+
+        给输入框绑定键盘按下事件onkeydown: 当键盘按下的时候，输出文本框中的内容,
+        当键盘按键按下的时候你所按下的那个键上的值并没有进入输入框
+
+        给输入框绑定键盘抬起事件onkeyup: 当键盘抬起的时候，输出文本框中的内容,
+    -->
+    <input type="text" id="ipt" onfocus="fn1()"
+           onmouseover="fn2()"
+           onmouseout="fn3()"
+
+           onkeyup="fn4()">
+
+    <!--
+        目标:给下拉框绑定内容改变事件onchange,当内容改变的时候，我们就输出一句"内容改变了..."
+    -->
+    <select onchange="fn5()">
+        <option>北京</option>
+        <option>上海</option>
+        <option>深圳</option>
+        <option>广州</option>
+    </select>
+    <script>
+        //绑定事件的两种方式: 普通方式绑定
+        function fn1() {
+            console.log("获取焦点了...")
+        }
+
+        function fn2(){
+            console.log("鼠标移入了...")
+        }
+
+        function fn3(){
+            console.log("鼠标移出了...")
+        }
+
+        function fn4(){
+            //获取文本框的内容
+            console.log(document.getElementById("ipt").value)
+        }
+
+        function fn5(){
+            console.log("内容改变了...")
+        }
+        //匿名函数方式绑定: 标签对象.onxxx = 匿名函数
+        document.getElementById("ipt").onblur = function () {
+            console.log("失去焦点了...")
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作标签体</title>
+</head>
+<body>
+    <div id="city"><h1>北京</h1></div>
+    <script>
+        //获取id为city的那个标签的标签体的内容
+        var innerHTML = document.getElementById("city").innerHTML;
+        console.log(innerHTML)
+
+        //设置id为city的标签体的内容
+        document.getElementById("city").innerHTML = "<h1>深圳</h1>"
+
+    </script>
+</body>
+</html>

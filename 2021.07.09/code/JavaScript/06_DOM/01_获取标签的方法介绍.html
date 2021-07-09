@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取标签的方法介绍</title>
+</head>
+<body>
+    <div id="d1" name="n1">hello div1</div>
+    <div class="c1">hello div2</div>
+    <span class="c1">hello span1</span>
+    <span name="n1">hello span2</span>
+    <script>
+        //根据id获取标签
+        //console.log(document.getElementById("d1"))
+
+        //根据name获取标签的数组
+        console.log(document.getElementsByName("n1"))
+
+        //根据标签名获取标签
+        // console.log(document.getElementsByTagName("div"))
+
+        //根据类名获取标签
+        //console.log(document.getElementsByClassName("c1"))
+
+        //扩展俩方法:1. 获取单个标签
+        //console.log(document.querySelector("#d1"))
+
+        //2. 获取多个标签
+        console.log(document.querySelectorAll("span"))
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>省市二级联动</title>
+</head>
+<body>
+<select id="provinceSelect">
+    <option value="0">请选择省份</option>
+    <option value="1">广东省</option>
+    <option value="2">湖南省</option>
+    <option value="3">湖北省</option>
+</select>
+<select id="citySelect">
+    <option>请选择城市</option>
+</select>
+
+<script>
+    //准备数据
+    var cities = [
+        [],
+        ["广州","深圳","惠州","东莞"],
+        ["长沙","岳阳","常德","衡阳"],
+        ["武汉","黄冈","宜昌","荆州"]
+    ]
+    //省份的option的value，就是对应城市数组的下标
+    //1. 给省份下拉框绑定onchange事件
+    document.getElementById("provinceSelect").onchange = function () {
+        //1. 获取当前省份的城市列表
+        //遍历添加之前，要先清除城市列表中的所有城市
+        document.getElementById("citySelect").innerHTML = "<option>请选择城市</option>"
+        //遍历出每一个城市
+        for (var i = 0; i < cities[this.value].length; i++) {
+            var cityName = cities[this.value][i];
+            //创建option标签
+            var optionElement = document.createElement("option");//<option></option>
+            //设置option标签中的内容为cityName
+            optionElement.innerHTML = cityName
+            //将option标签添加到城市下拉框中
+            document.getElementById("citySelect").appendChild(optionElement)
+        }
+    }
+</script>
+</body>
+</html>
