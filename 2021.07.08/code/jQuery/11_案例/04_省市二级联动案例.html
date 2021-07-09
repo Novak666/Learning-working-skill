@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>省市二级联动</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<!--
+    给省份的下拉框绑定change事件
+-->
+<select id="provinceSelect" onchange="changeProvince(this.value)">
+    <option value="0">请选择省份</option>
+    <option value="1">广东省</option>
+    <option value="2">湖南省</option>
+    <option value="3">湖北省</option>
+</select>
+<select id="citySelect">
+    <option>请选择城市</option>
+</select>
+
+<script>
+    var cities = [
+        [],
+        ["广州","深圳","惠州","东莞"],
+        ["长沙","岳阳","常德","衡阳"],
+        ["武汉","黄冈","宜昌","荆州"]
+    ]
+
+    function changeProvince(value){
+        //获取当前选中的那个省份的value
+        //当前省份的所有城市
+        var items = cities[value];
+
+        //遍历添加之前，先清除城市下拉框中的所有城市
+        $("#citySelect").html("<option>请选择城市</option>")
+        //遍历出每一个城市
+        $.each(items,function (index,element) {
+            //element就是遍历出来的每一个城市名字
+           $("#citySelect").append($("<option>"+element+"</option>"))
+        })
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery对象和js对象</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <input type="text" id="ipt" value="张三">
+    <script>
+        //目标: 获取输入框的值
+        //1. 什么是jQuery对象: 使用jQuery的选择器获取的对象就是jQuery对象
+        //2. 什么是js对象: 除了jQuery对象，其它的都是js对象
+        //3. js对象只能操作js对象自己的属性和方法
+        //4. jQuery对象只能操作jQuery对象自己的属性和方法
+        var ipt = document.getElementById("ipt");//js对象
+        //var value = ipt.value;
+        //console.log(value)
+
+        var $ipt = $("#ipt");//jQuery对象，jQuery对象的命名通常是以$开头作为标示
+        //var val = $ipt.val();
+        //console.log(val)
+
+        //5. 将js对象转换成jQuery对象: $(js对象)
+        console.log($(ipt).val())
+
+        //6. 将jQuery对象转成js对象: 遍历出数组中的元素(对象)
+        //jQuery对象的本质是一个数组，该数组中的每一个对象都是js对象
+        console.log($ipt[0].value)
+    </script>
+</body>
+</html>

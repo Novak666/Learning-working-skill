@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件切换</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <input type="text" id="ipt">
+    <script>
+        //目标: 鼠标移入的时候设置输入框的背景色为蓝色，鼠标移出的时候设置输入框的背景色为红色
+        //链式写法
+        /*$("#ipt").mouseover(function () {
+            $("#ipt").css("background-color","blue")
+        }).mouseout(function () {
+            $("#ipt").css("background-color","red")
+        })*/
+
+        //hover()方法，绑定鼠标移入和鼠标移出事件
+        $("#ipt").hover(function () {
+            $("#ipt").css("background-color","blue")
+        },function () {
+            $("#ipt").css("background-color","red")
+        })
+    </script>
+</body>
+</html>

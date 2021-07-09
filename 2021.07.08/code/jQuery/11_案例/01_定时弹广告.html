@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定时弹广告</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <div id="ad" style="display: none">
+        <img src="../img/ad.jpg" width="100%" height="200">
+    </div>
+    <h1>主题页面的内容</h1>
+
+    <script>
+        //声明一个函数，用于显示广告
+        function showAd(){
+            //在这个方法中，使用jquery的动画，显示广告
+            $("#ad").slideDown(3000,function () {
+                //当广告显示出来之后，再隔三秒就隐藏广告
+                setTimeout(hideAd,3000)
+            })
+        }
+
+        //声明一个函数，用于隐藏广告
+        function hideAd(){
+            $("#ad").slideUp(3000)
+        }
+
+        //当页面加载3秒后，开始显示广告: setTimeout()
+        setTimeout("showAd()",3000)
+    </script>
+</body>
+</html>

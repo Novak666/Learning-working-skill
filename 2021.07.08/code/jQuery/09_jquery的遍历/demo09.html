@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery的遍历</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <ul>
+        <li>北京</li>
+        <li>上海</li>
+        <li>深圳</li>
+        <li>广州</li>
+    </ul>
+    <script>
+        var arr = [1,2,3,4,"hello"]
+        //遍历出数组中的所有元素
+        //回顾使用js里面的for循环遍历
+        /*for(var i=0;i<arr.length;i++){
+            console.log(arr[i])
+        }*/
+
+        //使用js原始的for循环，遍历出每一个li，获取每一个li中的内容
+        /*var elements = document.getElementsByTagName("li");
+        for(var i=0;i<elements.length;i++){
+            console.log(elements[i].innerHTML)
+        }*/
+
+        //使用jquery对象的方式，进行遍历，获取每一个li中的内容
+        //jquery对象的each()方法，可以遍历出每一个jQuery对象, 它只能遍历jQuery对象
+        /*$("li").each(function (index,element) {
+            //index就表示遍历出来的每一个元素的下标，element就表示遍历出来的每一个元素
+            console.log(index+":"+element.innerHTML)
+        })*/
+
+        //jquery的全局each()方法进行遍历, jQuery的全局方法就是使用$调用的方法，不需要某个jQuery对象调用, 既可以遍历jQuery对象又可以遍历js对象
+        //$.each(要遍历的对象,处理遍历结果的回调函数)
+        /*$.each($("li"),function (index,element) {
+            console.log(index+":"+element.innerHTML)
+        })*/
+
+        /*$.each(arr,function (index,element) {
+            console.log(index+":"+element)
+        })*/
+
+        //for of语句进行遍历
+        /*for(element of $("li")){
+            //element就是遍历出来的每一个元素
+            console.log(element.innerText)
+        }*/
+
+        for(element of arr){
+            console.log(element)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <input id="ipt1" type="text" value="张三">
+    <input type="password" value="123456">
+    <script>
+        //目标1: 设置有id属性的input标签的背景色为红色
+        //属性选择器: [属性名]包含某个属性
+        $("input[id]").css("background-color","red")
+
+        //目标2: 设置type属性为password的input标签的背景色为红色
+        //属性选择器: [属性名='属性值']某个属性为啥值的标签
+        $("input[type='password']").css("background-color","red")
+    </script>
+</body>
+</html>

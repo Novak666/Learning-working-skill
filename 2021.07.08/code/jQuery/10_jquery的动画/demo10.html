@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery的动画</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <img src="../img/mm.jpg" width="409" height="292"><br>
+    <input type="button" onclick="showImg()" value="显示">
+    <input type="button" onclick="hideImg()" value="隐藏">
+    <input type="button" onclick="toggleImg()" value="切换">
+
+<script>
+    //显示图片的方法
+    function showImg() {
+        //jQuery对象.show(动画执行的速度,动画执行完毕的那瞬间调用的函数)
+        /*$("img").show(2000,function () {
+            alert("显示完毕")
+        })*/
+
+
+        //jQuery对象.slideDown(动画执行的速度,动画执行完毕的那瞬间调用的函数)
+        //$("img").slideDown(2000)
+
+
+        //jQuery对象.fadeIn(动画执行的速度,动画执行完毕的那瞬间调用的函数)
+        //淡入效果: 透明度从0-1
+
+        $("img").fadeIn(2000)
+    }
+
+    //隐藏图片的方法
+    function hideImg() {
+        //jQuery对象.hide(动画执行的速度,动画执行完毕的那瞬间调用的函数)
+        /*$("img").hide(2000,function () {
+            alert("隐藏完毕")
+        })*/
+
+
+        //jQuery对象.slideUp(动画执行的速度,动画执行完毕的那瞬间调用的函数)
+        //$("img").slideUp(2000)
+
+
+        //jQuery对象.fadeOut(动画执行的速度,动画执行完毕的那瞬间调用的函数)
+        //淡出效果: 透明度从1-0
+
+        $("img").fadeOut(2000)
+    }
+
+    //切换图片显示和隐藏的方法
+    function toggleImg() {
+        //jQuery对象.toggle(动画执行的速度,动画执行完毕的那瞬间调用的函数)
+        //$("img").toggle(2000)
+
+        //jQuery对象.slideToggle(动画执行的速度,动画执行完毕的那瞬间调用的函数)
+        //$("img").slideToggle(2000)
+
+        //jQuery对象.fadeToggle(动画执行的速度,动画执行完毕的那瞬间调用的函数)
+        $("img").fadeToggle(2000)
+    }
+</script>
+</body>
+</html>

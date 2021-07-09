@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery操作标签的文本和值</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <input type="text" id="ipt" value="张三"/>
+    <div id="city"><h1>北京</h1></div>
+    <script>
+        //获取输入框的value的值
+        //val()方法如果不传入参数，表示获取value值
+        console.log($("#ipt").val())
+
+        //设置输入框的value为李四
+        //val()传入参数表示设置value
+        $("#ipt").val("李四")
+
+
+        //获取id为city的div中的文本内容
+        //text()方法不传入参数，表示获取标签体的文本
+        console.log($("#city").text())
+
+        //获取id为city的div中的所有内容
+        //html()方法不传入参数，表示获取标签体的所有内容
+        //console.log($("#city").html())
+
+        //text()方法传入参数，表示设置标签体的文本
+        //$("#city").text("<h1>深圳</h1>")
+
+        //html()方法传入参数，表示设置标签体的内容
+        // $("#city").html("<h1>深圳</h1>")
+    </script>
+</body>
+</html>

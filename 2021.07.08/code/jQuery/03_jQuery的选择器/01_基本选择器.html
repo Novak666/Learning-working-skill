@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本选择器</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <div id="d1">div1</div>
+    <div class="c1">div2</div>
+    <span class="c1">span1</span>
+    <span class="c1">span2</span>
+
+    <script>
+        //目标1: 获取id为d1的标签
+        //console.log($("#d1"))
+
+        //目标2: 获取类名为c1的所有标签
+        console.log($(".c1"))
+
+        //目标3: 获取标签名为span的所有标签
+        console.log($("span"))
+    </script>
+</body>
+</html>

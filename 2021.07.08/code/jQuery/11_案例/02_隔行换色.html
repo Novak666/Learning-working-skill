@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.3.1.js"></script>
+
+    <style>
+        .greenStyle{
+            background-color: lawngreen;
+        }
+
+        .blueStyle{
+            background-color: lightskyblue;
+        }
+
+        .redStyle{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<table id="tab1" border="1" width="800" align="center" >
+    <tr>
+        <td colspan="5"><input type="button" value="删除"></td>
+    </tr>
+
+    <tr>
+        <th><input type="checkbox"></th>
+        <th>分类ID</th>
+        <th>分类名称</th>
+        <th>分类描述</th>
+        <th>操作</th>
+    </tr>
+
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>1</td>
+        <td>手机数码</td>
+        <td>手机数码类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>2</td>
+        <td>电脑办公</td>
+        <td>电脑办公类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>3</td>
+        <td>鞋靴箱包</td>
+        <td>鞋靴箱包类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>4</td>
+        <td>家居饰品</td>
+        <td>家居饰品类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+</table>
+</body>
+<script>
+    //隔行换色: 其实就是设置奇数行为绿色，偶数行为蓝色
+    $("tr:odd").addClass("greenStyle")
+    $("tr:even").addClass("blueStyle")
+
+    //给每行添加鼠标移入和鼠标移出事件，当鼠标移入的时候，将背景色变为红色，鼠标移出的时候，还原成原来的颜色
+    //要变红色，其实就是给当前鼠标移入的那一行添加类名为"redStyle",要还原成原来的颜色，就是移除当前这一行的类名"redStyle"
+    $("tr").mouseover(function () {
+        //怎么拿到当前行: this
+        $(this).addClass("redStyle")
+    })
+
+    $("tr").mouseout(function () {
+        $(this).removeClass("redStyle")
+    })
+</script>
+</html>

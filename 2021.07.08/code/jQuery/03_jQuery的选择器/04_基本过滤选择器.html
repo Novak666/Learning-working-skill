@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>基本过滤选择器完成隔行换色案例</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<table id="tab1" border="1" width="800" align="center" >
+    <tr>
+        <td colspan="5"><input type="button" value="删除"></td>
+    </tr>
+    <tr style="background-color: #999999;">
+        <th><input type="checkbox"></th>
+        <th>分类ID</th>
+        <th>分类名称</th>
+        <th>分类描述</th>
+        <th>操作</th>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>1</td>
+        <td>手机数码</td>
+        <td>手机数码类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>2</td>
+        <td>电脑办公</td>
+        <td>电脑办公类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>3</td>
+        <td>鞋靴箱包</td>
+        <td>鞋靴箱包类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>4</td>
+        <td>家居饰品</td>
+        <td>家居饰品类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+
+    <script>
+        //基本过滤选择器:
+        //目标1: 设置第一行的背景色为红色, :first
+        $("tr:first").css("background-color","red")
+
+        //目标2: 设置最后一行的背景色为蓝色，:last
+        $("tr:last").css("background-color","blue")
+
+        //目标3: 设置所有奇数(下标)行的背景色为绿色, :odd
+        $("tr:odd").css("background-color","green")
+
+        //目标4: 设置所有偶数(下标)行的背景色为黄色, :even
+        $("tr:even").css("background-color","yellow")
+
+        //目标5: 设置下标为3的那一行的背景色为粉红色, :eq(index)
+        $("tr:eq(3)").css("background-color","pink")
+
+        //目标6: 设置所有下标小于3的所有行的背景色为灰色, :lt(index)
+        $("tr:lt(3)").css("background-color","gray")
+
+        //目标7: 设置所有下标大于3的所有行的背景色为#ffc900, :gt(index)
+        $("tr:gt(3)").css("background-color","#ffc900")
+    </script>
+</table>
+</body>
+</html>

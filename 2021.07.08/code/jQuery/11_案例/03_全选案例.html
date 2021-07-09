@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<table id="tab1" border="1" width="800" align="center" >
+    <tr>
+        <td colspan="5">
+            <input type="button" value="反选" onclick="reverseSelect()">
+        </td>
+    </tr>
+    <tr>
+        <th>
+            <input type="checkbox" id="all" onclick="selectAll(this)" >
+        </th>
+        <th>分类ID</th>
+        <th>分类名称</th>
+        <th>分类描述</th>
+        <th>操作</th>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="itemSelect"></td>
+        <td>1</td>
+        <td>手机数码</td>
+        <td>手机数码类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="itemSelect"></td>
+        <td>2</td>
+        <td>电脑办公</td>
+        <td>电脑办公类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="itemSelect"></td>
+        <td>3</td>
+        <td>鞋靴箱包</td>
+        <td>鞋靴箱包类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="itemSelect"></td>
+        <td>4</td>
+        <td>家居饰品</td>
+        <td>家居饰品类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+</table>
+</body>
+<script>
+    //全选: 给全选框绑定点击事件，设置所有子选框的选中状态和全选框一致
+    function selectAll(obj) {
+        //设置所有子选框的选中状态(checked属性)和全选框的checked一样
+        $(".itemSelect").prop("checked",obj.checked)
+    }
+
+    //反选: 给反选按钮绑定点击事件: 设置所有子选框的checked属性和原来相反
+    function reverseSelect() {
+        //设置所有子选框的选中状态和原来的相反
+        /*$(".itemSelect").each(function (index,element) {
+            //element就是遍历出来的每一个子选框(js对象)
+            element.checked = !element.checked
+        })*/
+
+        //将所有子选框点击一遍也能实现反选
+        $(".itemSelect").click()
+    }
+
+    //点击子选框控制全选框的选中状态
+    //当所有子选框都选中，那么全选框也要选中；但凡有一个子选框没有选中，全选框也不选中
+    //关键是:怎么判断所有子选框都选中
+    $(".itemSelect").click(function () {
+        //最关键的一步: 判断是否所有子选框都选中
+        //思路一: 只要有没选中的，那么就是false
+        /*var flag = true
+        $(".itemSelect").each(function (index,element) {
+            if (!element.checked) {
+                //就说明，有子选框未选中
+                flag = false
+            }
+        })
+        //设置全选框的选中状态为flag
+        $("#all").prop("checked",flag)*/
+
+
+        //思路二: 判断子选框的总个数和选中的子选框的总个数是否相同
+        $("#all").prop("checked",$(".itemSelect").length == $(".itemSelect:checked").length)
+    })
+</script>
+</html>

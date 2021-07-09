@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery操作标签的样式</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+    <style>
+        /*css的类选择器*/
+        .redStyle{
+            background-color: red;
+            width: 600px;
+            height: 60px;
+        }
+
+        .blueStyle{
+            background-color: blue;
+            width: 800px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+<input id="ipt" type="text" onmouseover="fn1()" onmouseout="fn2()">
+<script>
+    //目标: 鼠标移入输入框的时候，设置输入框的背景色为红色，移出输入框的时候设置输入框的背景色为蓝色
+    function fn1() {
+        //鼠标移入
+        //使用css方法设置标签的样式，其实是设置的标签的行内样式,缺点:1. 样式无法复用  2. 编写太麻烦
+        // $("#ipt").css("background-color","red")
+
+        //给输入框添加一个类名为"redStyle"
+        $("#ipt").addClass("redStyle")
+        //删除输入框的"blueStyle"类名
+
+        $("#ipt").removeClass("blueStyle")
+    }
+
+
+    function fn2() {
+        //鼠标移出
+        // $("#ipt").css("background-color","blue")
+
+        //给输入框添加一个类名为"blueStyle"
+        $("#ipt").addClass("blueStyle")
+
+        //删除输入框的"redStyle"类名
+        $("#ipt").removeClass("redStyle")
+    }
+</script>
+</body>
+</html>

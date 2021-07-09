@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>表单属性过滤选择器</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+        div,span{
+            width: 180px;
+            height: 180px;
+            margin: 20px;
+            background: #9999CC;
+            border: #000 1px solid;
+            float:left;
+            font-size: 17px;
+            font-family:Roman;
+        }
+
+        div .mini{
+            width: 50px;
+            height: 50px;
+            background: #CC66FF;
+            border: #000 1px solid;
+            font-size: 12px;
+            font-family:Roman;
+        }
+
+        div .mini01{
+            width: 50px;
+            height: 50px;
+            background: #CC66FF;
+            border: #000 1px solid;
+            font-size: 12px;
+            font-family:Roman;
+        }
+        #job{
+            margin: 20px;
+        }
+        #edu{
+            margin-top:-70px;
+        }
+
+    </style>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+
+<body>
+<input type="button" onclick="fn1()" value="设置可用的文本框的背景色为红色"  id="b1"/>
+<input type="button" onclick="fn2()" value="设置不可用的文本框的背景色为红色"  id="b2"/>
+<input type="button" onclick="fn3()" value="获取选中的多选框的个数"  id="b3"/>
+<input type="button" onclick="fn4()" value="获取选中的下拉框的个数"  id="b4"/>
+
+<br><br>
+
+<input type="text" value="不可用值1" disabled="disabled">
+<input type="text" value="可用值1" >
+<input type="text" value="不可用值2" disabled="disabled">
+<input type="text" value="可用值2" >
+
+<br><br>
+<input type="checkbox" name="items" value="美容" >美容
+<input type="checkbox" name="items" value="IT" >IT
+<input type="checkbox" name="items" value="金融" >金融
+<input type="checkbox" name="items" value="管理" >管理
+
+<br><br>
+
+<input type="radio" name="sex" value="男" >男
+<input type="radio" name="sex" value="女" >女
+
+<br><br>
+
+<select name="job" id="job" multiple="multiple" size=4>
+    <option>程序员</option>
+    <option>中级程序员</option>
+    <option>高级程序员</option>
+    <option>系统分析师</option>
+</select>
+
+<select name="edu" id="edu">
+    <option>本科</option>
+    <option>博士</option>
+    <option>硕士</option>
+    <option>大专</option>
+</select>
+
+
+<br/>
+
+<div id="two" class="mini" >
+    id为two   class是 mini  div
+    <div  class="mini" >class是 mini</div>
+</div>
+
+<div class="one" >
+    class是 one
+    <div  class="mini" >class是 mini</div>
+    <div  class="mini" >class是 mini</div>
+</div>
+<div class="one" >
+    class是 one
+    <div  class="mini01" >class是 mini01</div>
+    <div  class="mini" >class是 mini</div>
+</div>
+
+</body>
+
+<script type="text/javascript">
+    //设置可用的文本框的背景色为红色
+    function fn1() {
+        //怎么获取文本框, :text
+        //怎么获取可用的表单项, :enabled
+        $(":text:enabled").css("background-color","red")
+    }
+
+    //设置不可用的文本框的背景色为红色
+    function fn2() {
+        //怎么获取不可用的表单项，:disabled
+        $(":text:disabled").css("background-color","red")
+    }
+
+    //获取选中的多选框的个数
+    function fn3() {
+        //怎么获取多选框, :checkbox
+        //怎么获取选中的, :checked
+        alert($(":checkbox:checked").length)
+    }
+
+    //获取选中的下拉框的个数
+    function fn4() {
+        //怎么获取选中的下拉框，:selected
+        alert($(":selected").length)
+    }
+</script>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery操作标签的属性</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <input type="text" name="username" aa="bb"><br>
+
+    <script>
+        //设置输入框的name属性为nickname
+        $("input").attr("name","nickname")
+
+        $("input").prop("name","nickname")
+
+        //设置输入框的aa属性为cc
+        $("input").attr("aa","cc")
+        $("input").prop("aa","cc")
+
+        //1. attr方法可以操作标签的一切属性,而prop方法只能操作标签内置有的属性
+        //2. 如果属性是boolean类型的，那么我们使用prop操作
+    </script>
+</body>
+</html>

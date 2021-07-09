@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery创建、删除、添加标签</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<ul id="city">
+    <li id="bj">北京</li>
+    <li id="sh">上海</li>
+    <li id="sz">深圳</li>
+    <li id="gz">广州</li>
+</ul>
+<input type="button" value="添加" onclick="addCity()"><br>
+<input type="button" value="删除" onclick="removeCity()"><br>
+<input type="button" value="清空城市列表" onclick="removeAllCity()">
+<script>
+    //目标1: 点击添加按钮的时候，往城市列表中添加"长沙"
+    function addCity() {
+        //1. 创建一个长沙标签
+        //2. 将创建出来的长沙标签添加到城市列表中
+        //append()方法，父标签将创建出来的标签添加到最后, append这个单词的意思是追加
+        // $("#city").append($("<li id='cs'>长沙</li>"))
+
+        //appendTo()方法， 新创建出来的标签被添加到列表中
+        // $("<li id='cs'>长沙</li>").appendTo($("#city"))
+
+        //prepend()方法，父标签将子标签添加到最前面
+        // $("#city").prepend($("<li id='cs'>长沙</li>"))
+
+        //prependTo()方法
+
+        //before()方法，在某个标签之前添加标签
+        // $("#sz").before($("<li id='cs'>长沙</li>"))
+
+        //after()方法，在某个标签之后添加标签
+        // $("#sz").after($("<li id='cs'>长沙</li>"))
+    }
+
+    //目标2: 点击删除按钮的时候，删除"上海"
+    function removeCity() {
+        $("#sh").remove()
+    }
+
+    //目标3: 点击清空城市列表按钮的时候，删除所有的城市，但是要保留列表ul
+    function removeAllCity() {
+        //empty()方法，可以清空某个标签中的所有子标签
+        $("#city").empty()
+    }
+</script>
+</body>
+</html>

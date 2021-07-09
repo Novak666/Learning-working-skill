@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电子时钟案例</title>
+    <style>
+        div{
+            font-size: 30px;
+            color: green;
+        }
+    </style>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<div id="time">
+
+</div>
+
+<input type="button" value="开始" onclick="startTime()">
+<input type="button" value="暂停" onclick="pauseTime()">
+<script>
+    var id = null
+    //1. 给开始按钮绑定点击事件，点击之后，在id为time的div中显示当前时间，并且要让时钟动起来
+    function startTime() {
+        var time = new Date().toLocaleString();
+        $("#time").html(time)
+
+        //每次开启一个定时器之前，先清除原来的定时器
+        if (id != null) {
+            clearInterval(id)
+        }
+
+        id = setInterval(function () {
+            var time = new Date().toLocaleString();
+            $("#time").html(time)
+        },1000);
+    }
+
+    //2. 点击暂停按钮的时候，时钟停止
+    function pauseTime() {
+        //要让电子时钟停止，则。需要清除那个定时器
+        clearInterval(id)
+    }
+</script>
+</body>
+</html>

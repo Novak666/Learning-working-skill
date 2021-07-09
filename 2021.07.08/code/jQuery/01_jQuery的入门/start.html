@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery的入门</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <script>
+        //给当前的window绑定一个加载完毕事件
+        /*window.onload = function () {
+            //窗体加载完毕，就会执行这个匿名函数
+            //目标: 获取输入框的value值
+            var ipt = document.getElementById("ipt");
+            var value = ipt.value;
+            console.log(value)
+        }*/
+
+        //jQuery也能够绑定页面加载完毕事件
+        $(function () {
+            //页面加载完毕之后要执行的代码，就写在这个匿名函数中
+            //目标: 获取输入框的value值
+            var ipt = document.getElementById("ipt");
+            var value = ipt.value;
+            console.log(value)
+        })
+    </script>
+
+    <input type="text" id="ipt" value="张三">
+</body>
+</html>
