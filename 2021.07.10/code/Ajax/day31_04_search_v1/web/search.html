@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<center>
+
+    <h1>黑马</h1>
+    <div style="color: red" id="msg"></div>
+    <input id="inputId" type="text" style="width: 500px; height: 38px;" onkeyup="searchWords(this.value)"/>
+    <input type="button" style="height: 38px;" value="黑马一下" />
+    <div id="divId"
+         style="width: 500px; border: 1px red solid; height: 300px; position: absolute; left: 394px;">
+        <table id="tabId" width="100%" height="100%"  border="1px">
+
+        </table>
+    </div>
+</center>
+<script>
+    //声明一个搜索的方法
+    function searchWords(keyword) {
+        //发送异步请求给WordsServlet，携带参数action以及搜索关键字keyword
+        $.post("words","action=search&keyword="+keyword,function (result) {
+            //判断是否查询成功
+            if (result.flag) {
+                //查询成功
+                var data = result.data;//json数组,每一个json对象就对应一个Words对象
+
+                //每次遍历添加之前，先要清除原来的数据
+                $("#tabId").empty()
+                //遍历出每一个json对象
+                $.each(data,function (index,words) {
+                    //words就是遍历出来的每一个json
+                    //获取word属性的值
+                    var word = words.word;
+
+                    //有一个word就往展示的table中添加一行
+                    $("#tabId").append($("<tr><td>"+word+"</td></tr>"))
+                })
+            }else {
+                //查询失败
+                $("#msg").html("网络异常")
+            }
+        },"json")
+    }
+</script>
+</body>
+</html>

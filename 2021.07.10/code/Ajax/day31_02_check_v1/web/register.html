@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <form action="#" method="post">
+        用户名<input type="text" name="username" onblur="checkUsername(this.value)">
+        <span id="uspan" style="color: red"></span>
+    </form>
+
+    <script>
+        function checkUsername(username) {
+            //校验用户名
+            //发送异步请求给UserServlet，并且携带参数action和username
+            $.post("user","action=checkUsername&username="+username,function (result) {
+                //这个result就是服务器端的响应结果
+                $("#uspan").html(result)
+            })
+        }
+    </script>
+</body>
+</html>

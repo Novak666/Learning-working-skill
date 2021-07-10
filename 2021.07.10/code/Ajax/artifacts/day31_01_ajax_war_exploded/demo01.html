@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>异步请求</title>
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <div style="color: red" id="msg"></div>
+    <h1>使用js的原生代码发送异步请求</h1>
+    <a href="demo01?username=aobama">发送同步请求</a><br>
+    <a href="javascript:;" onclick="fn1()">发送异步的get请求请求</a><br>
+    <a href="javascript:;" onclick="fn2()">发送异步的post请求请求</a><br>
+
+    <h1>使用jquery发送异步请求</h1>
+    <a href="javascript:;" onclick="fn3()">发送异步的get请求请求</a><br>
+    <a href="javascript:;" onclick="fn4()">发送异步的post请求请求</a><br>
+    <a href="javascript:;" onclick="fn5()">使用jquery的ajax方法发送异步请求</a><br>
+<script>
+    //使用原生的js代码发送异步请求
+    function fn1() {
+        //1. 创建XMLHTTPRequest对象
+        var xhr = new XMLHttpRequest();
+        //2. 建立与服务器的连接
+        xhr.open("GET","demo01?username=jay")
+        //3. 发送请求
+        xhr.send()
+
+        //4.自己编写代码处理响应，展示响应数据
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                //获取响应数据
+                var responseText = xhr.responseText;
+                document.getElementById("msg").innerHTML = responseText
+            }
+        }
+    }
+
+    //使用js原生的代码发送异步的post请求
+    function fn2() {
+        //1. 创建XMLHTTPRequest对象
+        var xhr = new XMLHttpRequest();
+        //2. 建立与服务器的连接
+        xhr.open("POST","demo01")
+        //3. 发送请求
+        //设置一个请求头，用来设置请求参数的类型
+        xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+        xhr.send("username=jay")
+        //4.自己编写代码处理响应，展示响应数据
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                //获取响应数据
+                var responseText = xhr.responseText;
+                document.getElementById("msg").innerHTML = responseText
+            }
+        }
+    }
+
+    //使用jquery的代码发送异步的get请求
+    function fn3() {
+        //使用jquery的方法发送异步请求，我们只需要关注啥: 路径、参数、处理响应数据
+        //$.get("请求路径",处理响应数据的匿名函数,响应数据的类型(默认是text))
+        $.get("demo01?username=aobama",function (result) {
+            //result就是服务器的响应数据
+            $("#msg").html(result)
+        })
+    }
+
+    //使用jquery的代码发送异步的post请求
+    function fn4() {
+        //$.post("请求路径","请求参数",处理响应数据的匿名函数,响应数据的类型(默认是text))
+        $.post("demo01","username=jay",function (result) {
+            $("#msg").html(result)
+        })
+    }
+
+    //使用jquery的ajax方法发送异步请求
+    function fn5() {
+        $.ajax({
+            url:"demo01",//请求路径
+            data:"username=aobama",//请求参数
+            type:"post",//请求方式
+            dataType:"text",//响应数据类型
+            success:function (result) {
+                $("#msg").html(result)
+            },//请求成功的回调函数
+            error:function () {
+                $("#msg").html("服务器异常")
+            }//请求失败的回调函数
+        })
+    }
+</script>
+</body>
+</html>

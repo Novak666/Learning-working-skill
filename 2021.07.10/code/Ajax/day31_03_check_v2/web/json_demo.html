@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>json的讲解</title>
+</head>
+<body>
+    <script>
+        //在js里面json其实就是一个js的对象，它的格式:{key:value,key:value},它的作用就是存储数据
+        var person1 = {"name":"张三疯","address":"武当山","age":168}
+
+        //json中的键值对的键一般都是字符串,json中的键值对的值可以是任意类型
+        var person2 = {
+                        "name":"张三疯",
+                        "address":"武当山",
+                        "age":168,
+                        "wife":{
+                            "name":"小花",
+                            "age":18,
+                            "address":"武当山下的小村庄"
+                        }
+        }
+
+        //js中的数组里面可以存放任意数据，所以js中的数组也能存放json
+        var person3 = {
+            "name":"张三疯",
+            "address":"武当山",
+            "age":168,
+            "wife":{
+                "name":"小花",
+                "age":18,
+                "address":"武当山下的小村庄"
+            },
+            "sons":[
+                {
+                    "name":"张三",
+                    "age":2,
+                    "address":"武当山"
+                },
+                {
+                    "name":"李四",
+                    "age":1,
+                    "address":"深圳"
+                }
+            ]
+        }
+
+        alert(person3.sons[0].name)
+    </script>
+</body>
+</html>

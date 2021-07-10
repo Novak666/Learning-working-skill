@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!-- 网页使用的语言 -->
+<html lang="zh-CN">
+<head>
+    <!-- 指定字符集 -->
+    <meta charset="utf-8">
+    <!-- 使用Edge最新的浏览器的渲染方式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- viewport视口：网页可以根据设置的宽度自动进行适配，在浏览器的内部虚拟一个容器，容器的宽度与设备的宽度相同。
+    width: 默认宽度与设备的宽度相同
+    initial-scale: 初始的缩放比，为1:1 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap模板</title>
+
+    <!-- 1. 导入CSS的全局样式 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- 2. jQuery导入，建议使用1.9以上的版本 -->
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <!-- 3. 导入bootstrap的js文件 -->
+    <script src="js/bootstrap.min.js"></script>
+    <style type="text/css">
+        td, th {
+            text-align: center;
+        }
+    </style>
+    <script src="js/getParameter.js"></script>
+</head>
+<body>
+<div class="container">
+    <h3 style="text-align: center">显示所有联系人</h3>
+    <table border="1" class="table table-bordered table-hover">
+        <thead>
+            <tr class="success">
+                <th>编号</th>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>年龄</th>
+                <th>籍贯</th>
+                <th>QQ</th>
+                <th>邮箱</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <td id="total" colspan="8" align="center">
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="8" align="center">
+                    <ul class="pagination success">
+
+                    </ul>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+<script>
+    //获取currentPage和pageSize的值
+    var currentPage = parseInt(getParameter("currentPage"));
+    var pageSize = parseInt(getParameter("pageSize"));
+
+    //发送异步请求给LinkManServlet进行分页查询
+    $.post("linkman","action=findByPage&currentPage="+currentPage+"&pageSize="+pageSize,function (result) {
+        if (result.flag) {
+            //分页查询成功
+            //获取并展示当前页的联系人集合
+            var linkmanList = result.data.list;
+            $.each(linkmanList,function (index,linkman) {
+                $("tbody").append($("<tr>\n" +
+                    "                <td>"+(index+1)+"</td>\n" +
+                    "                <td>"+linkman.name+"</td>\n" +
+                    "                <td>"+linkman.sex+"</td>\n" +
+                    "                <td>"+linkman.age+"</td>\n" +
+                    "                <td>"+linkman.address+"</td>\n" +
+                    "                <td>"+linkman.qq+"</td>\n" +
+                    "                <td>"+linkman.email+"</td>\n" +
+                    "                <td><a class=\"btn btn-default btn-sm\" href=\"修改联系人.html\">修改</a>&nbsp;<a class=\"btn btn-default btn-sm\" href=\"修改联系人.html\">删除</a></td>\n" +
+                    "            </tr>"))
+            })
+
+            var totalSize = result.data.totalSize;
+            var totalPage = result.data.totalPage;
+            //展示总条数和每页条数
+            $("#total").html("总数据条数为"+totalSize+"条<br>\n" +
+                "                每页显示"+pageSize+"条数据")
+
+            //展示页码
+            //先展示上一页
+            if(currentPage > 1){
+                $(".pagination").append($("<li>\n" +
+                    "                <a href=\"list_page.html?currentPage="+(currentPage-1)+"&pageSize="+pageSize+"\" aria-label=\"Previous\">\n" +
+                    "                <span aria-hidden=\"true\">&laquo;</span>\n" +
+                    "            </a>\n" +
+                    "            </li>"))
+            }
+
+            //遍历展示页码
+            for(var i=1;i<=totalPage;i++){
+                //判断是否是当前页
+                if (currentPage == i) {
+                    //高亮
+                    $(".pagination").append($("<li class=\"active\"><a href=\"#\">"+i+"</a></li>"))
+                }else {
+                    $(".pagination").append($(" <li><a href=\"list_page.html?currentPage="+i+"&pageSize="+pageSize+"\">"+i+"</a></li>"))
+                }
+            }
+
+            //展示下一页
+            if(currentPage < totalPage){
+                $(".pagination").append($("<li>\n" +
+                    "                            <a href=\"list_page.html?currentPage="+(currentPage+1)+"&pageSize="+pageSize+"\" aria-label=\"Next\">\n" +
+                    "                                <span aria-hidden=\"true\">&raquo;</span>\n" +
+                    "                            </a>\n" +
+                    "                        </li>"))
+            }
+        }
+    },"json")
+</script>
+</body>
+</html>

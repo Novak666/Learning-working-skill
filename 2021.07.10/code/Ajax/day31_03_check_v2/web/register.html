@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <form action="#" method="post">
+        用户名<input type="text" name="username" onblur="checkUsername(this.value)">
+        <span id="uspan" style="color: red"></span>
+    </form>
+
+    <script>
+        function checkUsername(username) {
+            //校验用户名
+            //发送异步请求给UserServlet，并且携带参数action和username
+            $.post("user","action=checkUsername&username="+username,function (result) {
+                //服务器端默认的响应数据类型是text，也就表示普通文本
+                //result 是 服务器端响应的json字符串
+                if (result.flag) {
+                    //服务器没有异常
+                    //判断用户名是否可用
+                    if (result.data) {
+                        //用户名可用
+                        $("#uspan").html("<img src='img/gou.png' width='30px' height='18px'/>")
+                    }else {
+                        //用户名不可用
+                        $("#uspan").html("用户名已被占用")
+                    }
+                }else {
+                    //服务器异常
+                    $("#uspan").html("服务器出现异常")
+                }
+            },"json")
+        }
+    </script>
+</body>
+</html>
