@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue的入门案例</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+    <!--
+        指定一块区域，在这块区域中可以使用vue
+        只有这块区域中的标签，才能使用vue和数据模型绑定
+    -->
+    <div id="app">
+        <!--
+            将vue的视图中的message绑定到div中,使用插值表达式{{message}}
+        -->
+        <div>{{username}}</div>
+    </div>
+
+    <script>
+        var vue = new Vue({
+            el:"#app",//指定哪个区域可以使用vue
+            data:{
+                message:"hello world",
+                username:"周杰棍"
+            }//数据模型：要展示到视图上的数据
+        });
+    </script>
+</body>
+</html>

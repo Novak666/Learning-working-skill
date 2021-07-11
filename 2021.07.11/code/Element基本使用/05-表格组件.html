@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格组件</title>
+    <link rel="stylesheet" href="element-ui/lib/theme-chalk/index.css">
+    <script src="js/vue.js"></script>
+    <script src="element-ui/lib/index.js"></script>
+</head>
+<body>
+    <div id="div">
+        <template>
+            <el-table
+              :data="tableData"
+              style="width: 100%">
+              <el-table-column
+                prop="date"
+                label="日期"
+                width="180">
+              </el-table-column>
+              <el-table-column
+                prop="name"
+                label="姓名"
+                width="180">
+              </el-table-column>
+              <el-table-column
+                prop="address"
+                label="地址">
+              </el-table-column>
+
+              <el-table-column
+                label="操作"
+                width="180">
+                <el-button type="warning">编辑</el-button>
+                <el-button type="danger">删除</el-button>
+              </el-table-column>
+            </el-table>
+          </template>
+    </div>
+</body>
+<script>
+    new Vue({
+        el:"#div",
+        data:{
+            tableData: [{
+                date: '2016-05-02',
+                name: '王小虎',
+                address: '上海市普陀区金沙江路 1518 弄'
+            }, {
+                date: '2016-05-04',
+                name: '王小虎',
+                address: '上海市普陀区金沙江路 1517 弄'
+            }, {
+                date: '2016-05-01',
+                name: '王小虎',
+                address: '上海市普陀区金沙江路 1519 弄'
+            }, {
+                date: '2016-05-03',
+                name: '王小虎',
+                address: '上海市普陀区金沙江路 1516 弄'
+            }]
+        }
+    });
+</script>
+</html>

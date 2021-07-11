@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue绑定鼠标移入事件</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+    <style>
+        .box {
+            width: 300px;
+            height: 400px;
+            border: 1px solid red;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="box" @mouseover="fn1()">
+            div
+        </div>
+    </div>
+    <script>
+        var vue = new Vue({
+           el:"#app",
+           methods:{
+                fn1(){
+                    alert("鼠标移入了...")
+                }
+           }
+        });
+    </script>
+</body>
+</html>

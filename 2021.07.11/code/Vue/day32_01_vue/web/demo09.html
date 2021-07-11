@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-if和v-show</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--
+        给img标签绑定v-if，如果值为true就显示，值为false就隐藏; v-if是通过直接删除标签来隐藏标签的
+
+        给img标签绑定v-show，如果值为true就显示，值为false就隐藏;v-show是通过设置display为none来隐藏标签的
+    -->
+    <img v-if="isShow" src="img/mm.jpg" width="400px" height="400px"/><br>
+    <input type="button" value="切换显示和隐藏" @click="toggleImg()"/>
+</div>
+<script>
+    var vue = new Vue({
+       el:"#app",
+       data:{
+           isShow:false
+       },
+        methods:{
+           toggleImg(){
+               this.isShow = !this.isShow
+           }
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue绑定键盘按下事件</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+    <!--
+        对文本输入框做校验，使用键盘按下事件，如果按下0-9的数字，正常显示，其他按键则阻止事件执行。
+    -->
+    <div id="app">
+        <!--
+            $event就是你当前触发的事件
+        -->
+        <input type="text" @keydown="fn1($event)">
+    </div>
+    <script>
+        var vue = new Vue({
+           el:"#app",
+           data:{
+
+           },
+           methods:{
+               fn1(event){
+                    //判断你按下的那个按键是否是0-9，如果不是0-9则阻止事件触发
+                   //event.keyCode获取当前按键的键码值
+                   var keyCode = event.keyCode;
+                   //先判断，按键是否是删除键
+                   if (keyCode != 8) {
+                       if (keyCode < 48 || keyCode > 57) {
+                           //说明输入的不是0-9，则阻止事件发生
+                           event.preventDefault()
+                       }
+                   }
+               }
+           }
+        });
+    </script>
+</body>
+</html>

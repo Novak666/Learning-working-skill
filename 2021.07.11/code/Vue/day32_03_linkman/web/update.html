@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- 网页使用的语言 -->
+<html lang="zh-CN">
+    <head>
+    	<base href="<%=basePath%>"/>
+        <!-- 指定字符集 -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>修改用户</title>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <script src="js/jquery-2.1.0.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/vuejs-2.5.16.js"></script>
+        <script src="js/axios-0.18.0.js"></script>
+        <script src="js/getParameter.js"></script>
+    </head>
+    <body>
+        <div class="container" style="width: 400px;" id="app">
+        <h3 style="text-align: center;">修改用户</h3>
+        <form action="/day05/update" method="post" onsubmit="return false">
+              <input type="hidden" name="id" v-model="linkman.id">
+              <div class="form-group">
+                <label for="name">姓名：</label>
+                <input type="text" class="form-control" v-model="linkman.name" id="name" name="name"  placeholder="请输入姓名" />
+              </div>
+
+              <div class="form-group">
+                <label>性别：</label>
+                  <input type="radio" v-model="linkman.sex" name="sex" value="男"  />男
+                    <input type="radio" v-model="linkman.sex" name="sex" value="女"  />女
+              </div>
+
+              <div class="form-group">
+                <label for="age">年龄：</label>
+                <input type="text" v-model="linkman.age" class="form-control" id="age"  name="age" placeholder="请输入年龄" />
+              </div>
+
+              <div class="form-group">
+                <label for="address">籍贯：</label>
+                 <select name="address" v-model="linkman.address" id="address" class="form-control" >
+                    <option value="广东">广东</option>
+                    <option value="广西">广西</option>
+                    <option value="湖南">湖南</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="qq">QQ：</label>
+                <input type="text" id="qq" v-model="linkman.qq" class="form-control" name="qq" placeholder="请输入QQ号码"/>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email：</label>
+                <input type="text" id="email" v-model="linkman.email" class="form-control" name="email" placeholder="请输入邮箱地址"/>
+              </div>
+
+                 <div class="form-group" style="text-align: center">
+                    <input class="btn btn-primary" type="submit" value="提交" @click="updateLinkMan()"/>
+                    <input class="btn btn-default" type="reset" value="重置" />
+                    <input class="btn btn-default" type="button" value="返回"/>
+                 </div>
+        </form>
+        </div>
+
+    <script>
+        var vue = new Vue({
+           el:"#app",
+           data:{
+                linkman:{}
+           },
+           methods:{
+                findById(){
+                    //1. 获取到地址上携带过来的id
+                    var id = parseInt(getParameter("id"))
+                    //2. 发送异步请求给LinkManServlet，根据id查询联系人的信息
+                    axios.get("linkman?action=findOne&id="+id).then(response=>{
+                        this.linkman = response.data.data
+                    })
+                },
+               updateLinkMan(){
+                   var params = this.linkman
+                   //发送异步请求给LinkManServlet，提交要修改的联系人的信息
+                   axios.post("linkman?action=update",params).then(response=>{
+                       if (response.data.flag) {
+                           //修改成功
+                           location.href = "list.html"
+                       }else {
+                           alert("修改失败")
+                       }
+                   })
+               }
+           },
+           created(){
+                this.findById()
+           }
+        });
+    </script>
+    </body>
+</html>

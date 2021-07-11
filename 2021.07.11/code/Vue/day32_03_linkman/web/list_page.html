@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- 网页使用的语言 -->
+<html lang="zh-CN">
+<head>
+    <!-- 指定字符集 -->
+    <meta charset="utf-8">
+    <!-- 使用Edge最新的浏览器的渲染方式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- viewport视口：网页可以根据设置的宽度自动进行适配，在浏览器的内部虚拟一个容器，容器的宽度与设备的宽度相同。
+    width: 默认宽度与设备的宽度相同
+    initial-scale: 初始的缩放比，为1:1 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap模板</title>
+
+    <!-- 1. 导入CSS的全局样式 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- 2. jQuery导入，建议使用1.9以上的版本 -->
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <!-- 3. 导入bootstrap的js文件 -->
+    <script src="js/bootstrap.min.js"></script>
+    <style type="text/css">
+        td, th {
+            text-align: center;
+        }
+    </style>
+    <script src="js/vuejs-2.5.16.js"></script>
+    <script src="js/axios-0.18.0.js"></script>
+    <script src="js/getParameter.js"></script>
+</head>
+<body>
+<div class="container" id="app">
+    <h3 style="text-align: center">显示所有用户</h3>
+    <table border="1" class="table table-bordered table-hover">
+        <tr class="success">
+            <th>编号</th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>年龄</th>
+            <th>籍贯</th>
+            <th>QQ</th>
+            <th>邮箱</th>
+            <th>操作</th>
+        </tr>
+        <tr v-for="(linkman,index) in pagination.list">
+            <td v-html="index+1"></td>
+            <td v-html="linkman.name"></td>
+            <td v-html="linkman.sex"></td>
+            <td v-html="linkman.age"></td>
+            <td v-html="linkman.address"></td>
+            <td v-html="linkman.qq"></td>
+            <td v-html="linkman.email"></td>
+            <td><a class="btn btn-default btn-sm" href="修改联系人.html">修改</a>&nbsp;<a class="btn btn-default btn-sm" href="修改联系人.html">删除</a></td>
+        </tr>
+        <tr>
+            <td colspan="8" align="center">
+				<ul class="pagination success">
+					<li v-if="prev">
+                        <a :href="'list_page.html?currentPage='+(pagination.currentPage-1)+'&pageSize='+pagination.pageSize" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+                    </li>
+
+					<li v-for="(element,index) in pagination.totalPage" :class="{active:pagination.currentPage == index+1}"><a :href="'list_page.html?currentPage='+(index+1)+'&pageSize='+pagination.pageSize" v-html="index+1"></a></li>
+					<li v-if="next">
+                        <a :href="'list_page.html?currentPage='+(pagination.currentPage+1)+'&pageSize='+pagination.pageSize" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+                    </li>
+				</ul>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<script>
+    var vue = new Vue({
+       el:"#app",
+       data:{
+            pagination:{},
+            prev:true,
+            next:true
+       },
+       methods:{
+            findByPage(){
+                //获取当前页数currentPage以及每页条数pageSize
+                var currentPage = parseInt(getParameter("currentPage"));
+                var pageSize = parseInt(getParameter("pageSize"));
+
+                //发送异步请求给LinkManServlet进行分页查询
+                axios.get("linkman?action=findByPage&currentPage="+currentPage+"&pageSize="+pageSize).then(response=>{
+                    this.pagination = response.data.data
+
+                    //怎么控制上一页和下一页是否显示
+                    if(currentPage <= 1){
+                        this.prev = false
+                    }else {
+                        this.prev = true
+                    }
+
+                    if(currentPage >= this.pagination.totalPage){
+                        this.next = false
+                    }else {
+                        this.next = true
+                    }
+                })
+            }
+       },
+       created(){
+           this.findByPage()
+       }
+    });
+</script>
+</body>
+</html>

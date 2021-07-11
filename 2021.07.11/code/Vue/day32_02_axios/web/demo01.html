@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用axios发送异步请求</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+    <script src="js/axios-0.18.0.js"></script>
+</head>
+<body>
+    <div id="app">
+        用户名:<span v-html="user.username"></span><br/>
+        密码:<span v-html="user.password"></span><br/>
+        昵称:<span v-html="user.nickname"></span><br/>
+        <a href="javascript:;" @click="fn1()">使用axios发送异步的get请求</a>
+
+        <br/>
+        <a href="javascript:;" @click="fn2()">使用axios发送异步的post请求</a>
+    </div>
+    <script>
+        var vue = new Vue({
+           el:"#app",
+           data:{
+             user:{}
+           },
+           methods:{
+                //使用axios发送异步的get请求
+                fn1(){
+                    // axios.get("demo01?username=aobama&password=123&nickname=圣枪游侠").then(response=>{
+                    //     //response就是http协议中的响应:包含行、头、体，我们要获取的是响应体的数据，其实就是response.data
+                    //     console.log(response.data)
+                    //     //处理响应数据，response就是服务器端的响应数据,将响应数据中的json赋值给user
+                    //     this.user = response.data
+                    // }).catch(error=>{
+                    //     //处理请求失败,error就是服务器的异常信息
+                    //     console.log(error)
+                    // })
+
+                    //另外一种get请求携带参数的方式
+                    axios.get("demo01",{
+                        params:{
+                            username:"奥巴马",
+                            password:"1234567",
+                            nickname:"圣枪游侠"
+                        }
+                    }).then(response=>{
+                        //response就是http协议中的响应:包含行、头、体，我们要获取的是响应体的数据，其实就是response.data
+                        console.log(response.data)
+                        //处理响应数据，response就是服务器端的响应数据,将响应数据中的json赋值给user
+                        this.user = response.data
+                    }).catch(error=>{
+                        //处理请求失败,error就是服务器的异常信息
+                        console.log(error)
+                    })
+                },
+                fn2(){
+                    //使用axios发送异步的post请求
+                    //post请求也可以在?后面携带参数
+                    /*axios.post("demo01?username=周杰棍&password=666666&nickname=周杰伦").then(response=>{
+                        this.user = response.data
+                    })*/
+
+                    //使用axios发送异步的post请求，并且携带json类型的参数(在请求体中)
+                    axios.post("demo01",{username:"周杰伦",password:"123456",nickname:"周杰棍"}).then(response=>{
+                        this.user = response.data
+                        console.log(response.data)
+                    })
+                }
+           }
+        });
+    </script>
+</body>
+</html>

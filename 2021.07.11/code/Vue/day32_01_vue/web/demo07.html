@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-model对表单数据进行双向绑定</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<div id="app">
+    <form>
+        用户名<input type="text" name="username" v-model="user.username"><br>
+        密码<input type="text" name="password" v-model="user.password"><br>
+        昵称<input type="text" name="nickname" v-model="user.nickname"><br>
+        地址<input type="text" name="address" v-model="user.address"><br>
+
+        <!--
+            1. 需求1: 点击获取表单数据的按钮的时候，将表单的所有数据获取到
+        -->
+        <input type="button" value="获取表单的数据" @click="obtainFormData()"><br>
+
+        <!--
+            2. 需求2: 点击回显表单数据，重新设置表单中的内容
+        -->
+        <input type="button" value="回显表单数据" @click="setFormData()">
+    </form>
+
+</div>
+
+<script>
+    var vue = new Vue({
+       el:"#app",
+       data:{
+           user:{
+               username:"张三",
+               password:"123456",
+               nickname:"张三疯",
+               address:"武当山"
+           }
+       } ,
+       methods:{
+           //获取表单数据
+           obtainFormData(){
+                //其实就是获取数据模型user
+                console.log(this.user)
+           },
+           setFormData(){
+                //假设: 接收到了服务器端的响应数据
+               var responseData = {
+                   username:"李四",
+                   password:"654321",
+                   nickname:"李四疯",
+                   address:"峨眉山"
+               }
+
+               //目的：将表单的值设置为responseData里面的值
+               //只要将responseData的值设置给user就行了
+               this.user = responseData
+           }
+       }
+    });
+</script>
+</body>
+</html>

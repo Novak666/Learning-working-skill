@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>vue绑定属性</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--
+        vue绑定html标签的属性，使用v-bind进行绑定: v-bind:属性名="数据模型"
+        简写  :属性名="数据模型"
+        绑定a标签的href属性
+    -->
+    <a :href="url1">跳转到百度</a><br>
+    <a :href="'https://www.qq.com?id='+id">跳转到腾讯网，并且携带请求参数id的值</a><br>
+    <font :color="ys">你好世界</font>
+</div>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            url1:"https://www.baidu.com",
+            id:30,
+            ys:"red"
+        }
+    })
+</script>
+</body>
+</html>

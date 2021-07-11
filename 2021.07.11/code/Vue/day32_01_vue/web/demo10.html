@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01_vue入门</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<div id="app">
+    <div id="msg">{{message}}</div>
+</div>
+
+<script>
+    var vue =  new Vue({
+        //表示当前vue对象接管了div区域
+        el: '#app',
+        //定义数据
+        data: {
+            message: 'hello word',
+        },
+        methods:{
+            showMsg(msg, obj) {
+                //1. 显示构造函数名字
+                console.log(msg);//钩子函数的名称,obj就是vue对象
+                //2. 显示数据模型的值
+                console.log("data:" + obj.message);
+                //3. 显示虚拟视图
+                console.log("el元素:" + obj.$el);
+                //4. 显示真实视图的内容
+                console.log("元素的内容:" + document.getElementById("app").innerHTML);
+            }
+        },
+        //beforeCreate:vue对象还没有实例化出来，vue对象中的数据模型还未创建出来
+        beforeCreate() {
+            this.showMsg('---beforeCreate---', this);
+        },
+        //created ：数据已经绑定到了对象实例，但是还没有挂载对象
+        created() {
+            // created钩子函数执行的时候，vue对象已经创建出来了，vue对象中的数据模型已经创建出来了
+            // 所以我们可以发送异步请求给服务器获取数据并且赋值给数据模型
+            this.message = "你好世界"
+            this.showMsg('---created---', this);
+        },
+        //beforeMount: 模板已经编译好了，根据数据和模板已经生成了对应的元素对象，将数据对象关联到了对象的
+        beforeMount() {
+            this.showMsg('---beforeMount---', this);
+        },
+        //mounted:将el的内容挂载到了el，相当于我们在jquery执行了(el).html(el)
+        //生成页面上真正的dom，上面我们就会发现dom的元素和我们el的元素是一致的。在此之后，我们能够用方法来获取到el元素下的dom对象，并进行各种操作当我们的data发生改变时，会调用beforeUpdate和updated方法
+        mounted() {
+            //在mounted里面可以获取视图上的数据
+            this.showMsg('---mounted---', this);
+        }
+    });
+</script>
+</body>
+</html>
