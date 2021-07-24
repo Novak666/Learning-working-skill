@@ -1,7 +1,3 @@
----
-typora-root-url: pics
----
-
 # 1. Git作用
 
 1. 代码备份 (云端)
@@ -10,8 +6,6 @@ typora-root-url: pics
 4. 责任追溯
 
 # 2. Git特点
-
-![1](/1.png)
 
 ![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/1.png)
 
