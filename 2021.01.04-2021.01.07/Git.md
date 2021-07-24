@@ -9,7 +9,7 @@
 
 # 2. Git特点
 
-![](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/1.png)
+![1](F:\Java学习\学习强基\2021.01.04-2021.01.07\pics\1.png)
 
 
 
