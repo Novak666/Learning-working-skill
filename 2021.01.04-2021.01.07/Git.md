@@ -1,7 +1,3 @@
----
-typora-root-url: pics
----
-
 # 1. Git作用
 
 1. 代码备份 (云端)
@@ -9,17 +5,15 @@ typora-root-url: pics
 3. 协同工作 (团队)
 4. 责任追溯
 
-
-
 # 2. Git特点
 
-![1](/1.png)
+![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/1.png)
 
 
 
 # 3. Git操作
 
-![](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/2.png)
+![2](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/2.png)
 
 先将代码添加到暂存区，再提交到本地仓库
 
@@ -39,7 +33,7 @@ git常用命令
 
 例子
 
-![](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/3.png)
+![3](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/3.png)
 
 
 
@@ -74,7 +68,7 @@ git常用命令
 - Master: 指向提交的代码版本
 - Header: 指向当前所使用的的分支
 
-![](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/4.png)
+![4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/4.png)
 
 ## 4.3 分支操作
 
@@ -106,7 +100,7 @@ git常用命令
 
 ## 5.1 工作流程
 
-![](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/5.png)
+![5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/5.png)
 
 ## 5.2 远程仓库介绍
 
@@ -147,7 +141,7 @@ git常用命令
     - git config --global user.email “邮箱”（设置全局邮箱）
     - cd ~/.ssh（查看是否生成过SSH公钥）
 
-![](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/6.png)
+![6](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/6.png)
 
 ​		2. 生成SSH公钥
 
@@ -157,7 +151,7 @@ git常用命令
 
 ​		3. 设置账户公钥
 
-![](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/7.png)
+![7](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/7.png)
 
 ​		4. 公钥测试
 
@@ -174,9 +168,9 @@ git常用命令
   git remote add 远程仓库别名 远程仓库URL
   git push -u 远程仓库别名 分支名
 
-![](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/8.png)
+![8](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/8.png)
 
-![](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/9.png)
+![9](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/9.png)
 
 ### 5.3.2 先有远程仓库，本地项目为空
 
@@ -205,7 +199,7 @@ git常用命令
 1. 选择工程所在的目录（模块上一级）,这样就创建好本地仓库了
 2. 点击git后边的对勾,将当前项目代码提交到本地仓库
 
-![](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/10.png)
+![10](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.01.04-2021.01.07/pics/10.png)
 
 其他操作包括版本切换 分支管理（创建 切换 合并 删除）向远程仓库推送 克隆到本地
 
