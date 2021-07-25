@@ -7,7 +7,7 @@ Nginx是一种服务器软件，其最主要，最基本的功能是可以与服
 ​	除此之外，Nginx还是一种高性能的HTTP和反向代理服务器，同时也是一个代理邮件服务器。也就是说，我们在Nginx上可以： 
 
 1. 可以发布网站(静态, html,css,js)
-2. 可以实现负载均衡, 
+2. 可以实现负载均衡
 3. 代理服务器
 4. 可以作为邮件服务器实现收发邮件等功能
 
@@ -28,8 +28,6 @@ put 目录/nginx.tar.gz
 ```
 tar -zxvf nginx.tar.gz
 ```
-
-### 1.2.3 进入Nginx目录
 
 ### 1.2.3 进入Nginx目录
 
@@ -80,14 +78,14 @@ http://ip地址:80
 ### 1.3.1 创建一个toutiao目录
 ```
 cd /home
-mkdir toutiao
+mkdir web-test
 ```
 
 ### 1.3.2 将项目上传到toutiao目录
 
 ```
 put 目录/web.zip
-mv web.zip /home/toutiao
+mv web.zip /home/web-test
 ```
 
 ### 1.3.3 解压项目
