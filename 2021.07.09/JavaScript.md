@@ -582,27 +582,46 @@ function(形参列表){
   需求: 每点击一次按钮 弹出hello...
 
 ```js
-<input type="button" value="按钮" onclick="fn1()">
+<body>
+    <!--
+        当点击按钮的时候，就在控制台输出一句"点击了..."
+        给按钮绑定点击事件
+            1. 在按钮上添加onclick属性用于绑定点击事件
+            2. 声明一个函数，在监听到用户点击按钮的时候调用
+
+         如果没有js的事件，那么用户和页面就无法交互
+    -->
+    <!--<input type="button" value="按钮" onclick="fn1()">-->
+    <!--<input type="button" value="百度一下" id="bd">-->
+    <!--<script>-->
+        <!--function fn1() {-->
+            <!--console.log("点击了...")-->
+            <!--//通过代码，改变"百度一下"按钮的背景色-->
+            <!--document.getElementById("bd").style.backgroundColor = "red"-->
+        <!--}-->
+    <!--</script>-->
+    <input type="button" value="按钮" onclick="fn1()">
 
     <input type="button" value="另一个按钮" id="btn">
-        <script>
+    <script>
         //当点击的时候要调用的函数
         function fn1() {
-        alert("我被点击了...")
-    }
+            alert("我被点击了...")
+        }
 
-//给另外一个按钮，绑定点击事件:
-//1.先根据id获取标签
-let btn = document.getElementById("btn");
-//2. 设置btn的onclick属性(绑定事件)
-//绑定命名函数
-//btn.onclick = fn1
+        //给另外一个按钮，绑定点击事件:
+        //1.先根据id获取标签
+        let btn = document.getElementById("btn");
+        //2. 设置btn的onclick属性(绑定事件)
+        //绑定命名函数
+        btn.onclick = fn1
 
-//绑定匿名函数
-btn.onclick = function () {
-    console.log("点击了另外一个按钮")
-}
-</script>
+        //绑定匿名函数
+        // btn.onclick = function () {
+        //     console.log("点击了另外一个按钮")
+        // }
+    </script>
+</body>
 ```
 
 + 获得焦点(onfocus)和失去焦点(onblur)
