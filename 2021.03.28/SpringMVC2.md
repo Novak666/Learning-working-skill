@@ -735,7 +735,7 @@ public String fileupload(MultipartFile file,MultipartFile file1,MultipartFile fi
 
 GET（查询） http://localhost/user/1 GET
 POST（新增） http://localhost/user POST
-PUT（更新） http://localhost/user PUT
+PUT（修改） http://localhost/user PUT
 DELETE（删除） http://localhost/user DELETE
 **注意：**上述行为是约定方式，约定不是规范，可以打破，所以称Rest风格，而不是Rest规范
 
