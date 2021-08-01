@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <form action="">
+      <div>
+        用户名：
+        <input type="text" v-model="username" v-on:keyup.delete="deleteContent">
+      </div>
+      <div>
+        密码：
+        <input type="text" v-model="password">
+      </div>
+      <div>
+                <button v-on:click="submit">提交</button>
+<!--        <input type="button" value="提交" v-on:click="submit">-->
+      </div>
+    </form>
+  </div>
+  <script type="text/javascript" src="js/vue.js"></script>
+  <script type="text/javascript">
+    /*
+      事件绑定-按键修饰符
+    */
+    Vue.config.keyCodes.f1 = 113
+    vm = new Vue({
+      el: "#app",
+      data: {
+        username: "",
+        password: ""
+      },
+      methods: {
+        submit: function () {
+          console.log(this.username);
+          console.log(this.password);
+        },
+        deleteContent: function () {
+          this.username="";
+        }
+      }
+    });
+  </script>
+</body>
+</html>

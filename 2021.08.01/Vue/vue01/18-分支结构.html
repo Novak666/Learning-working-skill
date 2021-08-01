@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-if="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  
+</head>
+<body>
+  <div id="app">
+    <div v-if="score>=90">优秀</div>
+    <div v-else-if="score<90&&score>=70">良好</div>
+    <div v-else-if="score<70&&score>=60">合格</div>
+    <div v-else>不合格</div>
+    <div v-show="flag">v-show</div>
+    <button v-on:click="change">切换</button>
+  </div>
+  <script type="text/javascript" src="js/vue.js"></script>
+  <script type="text/javascript">
+    /*
+      分支结构
+      v-show的原理：控制元素样式是否显示 display:none
+    */
+    var vm = new Vue({
+      el: "#app",
+      data: {
+        score: 60,
+        flag: true
+      },
+      methods: {
+        change: function () {
+          this.flag = !this.flag;
+        }
+      }
+    });
+  </script>
+</body>
+</html>

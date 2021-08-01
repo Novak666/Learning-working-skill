@@ -355,3 +355,10 @@ Ajax，Jackson和fastjson，用户名异步校验，搜索提示案例
 # 2021.07.11
 
 Vue
+
+
+
+# 2021.08.01
+
+Vue指令，事件绑定，属性绑定，分支循环，表单、自定义指令、computed、watch、过滤器filter
+
