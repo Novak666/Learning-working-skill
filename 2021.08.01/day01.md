@@ -11,9 +11,9 @@
 
 使用Vue将helloworld渲染到页面上
 
-<img  src="./images/day01-1.png"  >
+![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.08.01/img1/1.png)
 
-![QQ截图20210729083749](C:\Users\HASEE\Desktop\images\QQ截图20210729083749.png)
+![2](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.08.01/img1/2.png)
 
 # 3. 模板语法
 
@@ -143,7 +143,7 @@
 
 ## 4.5 v-once
 
-![QQ截图20210729093139](C:\Users\HASEE\Desktop\images\QQ截图20210729093139.png)
+![3](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.08.01/img1/3.png)
 
 - 执行一次性的插值【当数据改变时，插值处的内容不会继续更新】节省性能
 
@@ -219,7 +219,7 @@
 
 ### 4.6.2 MVVM
 
-![QQ截图20210729095713](C:\Users\HASEE\Desktop\images\QQ截图20210729095713.png)
+![4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.08.01/img1/4.png)
 
 - MVC 是后端的分层开发概念； MVVM是前端视图层的概念，主要关注于 视图层分离，也就是说：MVVM把前端的视图层，分为了 三部分 Model, View , VM ViewModel
 - m   model
@@ -421,7 +421,7 @@
 
 https://cn.vuejs.org/v2/api/#v-on
 
-![QQ截图20210729104818](C:\Users\HASEE\Desktop\images\QQ截图20210729104818.png)
+![5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.08.01/img1/5.png)
 
 ## 5.4 按键修饰符
 
@@ -1044,7 +1044,7 @@ https://cn.vuejs.org/v2/api/#v-on
 
 # 9. 案例选项卡
 
-![QQ截图20210729161338](C:\Users\HASEE\Desktop\images\QQ截图20210729161338.png)
+![6](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.08.01/img1/6.png)
 
 ## 9.1 HTML结构
 

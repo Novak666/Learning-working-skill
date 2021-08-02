@@ -296,7 +296,7 @@ binding指的就是绑定的msg
 
 ## 5.1 基本使用
 
-![QQ截图20210731132654](C:\Users\HASEE\Desktop\img2\QQ截图20210731132654.png)
+![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.08.01/img2/1.png)
 
 - 使用watch来监听数据的变化
 - <font color='red'>一般用于异步或者开销较大的操作</font>
@@ -420,7 +420,7 @@ binding指的就是绑定的msg
 
 ## 6.1 基本使用
 
-![QQ截图20210731135940](C:\Users\HASEE\Desktop\img2\QQ截图20210731135940.png)
+![2](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.08.01/img2/2.png)
 
 - Vue.js允许自定义过滤器，可被用于一些常见的文本格式化。
 - 过滤器可以用在两个地方：双花括号插值和v-bind表达式。
@@ -500,16 +500,12 @@ binding指的就是绑定的msg
     </script>
 ```
 
-
-
-
-
-### 生命周期
+# 7. 生命周期
 
 - 事物从出生到死亡的过程
-- Vue实例从创建 到销毁的过程 ，这些过程中会伴随着一些函数的自调用。我们称这些函数为钩子函数
+- Vue实例从创建 到销毁的过程 ，这些过程中会伴随着一些函数的自调用。我们称这些函数为<font color='red'>钩子函数</font>
 
-####常用的 钩子函数
+常用的钩子函数
 
 | beforeCreate  | 在实例初始化之后，数据观测和事件配置之前被调用 此时data 和 methods 以及页面的DOM结构都没有初始化   什么都做不了 |
 | ------------- | ------------------------------------------------------------ |
@@ -521,7 +517,9 @@ binding指的就是绑定的msg
 | beforeDestroy | 实例销毁之前调用                                             |
 | destroyed     | 实例销毁后调用                                               |
 
-### 数组变异方法
+# 8. 数组
+
+## 8.1 数组变异方法
 
 - 在 Vue 中，直接修改对象属性的值无法触发响应式。当你直接修改了对象属性的值，你会发现，只有数据改了，但是页面内容并没有改变
 - 变异数组方法即保持数组方法原有功能不变的前提下对其进行功能拓展
@@ -535,7 +533,7 @@ binding指的就是绑定的msg
 | `sort()`    | sort()  使数组按照字符编码默认从小到大排序,成功返回排序后的数组 |
 | `reverse()` | reverse()  将数组倒序，成功返回倒序后的数组                  |
 
-### 替换数组
+## 8.2 替换数组
 
 - 不会改变原始数组，但总是返回一个新数组
 
@@ -544,18 +542,118 @@ binding指的就是绑定的msg
 | concat | concat() 方法用于连接两个或多个数组。该方法不会改变现有的数组 |
 | slice  | slice() 方法可从已有的数组中返回选定的元素。该方法并不会修改数组，而是返回一个子数组 |
 
-### 动态数组响应式数据
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <div>
+      <span>
+        <input type="text" v-model='fname'>
+        <button @click='add'>添加</button>
+        <button @click='del'>删除</button>
+        <button @click='change'>替换</button>
+      </span>
+    </div>
+    <ul>
+      <li :key='index' v-for='(item,index) in list'>{{item}}</li>
+    </ul>
+  </div>
+  <script type="text/javascript" src="js/vue.js"></script>
+  <script type="text/javascript">
+    /*
+      Vue数组操作
+      1、变异方法：会影响数组的原始数据的变化。
+      2、替换数组：不会影响原始的数组数据，而是形成一个新的数组。
+    */
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        fname: '',
+        list: ['apple','orange','banana']
+      },
+      methods: {
+        add: function(){
+          this.list.push(this.fname);
+        },
+        del: function(){
+          this.list.pop();
+        },
+        change: function(){
+          this.list = this.list.slice(0,2);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+```
+
+# 9. 动态数组响应式数据
+
+![3](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.08.01/img2/3.png)
 
 - Vue.set(a,b,c)    让 触发视图重新更新一遍，数据动态起来
 - a是要更改的数据 、   b是数据的第几项、   c是更改后的数据
 
-###  图书列表案例
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <ul>
+      <li v-for='item in list'>{{item}}</li>
+    </ul>
+    <div>
+      <div>{{info.name}}</div>
+      <div>{{info.age}}</div>
+      <div>{{info.gender}}</div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/vue.js"></script>
+  <script type="text/javascript">
+    /*
+      动态处理响应式数据
+      
+    */
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        list: ['apple', 'orange', 'banana'],
+        info: {
+          name: 'lisi',
+          age: 12
+        }
+      },
+    });
+    // vm.list[1] = 'lemon';
+    // Vue.set(vm.list, 2, 'lemon');
+    vm.$set(vm.list, 1, 'lemon');
+
+    // vm.info.gender = 'male';
+    vm.$set(vm.info, 'gender', 'female');
+
+    
+  </script>
+</body>
+</html>
+```
+
+# 10. 图书列表案例
 
 - 静态列表效果
 - 基于数据实现模板效果
 - 处理每行的操作按钮
 
-#### 1、 提供的静态数据
+## 10.1 提供的静态数据
 
 - 数据存放在vue 中 data 属性中
 
@@ -605,7 +703,7 @@ binding指的就是绑定的msg
     });
 ```
 
-#### 2、 把提供好的数据渲染到页面上
+## 10.2 把提供好的数据渲染到页面上
 
 - 利用 v-for循环 遍历 books 将每一项数据渲染到对应的数据中
 
@@ -627,7 +725,7 @@ binding指的就是绑定的msg
 </tbody>
 ```
 
-#### 3、 添加图书
+## 10.3 添加图书
 
 - 通过双向绑定获取到输入框中的输入内容 
 - 给按钮添加点击事件 
@@ -698,7 +796,7 @@ binding指的就是绑定的msg
   </script>
 ```
 
-#### 4 修改图书-上 
+## 10.4 修改图书-上 
 
 - 点击修改按钮的时候 获取到要修改的书籍名单
   - 4.1  给修改按钮添加点击事件，  需要把当前的图书的id 传递过去 这样才知道需要修改的是哪一本书籍
@@ -811,7 +909,7 @@ binding指的就是绑定的msg
   </script>
 ```
 
-#### 5  修改图书-下
+## 10.5 修改图书-下
 
 - 5.1  定义一个标识符， 主要是控制 编辑状态下当前编辑书籍的id 不能被修改 即 处于编辑状态下 当前控制书籍编号的输入框禁用  
 -  5.2  通过属性绑定给书籍编号的 绑定 disabled 的属性  flag 为 true 即为禁用
@@ -926,7 +1024,7 @@ binding指的就是绑定的msg
     </script>
 ```
 
-#### 6 删除图书
+## 10.6 删除图书
 
 - 6.1 给删除按钮添加事件 把当前需要删除的书籍id 传递过来
 -  6.2 根据id从数组中查找元素的索引
@@ -974,11 +1072,15 @@ binding指的就是绑定的msg
   </script>
 ```
 
+# 11. 常用特性应用场景
 
++ 过滤器(格式化日期)
++ 自定义指令(获取表单焦点)
++ 计算属性(统计图书数量)
++ 侦听器(验证图书存在性)
++ 生命周期(图书数据处理)
 
-### 常用特性应用场景
-
-#### 1 过滤器
+## 11.1 过滤器
 
 - Vue.filter  定义一个全局过滤器
 
@@ -1056,7 +1158,7 @@ binding指的就是绑定的msg
 </script>
 ```
 
-#### 2 自定义指令
+## 11.2 自定义指令
 
 - 让表单自动获取焦点
 - 通过Vue.directive 自定义指定
@@ -1076,7 +1178,7 @@ binding指的就是绑定的msg
 </script>
 ```
 
-#### 3 计算属性
+## 11.3 计算属性
 
 - 通过计算属性计算图书的总数
   - 图书的总数就是计算数组的长度 
@@ -1108,12 +1210,7 @@ binding指的就是绑定的msg
       },
     });
   </script>
-
 ```
-
-
-
-####  生命周期
 
 
 
