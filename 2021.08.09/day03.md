@@ -194,7 +194,7 @@
 
 ## 3.1 父组件向子组件传值
 
-![1](C:\Users\HASEE\Desktop\pics\1.png)
+![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.08.09/pics/1.png)
 
 - 父组件发送的形式是以属性的形式绑定值到子组件身上。
 - 然后子组件用属性props接收
@@ -334,7 +334,7 @@ $emit固定，后面的enlarge-text是自定义的，随便起
 - `$emit()`  第一个参数为 自定义的事件名称     第二个参数为需要传递的数据
 - 父组件用v-on 监听子组件的事件
 
-![2](C:\Users\HASEE\Desktop\pics\2.png)
+![2](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.08.09/pics/2.png)
 
 基本用法
 
@@ -389,7 +389,7 @@ $emit固定，后面的enlarge-text是自定义的，随便起
 
 传参使用
 
-![3](C:\Users\HASEE\Desktop\pics\3.png)
+![3](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.08.09/pics/3.png)
 
 ```html
 
@@ -440,7 +440,7 @@ $emit固定，后面的enlarge-text是自定义的，随便起
 
 ## 3.3 兄弟之间的传递
 
-![4](C:\Users\HASEE\Desktop\pics\4.png)
+![4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.08.09/pics/4.png)
 
 - 兄弟之间传递数据需要借助于事件中心，通过事件中心传递数据   
   - 提供事件中心    var hub = new Vue()
@@ -538,7 +538,7 @@ $emit固定，后面的enlarge-text是自定义的，随便起
 
 # 4. 组件插槽
 
-![5](C:\Users\HASEE\Desktop\pics\5.png)
+![5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.08.09/pics/5.png)
 
 - 组件的最大特性就是复用性，而用好插槽能大大提高组件的可复用能力
 
@@ -647,7 +647,7 @@ $emit固定，后面的enlarge-text是自定义的，随便起
 
 ## 4.3 作用域插槽
 
-![6](C:\Users\HASEE\Desktop\pics\6.png)
+![6](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.08.09/pics/6.png)
 
 - 父组件对子组件加工处理
 - 既可以复用子组件的slot，又可以使slot内容不一致
@@ -713,7 +713,7 @@ $emit固定，后面的enlarge-text是自定义的，随便起
 
 # 5. 购物车案例
 
-![7](C:\Users\HASEE\Desktop\pics\7.png)
+![7](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.08.09/pics/7.png)
 
 ## 5.1 实现组件化布局
 
