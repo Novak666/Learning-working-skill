@@ -135,6 +135,8 @@ Monitor：统计服务的调用次数和调用时间的监控中心
 
 ## 3.1 zookeeper的安装
 
+充当Dubbo的注册中心
+
 1. 有JDK7及以上环境
 
 2. 把zookeeper的压缩包上传到linux系统
@@ -184,6 +186,8 @@ Monitor：统计服务的调用次数和调用时间的监控中心
 
 ## 3.2 Spring和SpringMVC的整合
 
+前置工作
+
 步骤：
 
 1. 创建服务提供者Provider模块
@@ -194,7 +198,9 @@ Monitor：统计服务的调用次数和调用时间的监控中心
 
 前置工作：创建一个空的project，设置jdk，settings里面设置Maven
 
-具体代码见code
+具体代码见code，之前是本地调用
+
+接下来改造成Dubbo方式，模拟远程调用过程，实际应该是Provider和Consumer2个工程分布在不同机器上
 
 ## 3.3 服务提供者
 
@@ -367,6 +373,8 @@ public class UserServiceImpl implements UserService {
     }
 }
 ```
+
+5. <font color='red'>注意log4j日志的使用</font>
 
 ## 3.4 服务消费者
 
@@ -622,6 +630,8 @@ systemctl disable firewalld.service
 
 ## 3.6 小节
 
+SOA的特点是无论是下图的web还是service模块都能独立对外提供服务
+
 ![7](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.04.09/pics/7.png)
 
 # 4. Dubbo高级特性
@@ -665,7 +675,7 @@ systemctl disable firewalld.service
 
 4. 打包项目
 
-   在dubbo-admin-develop目录执行打包命令
+   在dubbo-admin-develop目录执行powershell打包命令
 
    ```shell
    mvn clean package
