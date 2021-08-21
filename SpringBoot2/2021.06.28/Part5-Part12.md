@@ -477,12 +477,12 @@ public Car car(){
 }
 ```
 
-## 8.2 @EnableConfigurationProperties + @ConfigurationProperties
+## 8.2 @EnableConfigurationProperties + @ConfigurationProperties(源码中常用)
 
 car
 
 ```java
-@Component
+//@Component
 @ConfigurationProperties(prefix = "mycar")
 public class Car {
 ...
