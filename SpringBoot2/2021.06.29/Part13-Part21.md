@@ -44,6 +44,8 @@ public @interface EnableAutoConfiguration {}
 
 #### 1.1.3.1 @AutoConfigurationPackage
 
+<font color='red'>作用：将启动类所在的包及子包下所有的Bean加载到容器中</font>
+
 ```java
 @Import(AutoConfigurationPackages.Registrar.class)
 public @interface AutoConfigurationPackage {
@@ -67,8 +69,12 @@ public void registerBeanDefinitions(AnnotationMetadata metadata, BeanDefinitionR
 
 #### 1.1.3.2 @Import(AutoConfigurationImportSelector.class)
 
+<font color='red'>作用：将META-INF/spring.factories里的127个AutoConfiguration自动配置</font>
+
+selectImports方法：
+
 1. 利用getAutoConfigurationEntry(annotationMetadata);给容器中批量导入一些组件
-2. 调用List<String> configurations = getCandidateConfigurations(annotationMetadata, attributes)获取到所有需要导入到容器中的配置类
+2. 调用List<String> configurations = getCandidateConfigurations(annotationMetadata, attributes)获取到所有需要导入到容器中的配置类127个
 3. 利用工厂加载 Map<String, List<String>> loadSpringFactories(@Nullable ClassLoader classLoader)；得到所有的组件
 4. 从META-INF/spring.factories位置来加载一个文件
    + 默认扫描我们当前系统里面所有META-INF/spring.factories位置的文件
@@ -116,12 +122,12 @@ public MultipartResolver multipartResolver(MultipartResolver resolver) {
 }
 ```
 
-SpringBoot默认会在底层配好所有的组件，但是**如果用户自己配置了以用户的优先**
+SpringBoot默认会在底层配好所有的组件，例如DispatcherServlet，所以不用自己再xml文件里配置了，但是**如果用户自己配置了以用户的优先**（@ConditionalOnMissingBean)
 
 总结：
 
 - SpringBoot先加载所有的自动配置类  xxxxxAutoConfiguration
-- 每个自动配置类按照条件进行生效，默认都会绑定配置文件指定的值。xxxxProperties里面拿。xxxProperties和配置文件进行了绑定
+- 每个自动配置类按照条件进行生效，默认都会绑定配置文件指定的值。xxxxProperties里面拿。xxxProperties又和配置文件进行了绑定
 
 - 生效的配置类就会给容器中装配很多组件
 - 只要容器中有这些组件，相当于这些功能就有了
