@@ -46,11 +46,11 @@ Cornstone
 
 ## 2.1 SVN Checkout
 
-建立本地文件夹
+建立本地文件夹，将一个新的项目拉下来，同时建立了本地与服务器端目录的对应关系
 
 ## 2.2 SVN Commit
 
-提交
+提交，如果有修改，可以双击变更的文件查看修改前后的对比
 
 ## 2.3 SVN Update
 
@@ -64,15 +64,15 @@ TortoiseSVN->show log
 
 ## 3.1 撤销本地
 
-TortoiseSVN->Revert或者点击SVN Commit，然后右键选中变化的文件，点击Revert
+选中变化的文件TortoiseSVN->Revert或者点击SVN Commit，然后右键选中变化的文件，点击Revert
 
 ## 3.2 撤销已提交
 
-TortoiseSVN->show log，右键最新错误版本，点击Revert changes from this revision(先update)
+TortoiseSVN->show log，右键最新错误版本，点击Revert changes from this revision(先update)，但是这只是撤销了本地的错误版本，还要提交才能使服务器端撤销
 
 ## 3.3 恢复到指定版本
 
-TortoiseSVN->show log，右键历史版本恢复，点击Revert to this revision
+TortoiseSVN->show log，右键历史版本恢复，点击Revert to this revision，最后再提交
 
 # 4. 添加忽略
 
@@ -92,9 +92,11 @@ TortoiseSVN->show log，右键历史版本恢复，点击Revert to this revision
 
 解决冲突：
 
+在弹出的冲突窗口中右键
+
 1. 使用对方的
 2. 使用自己的
-3. 编辑冲突
+3. 编辑冲突，完成后点击标记为解决
 
 # 6. 分支
 
@@ -104,19 +106,19 @@ SVN经典目录结构：
 2. branches
 3. tags
 
-选择主干，右键创建分支，update
+选择主干，右键创建分支(在服务器端创建)，所以要再将分支update到本地
 
 右键属性，在subversion中复制地址，可换一个地方checkout
 
-分支TortoiseSVN->show log，选择相应的提交合并到主干上
+分支TortoiseSVN->show log，选择上方相应的提交合并到主干(也要选择)上
 
-还可以切换分支
+还可以切换分支，切换后本地的分支目录名要改一下
 
-查看服务器端的目录结构
+TortoiseSVN->查看服务器端的目录结构
 
 # 7. 暂存
 
-开发时修改了很多代码，但是代码没有写完，没有经过测试，不能提交，同时线上版本出现bug需要修复，就需要先把代码暂存起来。shelve会使暂存后代码变化，checkpoint暂存后代码不会改变
+开发时修改了很多代码，但是代码没有写完，没有经过测试，不能提交，同时线上版本出现bug需要修复，就需要先把代码暂存起来。TortoiseSVN->shelve，shelve会使暂存后代码变化，checkpoint暂存后代码不会改变
 
 # 8. 复杂代码合并
 
