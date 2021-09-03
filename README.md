@@ -379,3 +379,9 @@ Vue组件，全局与局部，组件之间传值，组件插槽，购物车案�
 # 2021.08.12
 
 Swagger
+
+
+
+# 2021.09.03
+
+Vue异步通信，Promise、Fetch、Axios、async和await的用法
