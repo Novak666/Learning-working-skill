@@ -391,3 +391,9 @@ Vue异步通信，Promise、Fetch、Axios、async和await的用法
 # 2021.09.05
 
 路由Vue Router和应用案例
+
+
+
+# 2021.09.06
+
+前端模块化，webpack，Vue脚手架，Element-UI
