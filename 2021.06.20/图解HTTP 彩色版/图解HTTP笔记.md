@@ -8,11 +8,11 @@
 
 ### 1.3.3 TCP/IP通信传输流
 
-![1.1](C:\Users\HASEE\Desktop\图解HTTP 彩色版\pics\1.1.png)
+![1.1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.06.20/%E5%9B%BE%E8%A7%A3HTTP%20%E5%BD%A9%E8%89%B2%E7%89%88/pics/1.1.png)
 
 利用 TCP/IP 协议族进行网络通信时，会通过分层顺序与对方进行通信。发送端从应用层往下走，接收端则往应用层往上走。
 
-![1.2](C:\Users\HASEE\Desktop\图解HTTP 彩色版\pics\1.2.png)
+![1.2](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.06.20/%E5%9B%BE%E8%A7%A3HTTP%20%E5%BD%A9%E8%89%B2%E7%89%88/pics/1.2.png)
 
 发送端在层与层之间传输数据时，每经过一层时必定会被打上一个该层所属的首部信息。反之，接收端在层与层传输数据时，每经过一层时会把对应的首部消去。
 这种把数据信息包装起来的做法称为封装。
@@ -29,7 +29,7 @@ ARP 是一种用以解析地址的协议，根据通信方的 IP 地址就可以
 没有人能够全面掌握互联网中的传输状况，在到达通信目标前的中转过程中，那些计算机和路由器等网络设备只
 能获悉很粗略的传输路线。这种机制称为路由选择（routing）。
 
-![1.3](C:\Users\HASEE\Desktop\图解HTTP 彩色版\pics\1.3.png)
+![1.3](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.06.20/%E5%9B%BE%E8%A7%A3HTTP%20%E5%BD%A9%E8%89%B2%E7%89%88/pics/1.3.png)
 
 ### 1.4.2 确保可靠性的TCP协议
 
@@ -37,7 +37,7 @@ TCP 协议为了更容易传送大数据才把数据分割，而且 TCP 协议�
 
 确保数据能到达目标。
 
-![1.4](C:\Users\HASEE\Desktop\图解HTTP 彩色版\pics\1.4.png)
+![1.4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.06.20/%E5%9B%BE%E8%A7%A3HTTP%20%E5%BD%A9%E8%89%B2%E7%89%88/pics/1.4.png)
 
 ### 1.4.3 负责域名解析的DNS服务
 
@@ -45,13 +45,13 @@ DNS（Domain Name System）服务是和 HTTP 协议一样位于应用层的协�
 
 DNS 协议提供通过域名查找 IP 地址，或逆向从 IP 地址反查域名的服务。
 
-![1.5](C:\Users\HASEE\Desktop\图解HTTP 彩色版\pics\1.5.png)
+![1.5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.06.20/%E5%9B%BE%E8%A7%A3HTTP%20%E5%BD%A9%E8%89%B2%E7%89%88/pics/1.5.png)
 
 ## 1.6 各种协议与HTTP协议的关系
 
 IP 协议、TCP 协议和 DNS 服务在使用 HTTP 协议的通信过程中各自发挥了哪些作用。
 
-![1.6](C:\Users\HASEE\Desktop\图解HTTP 彩色版\pics\1.6.png)
+![1.6](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.06.20/%E5%9B%BE%E8%A7%A3HTTP%20%E5%BD%A9%E8%89%B2%E7%89%88/pics/1.6.png)
 
 ## 1.7 URI和URL
 
@@ -59,11 +59,11 @@ URI 用字符串标识某一互联网资源，而 URL 表示资源的地点（�
 
 URI例子：
 
-![1.7](C:\Users\HASEE\Desktop\图解HTTP 彩色版\pics\1.7.png)
+![1.7](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.06.20/%E5%9B%BE%E8%A7%A3HTTP%20%E5%BD%A9%E8%89%B2%E7%89%88/pics/1.7.png)
 
 绝对URI格式如下：
 
-![1.8](C:\Users\HASEE\Desktop\图解HTTP 彩色版\pics\1.8.png)
+![1.8](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.06.20/%E5%9B%BE%E8%A7%A3HTTP%20%E5%BD%A9%E8%89%B2%E7%89%88/pics/1.8.png)
 
 # 第2章 简单的HTTP协议
 
@@ -71,17 +71,17 @@ URI例子：
 
 请求报文是由请求方法、请求 URI、协议版本、可选的请求首部字段和内容实体构成的。
 
-![2.1](C:\Users\HASEE\Desktop\图解HTTP 彩色版\pics\2.1.png)
+![2.1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.06.20/%E5%9B%BE%E8%A7%A3HTTP%20%E5%BD%A9%E8%89%B2%E7%89%88/pics/2.1.png)
 
 响应报文基本上由协议版本、状态码（表示请求成功或失败的数字代码）、用以解释状态码的原因短语、可选的响应首部字段以及实体主体构成。
 
-![2.2](C:\Users\HASEE\Desktop\图解HTTP 彩色版\pics\2.2.png)
+![2.2](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.06.20/%E5%9B%BE%E8%A7%A3HTTP%20%E5%BD%A9%E8%89%B2%E7%89%88/pics/2.2.png)
 
 ## 2.4 请求URI定位资源
 
 以 http://hackr.jp/index.htm 作为请求的例子：
 
-![2.3](C:\Users\HASEE\Desktop\图解HTTP 彩色版\pics\2.3.png)
+![2.3](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.06.20/%E5%9B%BE%E8%A7%A3HTTP%20%E5%BD%A9%E8%89%B2%E7%89%88/pics/2.3.png)
 
 ## 2.5 告知服务器意图的HTTP方法
 
@@ -91,7 +91,7 @@ GET ：获取资源
 
 例子：
 
-![2.4](C:\Users\HASEE\Desktop\图解HTTP 彩色版\pics\2.4.png)
+![2.4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.06.20/%E5%9B%BE%E8%A7%A3HTTP%20%E5%BD%A9%E8%89%B2%E7%89%88/pics/2.4.png)
 
 ### 2.5.2 POST
 
@@ -101,7 +101,7 @@ POST：传输实体主体
 
 例子：
 
-![2.5](C:\Users\HASEE\Desktop\图解HTTP 彩色版\pics\2.5.png)
+![2.5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.06.20/%E5%9B%BE%E8%A7%A3HTTP%20%E5%BD%A9%E8%89%B2%E7%89%88/pics/2.5.png)
 
 ### 2.5.3 PUT
 
@@ -111,7 +111,7 @@ PUT 方法用来传输文件。就像 FTP 协议的文件上传一样，要求�
 
 例子：
 
-![2.6](C:\Users\HASEE\Desktop\图解HTTP 彩色版\pics\2.6.png)
+![2.6](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.06.20/%E5%9B%BE%E8%A7%A3HTTP%20%E5%BD%A9%E8%89%B2%E7%89%88/pics/2.6.png)
 
 ### 2.5.4 HEAD
 
@@ -121,7 +121,7 @@ HEAD 方法和 GET 方法一样，只是不返回报文主体部分。用于确�
 
 例子：
 
-![2.7](C:\Users\HASEE\Desktop\图解HTTP 彩色版\pics\2.7.png)
+![2.7](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.06.20/%E5%9B%BE%E8%A7%A3HTTP%20%E5%BD%A9%E8%89%B2%E7%89%88/pics/2.7.png)
 
 ### 2.5.5 DELETE
 
@@ -131,7 +131,7 @@ DELETE 方法用来删除文件，是与 PUT 相反的方法。DELETE 方法按�
 
 例子：
 
-![2.8](C:\Users\HASEE\Desktop\图解HTTP 彩色版\pics\2.8.png)
+![2.8](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.06.20/%E5%9B%BE%E8%A7%A3HTTP%20%E5%BD%A9%E8%89%B2%E7%89%88/pics/2.8.png)
 
 ### 2.5.6 OPTIONS
 
@@ -141,7 +141,7 @@ OPTIONS 方法用来查询针对请求 URI 指定的资源支持的方法。
 
 例子：
 
-![2.9](C:\Users\HASEE\Desktop\图解HTTP 彩色版\pics\2.9.png)
+![2.9](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.06.20/%E5%9B%BE%E8%A7%A3HTTP%20%E5%BD%A9%E8%89%B2%E7%89%88/pics/2.9.png)
 
 ## 2.6 GET和POST比较
 
@@ -235,24 +235,24 @@ XMLHttpRequest 在 AJAX 中被大量使用。
 
 ### 3.2.1 请求报文
 
-![2.10](C:\Users\HASEE\Desktop\图解HTTP 彩色版\pics\2.10.png)
+![2.10](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.06.20/%E5%9B%BE%E8%A7%A3HTTP%20%E5%BD%A9%E8%89%B2%E7%89%88/pics/2.10.png)
 
-![2.11](C:\Users\HASEE\Desktop\图解HTTP 彩色版\pics\2.11.png)
+![2.11](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.06.20/%E5%9B%BE%E8%A7%A3HTTP%20%E5%BD%A9%E8%89%B2%E7%89%88/pics/2.11.png)
 
 请求行：包含用于请求的方法，请求 URI 和 HTTP 版本。
 
 ### 3.2.2 响应报文
 
-![2.12](C:\Users\HASEE\Desktop\图解HTTP 彩色版\pics\2.12.png)
+![2.12](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.06.20/%E5%9B%BE%E8%A7%A3HTTP%20%E5%BD%A9%E8%89%B2%E7%89%88/pics/2.12.png)
 
-![2.13](C:\Users\HASEE\Desktop\图解HTTP 彩色版\pics\2.13.png)
+![2.13](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.06.20/%E5%9B%BE%E8%A7%A3HTTP%20%E5%BD%A9%E8%89%B2%E7%89%88/pics/2.13.png)
 
 状态行：包含表明响应结果的状态码，原因短语和 HTTP 版本。
 
 # 第4章 返回结果的HTTP状态码
 ## 4.1 状态码类别
 
-![2.14](C:\Users\HASEE\Desktop\图解HTTP 彩色版\pics\2.14.png)
+![2.14](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.06.20/%E5%9B%BE%E8%A7%A3HTTP%20%E5%BD%A9%E8%89%B2%E7%89%88/pics/2.14.png)
 
 ## 4.2 1XX 信息
 
@@ -386,9 +386,9 @@ https://mp.weixin.qq.com/s?__biz=MzA4MjA0MTc4NQ==&mid=504090000&idx=3&sn=f57d4f1
 
 ### 6.1.1 HTTP请求报文
 
-![2.15](C:\Users\HASEE\Desktop\图解HTTP 彩色版\pics\2.15.png)
+![2.15](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.06.20/%E5%9B%BE%E8%A7%A3HTTP%20%E5%BD%A9%E8%89%B2%E7%89%88/pics/2.15.png)
 
 ### 6.1.2 HTTP响应报文
 
-![2.16](C:\Users\HASEE\Desktop\图解HTTP 彩色版\pics\2.16.png)
+![2.16](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.06.20/%E5%9B%BE%E8%A7%A3HTTP%20%E5%BD%A9%E8%89%B2%E7%89%88/pics/2.16.png)
 
