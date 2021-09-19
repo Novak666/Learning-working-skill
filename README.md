@@ -312,7 +312,7 @@ SpringBoot入门工程，特点包括依赖管理和自动配置，一些注解�
 
 # 2021.07.01
 
-SpringBoot的Web开发，包括静态资源访问，请求和响应
+SpringBoot的Web开发，即SpringMVC的知识，包括静态资源访问，请求与响应的使用和源码详细分析
 
 
 

@@ -117,8 +117,8 @@ spring:
 
 ## 2.4 静态资源配置原理
 
-- SpringBoot启动默认加载 xxxAutoConfiguration 类（自动配置类）
-- SpringMVC功能的自动配置类`WebMvcAutoConfiguration`，生效
+- SpringBoot启动默认加载 xxxAutoConfiguration类（自动配置类）
+- SpringMVC功能的自动配置类<font color='red'>`WebMvcAutoConfiguration`</font>，生效
 
 ```java
 @Configuration(proxyBeanMethods = false)
@@ -149,16 +149,20 @@ public static class WebMvcAutoConfigurationAdapter implements WebMvcConfigurer {
 
 ### 2.4.1 配置类只有一个有参构造器
 
-有参构造器所有参数的值都会从容器中确定
+唯一有参构造器(WebMvcAutoConfigurationAdapter)所有参数的值都会从容器中寻找
 
-```java
-//ResourceProperties resourceProperties；获取和spring.resources绑定的所有的值的对象
+参数说明：
+
+//ResourceProperties resourceProperties 获取和spring.resources绑定的所有的值的对象
 //WebMvcProperties mvcProperties 获取和spring.mvc绑定的所有的值的对象
 //ListableBeanFactory beanFactory Spring的beanFactory
 //HttpMessageConverters 找到所有的HttpMessageConverters
-//ResourceHandlerRegistrationCustomizer 找到 资源处理器的自定义器
-//DispatcherServletPath  
-//ServletRegistrationBean   给应用注册Servlet、Filter....
+//ResourceHandlerRegistrationCustomizer 找到资源处理器的自定义器
+//DispatcherServletPath
+
+//ServletRegistrationBean 给应用注册Servlet、Filter....
+
+```java
 public WebMvcAutoConfigurationAdapter(WebProperties webProperties, WebMvcProperties mvcProperties,
 		ListableBeanFactory beanFactory, ObjectProvider<HttpMessageConverters> messageConvertersProvider,
 		ObjectProvider<ResourceHandlerRegistrationCustomizer> resourceHandlerRegistrationCustomizerProvider,
@@ -209,7 +213,7 @@ spring:
     add-mappings: false   #禁用所有静态资源规则
 ```
 
-静态资源规则
+静态资源规则(this.resourceProperties.getStaticLocations())
 
 ```java
 @ConfigurationProperties(prefix = "spring.resources", ignoreUnknownFields = false)
@@ -227,7 +231,7 @@ private String[] staticLocations = CLASSPATH_RESOURCE_LOCATIONS;
 
 ### 2.4.3 欢迎页的处理规则
 
-HandlerMapping：处理器映射。保存了每一个Handler能处理哪些请求
+HandlerMapping：处理器映射。保存了每一个Handler能处理哪些请求的映射关系
 
 ```java
 ...
@@ -439,7 +443,7 @@ Rest原理（表单提交要使用REST的时候）
 - 获取到**_method**的值。
 - 兼容以下请求；**PUT**.**DELETE**.**PATCH**
 
-- **原生request（post），包装模式requesWrapper重写了getMethod方法，返回的是传入的值。**
+- **原生request（post），包装模式requesWrapper重写了getMethod方法，返回的是传入的值(delete或put)。**
 - **过滤器链放行的时候用wrapper。以后的方法调用getMethod是调用**requesWrapper的
 
 Rest使用客户端工具，如PostMan直接发送Put、delete等方式请求，无需Filter
@@ -451,7 +455,7 @@ SpringMVC新注解：
 - @PutMapping
 - @DeleteMapping
 
-自定义filter，改变默认的`\_method`
+扩展：自定义filter，改变默认的`\_method`
 
 ```java
 @Configuration(proxyBeanMethods = false)
@@ -476,7 +480,7 @@ public class WebConfig{
 
 ![2](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.01/pics/2.png)
 
-SpringMVC功能分析都从 `org.springframework.web.servlet.DispatcherServlet` -> `doDispatch()`
+SpringMVC功能分析都从 <font color='red'>`org.springframework.web.servlet.DispatcherServlet` -> `doDispatch()`</font>
 
 ~~~java
 protected void doDispatch(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -526,11 +530,11 @@ protected HandlerExecutionChain getHandler(HttpServletRequest request) throws Ex
 
 ![3](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.01/pics/3.png)
 
-**RequestMappingHandlerMapping**：保存了所有@RequestMapping 和handler的映射规则：
+<font color='red'>**RequestMappingHandlerMapping**：mappingRegistry保存了所有@RequestMapping 和handler的映射规则：</font>
 
 ![4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.01/pics/4.png)
 
-所有的请求映射都在HandlerMapping中：
+所有的请求映射都在HandlerMapping(有5种)中：
 
 + SpringBoot自动配置欢迎页的 WelcomePageHandlerMapping 。访问 /能访问到index.html
 
@@ -784,13 +788,209 @@ public WebMvcConfigurer webMvcConfigurer(){
     };
 }
 ```
-## <font color='red'>3.3 参数处理原理</font>
+## 3.3 请求参数解析原理-argumentResolvers
 
-<font color='red'>视频32-36，实在是太长了</font>
+首先从DispatcherServlet的doDispatch说起
+
+首先getHandler得到具体的处理handler(这里实际就是controller的处理方法)
+
+其次，寻找对应的适配器HandlerAdapter
+
+```java
+// Determine handler adapter for the current request.
+HandlerAdapter ha = getHandlerAdapter(mappedHandler.getHandler());
+```
+
+HandlerAdapter有如下4种：
+
+![5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.01/pics/5.png)
+
+0是支持方法上标注@RequestMapping
+
+根据下面的代码，返回RequestMappingHandlerAdapter
+
+```java
+/**
+ * Return the HandlerAdapter for this handler object.
+ * @param handler the handler object to find an adapter for
+ * @throws ServletException if no HandlerAdapter can be found for the handler. This is a fatal error.
+ */
+protected HandlerAdapter getHandlerAdapter(Object handler) throws ServletException {
+   if (this.handlerAdapters != null) {
+      for (HandlerAdapter adapter : this.handlerAdapters) {
+         if (adapter.supports(handler)) {
+            return adapter;
+         }
+      }
+   }
+   throw new ServletException("No adapter for handler [" + handler +
+         "]: The DispatcherServlet configuration needs to include a HandlerAdapter that supports this handler");
+}
+```
+
+适配器执行目标controller方法
+
+```java
+// Actually invoke the handler.
+mv = ha.handle(processedRequest, response, mappedHandler.getHandler());
+```
+
+继续step into方法handle
+
+```java
+/**
+ * This implementation expects the handler to be an {@link HandlerMethod}.
+ */
+@Override
+@Nullable
+public final ModelAndView handle(HttpServletRequest request, HttpServletResponse response, Object handler)
+      throws Exception {
+
+   return handleInternal(request, response, (HandlerMethod) handler);
+}
+```
+
+继续step into方法handleInternal
+
+```java
+@Override
+protected ModelAndView handleInternal(HttpServletRequest request,
+      HttpServletResponse response, HandlerMethod handlerMethod) throws Exception {
+
+   ModelAndView mav;
+......
+      mav = invokeHandlerMethod(request, response, handlerMethod);
+   }
+......
+   return mav;
+}
+```
+
+继续step into方法invokeHandlerMethod
+
+```java
+......
+ServletInvocableHandlerMethod invocableMethod = createInvocableHandlerMethod(handlerMethod);
+if (this.argumentResolvers != null) {
+   invocableMethod.setHandlerMethodArgumentResolvers(this.argumentResolvers);
+}
+if (this.returnValueHandlers != null) {
+   invocableMethod.setHandlerMethodReturnValueHandlers(this.returnValueHandlers);
+}
+......
+```
+
+注意this.argumentResolvers参数，SpringMVC目标方法能写多少种参数类型。取决于参数解析器argumentResolvers
+
+![6](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.01/pics/6.png)argumentResolvers是HandlerMethodArgumentResolver类型，包括2个方法
+
+![7](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.01/pics/7.png)
+
+注意this.returnValueHandlers参数，这个参数决定了返回值的类型
+
+![8](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.01/pics/8.png)
+
+invokeHandlerMethod方法中向下执行
+
+```java
+invocableMethod.invokeAndHandle(webRequest, mavContainer);
+```
+
+继续step into方法invokeAndHandle，ServletInvocableHandlerMethod类中的invokeForRequest真正执行controller目标方法
+
+```java
+Object returnValue = invokeForRequest(webRequest, mavContainer, providedArgs);
+```
+
+继续step into方法invokeForRequest，getMethodArgumentValues得到各种参数
+
+```java
+Object[] args = getMethodArgumentValues(request, mavContainer, providedArgs);
+```
+
+继续step into方法supportsParameter
+
+```java
+if (!this.resolvers.supportsParameter(parameter)) {
+   throw new IllegalStateException(formatArgumentError(parameter, "No suitable resolver"));
+}
+```
+
+解析
+
+```java
+args[i] = this.resolvers.resolveArgument(parameter, mavContainer, request, this.dataBinderFactory);
+```
+
+## 3.4 HttpServletRequest，Map和Model
+
+![9](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.01/pics/9.png)
+
+即controller方法中的参数是例如HttpServletRequest，Map和Model这些，<font color='red'>向这些里面添加数据相当于放在request请求域中</font>
+
+源码分析过程和3.3类似
+
+![10](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.01/pics/10.png)
+
+**ModelAndViewContainer**包含要去的页面地址View，还包含Model和Map数据
+
+关键源码
+
+![11](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.01/pics/11.png)
+
+处理派发结果
+
+```java
+processDispatchResult(processedRequest, response, mappedHandler, mv, dispatchException);
+```
+
+继续step into方法processDispatchResult
+
+```
+render(mv, request, response);
+```
+
+继续查看源码里面会有将mv的数据放入request的逻辑
+
+![12](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.01/pics/12.png)
+
+exposeModelAsRequestAttributes将Model和Map中的数据遍历放在request域中
+
+![13](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.01/pics/13.png)
+
+## 3.5 自定义参数绑定原理
+
+![14](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.01/pics/14.png)
+
+另外定义好Person类，提交Person相关数据能自动封装
+
+ServletModelAttributeMethodProcessor(this.argumentResolvers的26中的一个解析器)
+
+![15](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.01/pics/15.png)
+
+ModelAttributeMethodProcessor类
+
+```java
+WebDataBinder binder = binderFactory.createBinder(webRequest, attribute, name);
+```
+
+WebDataBinder将请求的参数值绑定到指定的attribute(这个例子中是Person)，具体实现是bindRequestParameters方法(该方法里面是反射获取参数值)
+
+```java
+bindRequestParameters(binder, webRequest);
+```
+
+![16](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.01/pics/16.png)
+
+最后还要用converter转换一下数据类型
+
+## 3.6 自定义Converter原理
+
+在3.5节中提到，用法见3.2.5小节
 
 # 4. 响应
 
-![5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.01/pics/5.png)
+![17](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.01/pics/17.png)
 
 ## 4.1 响应JSON
 
@@ -835,9 +1035,135 @@ public Person getPerson(){
 }
 ~~~
 
-### 4.1.2 原理
+### 4.1.2 返回参数原理-returnValueHandlers
 
-<font color='red'>暂时跳过</font>
+对应3.3小节中的argumentResolvers
+
+![18](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.01/pics/18.png)
+
+方法invokeAndHandle内
+
+```java
+try {
+   this.returnValueHandlers.handleReturnValue(
+         returnValue, getReturnValueType(returnValue), mavContainer, webRequest);
+}
+```
+
+继续step into方法handleReturnValue
+
+```java
+@Override
+public void handleReturnValue(@Nullable Object returnValue, MethodParameter returnType,
+      ModelAndViewContainer mavContainer, NativeWebRequest webRequest) throws Exception {
+
+   HandlerMethodReturnValueHandler handler = selectHandler(returnValue, returnType);
+   if (handler == null) {
+      throw new IllegalArgumentException("Unknown return value type: " + returnType.getParameterType().getName());
+   }
+   handler.handleReturnValue(returnValue, returnType, mavContainer, webRequest);
+}
+```
+
+继续step into方法selectHandler
+
+接口HandlerMethodReturnValueHandler有2个方法
+
+![19](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.01/pics/19.png)
+
+其中，supportsReturnType判断哪个处理器，handleReturnValue进行返回值处理
+
+本例中的handleReturnValue是RequestResponseBodyMethodProcessor，支持加了@ResponseBody的方法返回值
+
+step into方法handleReturnValue
+
+```java
+@Override
+public void handleReturnValue(@Nullable Object returnValue, MethodParameter returnType,
+      ModelAndViewContainer mavContainer, NativeWebRequest webRequest)
+      throws IOException, HttpMediaTypeNotAcceptableException, HttpMessageNotWritableException {
+
+   mavContainer.setRequestHandled(true);
+   ServletServerHttpRequest inputMessage = createInputMessage(webRequest);
+   ServletServerHttpResponse outputMessage = createOutputMessage(webRequest);
+
+   // Try even with null return value. ResponseBodyAdvice could get involved.
+   writeWithMessageConverters(returnValue, returnType, inputMessage, outputMessage);
+}
+```
+
+可见最后处理返回值是用writeWithMessageConverters方法处理的
+
+### 4.1.3 HTTPMessageConverter原理
+
+writeWithMessageConverters方法内
+
+```java
+HttpServletRequest request = inputMessage.getServletRequest();
+List<MediaType> acceptableTypes = getAcceptableMediaTypes(request);
+List<MediaType> producibleTypes = getProducibleMediaTypes(request, valueType, targetType);
+```
+
+acceptableTypes表示浏览器能接收的类型
+
+producibleTypes表示服务器能提供的类型
+
+![20](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.01/pics/20.png)
+
+```java
+......
+for (HttpMessageConverter<?> converter : this.messageConverters)
+......
+```
+
+再次遍历，看底层哪个HttpMessageConverter能处理
+
+HttpMessageConverter接口的内容如下
+
+![21](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.01/pics/21.png)
+
+this.messageConverters
+
+![22](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.01/pics/22.png)
+
+本例中是MappingJackson2HttpMessageConverter能处理
+
+关键源码
+
+```java
+if (selectedMediaType != null) {
+   selectedMediaType = selectedMediaType.removeQualityValue();
+   for (HttpMessageConverter<?> converter : this.messageConverters) {
+      GenericHttpMessageConverter genericConverter = (converter instanceof GenericHttpMessageConverter ?
+            (GenericHttpMessageConverter<?>) converter : null);
+      if (genericConverter != null ?
+            ((GenericHttpMessageConverter) converter).canWrite(targetType, valueType, selectedMediaType) :
+            converter.canWrite(valueType, selectedMediaType)) {
+         body = getAdvice().beforeBodyWrite(body, returnType, selectedMediaType,
+               (Class<? extends HttpMessageConverter<?>>) converter.getClass(),
+               inputMessage, outputMessage);
+         if (body != null) {
+            Object theBody = body;
+            LogFormatUtils.traceDebug(logger, traceOn ->
+                  "Writing [" + LogFormatUtils.formatValue(theBody, !traceOn) + "]");
+            addContentDispositionHeader(inputMessage, outputMessage);
+            if (genericConverter != null) {
+               genericConverter.write(body, targetType, selectedMediaType, outputMessage);
+            }
+            else {
+               ((HttpMessageConverter) converter).write(body, selectedMediaType, outputMessage);
+            }
+         }
+         else {
+            if (logger.isDebugEnabled()) {
+               logger.debug("Nothing to write: null body");
+            }
+         }
+         return;
+      }
+   }
+}
+```
 
 ## 4.2 内容协商
 
@@ -852,15 +1178,92 @@ public Person getPerson(){
 </dependency>
 ```
 
-Http协议中规定的，Accept字段告诉服务器本客户端可以接收的数据类型
+<font color='red'>Http协议中规定的，Accept字段告诉服务器本客户端可以接收的数据类型</font>
 
 可用Postman软件分别测试返回json和xml，只需要改变请求头中Accept字段为application/json、application/xml
 
-### 4.2.1 原理
+### 4.2.1 内容协商原理
 
-<font color='red'>暂时跳过</font>
+和4.1.3小节差不多，文字概括如下：
 
-### 4.2.2 自定义 MessageConverter
+1. 判断当前响应头中是否已经有确定的媒体类型`MediaType`
+2. 获取客户端(PostMan、浏览器)支持接收的内容类型(获取客户端Accept请求头字段)
+   - `contentNegotiationManager` 内容协商管理器，默认使用基于请求头的策略
+   - `HeaderContentNegotiationStrategy` 确定客户端可以接收的内容类型
+3. 遍历循环所有当前系统的 `MessageConverter`，看谁支持操作这个对象(Person)
+
+4. 找到支持操作Person的converter，把converter支持的媒体类型统计出来
+5. 客户端需要application/xml，服务端有10种MediaType
+6. 进行内容协商的最佳匹配媒体类型
+7. 用支持将对象转为最佳匹配媒体类型的converter。调用它进行转化
+
+### 4.2.2 基于浏览器不同请求参数的内容协商
+
+step into方法getAcceptableMediaTypes，出现contentNegotiationManager
+
+```java
+List<MediaType> acceptableTypes = getAcceptableMediaTypes(request);
+```
+
+即浏览器请求默认接收的类型优先是xml，要改变这一行为，根据源码，就要改变contentNegotiationManager的默认策略，在yaml中配置
+
+```yaml
+spring:
+  mvc:
+    contentnegotiation:
+      favor-parameter: true
+```
+
+浏览器地址输入带format参数的URL即可
+
+http://localhost:8080/test/person?format=json
+
+http://localhost:8080/test/person?format=xml
+
+会根据format的内容返回不同的类型
+
+### 4.2.3 自定义MessageConverter
+
+需求：
+
+1. 浏览器发请求直接返回 xml    [application/xml]        jacksonXmlConverter
+
+2. 如果是ajax请求 返回 json   [application/json]      jacksonJsonConverter
+
+3. 如果硅谷app发请求，返回自定义协议数据  [appliaction/x-guigu]   xxxxConverter
+
+在SpringMVC的自动配置类WebMvcAutoConfiguration中，默认的MessageConverters源码如下
+
+```java
+@Override
+public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
+   this.messageConvertersProvider
+         .ifAvailable((customConverters) -> converters.addAll(customConverters.getConverters()));
+}
+```
+
+step into方法getConverters
+
+```java
+public List<HttpMessageConverter<?>> getConverters() {
+   return this.converters;
+}
+```
+
+step into this.converters，构造器赋值
+
+```java
+public HttpMessageConverters(boolean addDefaultConverters, Collection<HttpMessageConverter<?>> converters) {
+   List<HttpMessageConverter<?>> combined = getCombinedConverters(converters,
+         addDefaultConverters ? getDefaultConverters() : Collections.emptyList());
+   combined = postProcessConverters(combined);
+   this.converters = Collections.unmodifiableList(combined);
+}
+```
+
+继续step into若干，就能看见默认的那些converters
+
+实现：
 
 想改变SpringMVC的功能，都是在容器中添加WebMvcConfigurer，然后重写相应的方法
 
@@ -906,3 +1309,7 @@ public Person getPerson(){
 ```
 
 4. 用Postman发送`/test/person`（请求头`Accept:application/x-guigu`)，将返回自定义协议数据的写出
+
+### 4.2.4 自定义内容协商器
+
+<font color='red'>P42视频内容，在理解响应部分的全部源码的情况下的一个实战例子，很硬核</font>
