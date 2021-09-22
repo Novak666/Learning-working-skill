@@ -318,7 +318,7 @@ SpringBoot的Web开发，即SpringMVC的知识，包括静态资源访问，请�
 
 # 2021.07.05
 
-模板引擎Thymeleaf，拦截器，文件上传，异常处理，Web原生组件注入，切换Tomcat，定制化原理总结
+模板引擎Thymeleaf，拦截器、文件上传、异常处理和Web原生组件注入的使用和原理，切换Tomcat，定制化原理总结
 
 
 

@@ -12,6 +12,8 @@ Thymeleaf is a modern server-side Java template engine for both web and standalo
 
 **现代化的服务端Java模板引擎**
 
+普通单体应用可以，但是性能不高，高并发的项目应该选择其他或其让前端人员来做
+
 ### 1.1.2 基本语法
 
 1. 表达式
@@ -219,7 +221,50 @@ server:
 
 thymeleaf、web-starter、devtools、lombok、Spring Configuration Processor
 
-<font color='red'>Part44-Part47暂时略过</font>
+<font color='red'>Part45-Part46暂时略过</font>
+
+### 1.3.2 视图解析原理
+
+controller代码
+
+```java
+@PostMapping("/login")
+public String main(User user, HttpSession session, Model model){ //RedirectAttributes
+
+    if(StringUtils.hasLength(user.getUserName()) && "123456".equals(user.getPassword())){
+        //把登陆成功的用户保存起来
+        session.setAttribute("loginUser",user);
+        //登录成功重定向到main.html;  重定向防止表单重复提交
+        return "redirect:/main.html";
+    }else {
+        model.addAttribute("msg","账号密码错误");
+        //回到登录页面
+        return "login";
+    }
+
+}
+```
+
+和前面SpringMVC分析源码的过程类似，这里处理返回页面的字符串"redirect:/main.html"采用了ViewNameMethodReturnValueHandler，这里不再大量贴图和源码，只是对大体流程进行概括：
+
+1. 目标方法处理的过程中(阅读`DispatcherServlet`源码)，所有数据都会被放在 `ModelAndViewContainer` 里面，其中包括数据和视图地址
+2. 方法的参数如果是一个自定义类型对象，本例中user(从请求参数中确定的)，也会重新放在 `ModelAndViewContainer`
+3. 任何目标方法执行完成以后都会返回`ModelAndView`(数据和视图地址)
+4. `processDispatchResult()`处理派发结果(页面如何响应)
+
+   + 所有的视图解析器尝试是否能根据当前返回值得到`View`对象
+   + 得到了 `redirect:/main.html --> Thymeleaf new RedirectView()`
+   + `ContentNegotiationViewResolver` 里面包含了下面所有的视图解析器，内部还是利用下面所有视图解析器得到视图对象
+   + `view.render(mv.getModelInternal(), request, response);` 视图对象调用自定义的render进行页面渲染工作
+   + `RedirectView` 最后会到源码response.sendRedirect(encodedURL)
+
+视图解析：
+
++ 返回值以 `forward:` 开始： `new InternalResourceView(forwardUrl);` --> 转发`request.getRequestDispatcher(path).forward(request, response)`
++ 返回值以 `redirect:` 开始： `new RedirectView()` --> render就是重定向
++ 返回值是普通字符串：`new ThymeleafView()`
+
+启示：可以定义自己的视图解析器，返回自定义的数据，例如表格
 
 ## 1.4 拦截器
 
@@ -323,20 +368,55 @@ public class AdminWebConfig implements WebMvcConfigurer {
 
 1、根据当前请求，找到**HandlerExecutionChain【**可以处理请求的handler以及handler的所有 拦截器】
 
+![3](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.05/pics/3.png)
+
 2、先来**顺序执行** 所有拦截器的 preHandle方法
 
 - 1、如果当前拦截器prehandler返回为true。则执行下一个拦截器的preHandle
-- 2、如果当前拦截器返回为false。直接    倒序执行所有已经执行了的拦截器的  afterCompletion；
+- 2、如果当前拦截器返回为false。直接倒序执行所有已经执行了的拦截器的  afterCompletion；
 
 **3、如果任何一个拦截器返回false。直接跳出不执行目标方法**
 
 **4、所有拦截器都返回True。执行目标方法**
 
+原因是下面这段源码决定的(DispatcherServlet内)
+
+```java
+if (!mappedHandler.applyPreHandle(processedRequest, response)) {
+   return;
+}
+```
+
 **5、倒序执行所有拦截器的postHandle方法。**
+
+倒序执行也和源码有关
+
+```java
+void triggerAfterCompletion(HttpServletRequest request, HttpServletResponse response, @Nullable Exception ex)
+      throws Exception {
+
+   HandlerInterceptor[] interceptors = getInterceptors();
+   if (!ObjectUtils.isEmpty(interceptors)) {
+      for (int i = this.interceptorIndex; i >= 0; i--) {
+         HandlerInterceptor interceptor = interceptors[i];
+         try {
+            interceptor.afterCompletion(request, response, this.handler, ex);
+         }
+         catch (Throwable ex2) {
+            logger.error("HandlerInterceptor.afterCompletion threw exception", ex2);
+         }
+      }
+   }
+}
+```
 
 **6、前面的步骤有任何异常都会直接倒序触发** afterCompletion
 
 7、页面成功渲染完成以后，也会倒序触发 afterCompletion
+
+6和7也和源码有关
+
+![4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.05/pics/4.png)
 
 ## 1.5 文件上传
 
@@ -383,7 +463,7 @@ public String upload(@RequestParam("email") String email,
 }
 ```
 
-配置
+查看源码MultipartAutoConfiguration配置
 
 ```properties
 spring.servlet.multipart.max-file-size=10MB
@@ -392,7 +472,15 @@ spring.servlet.multipart.max-request-size=100MB
 
 ### 1.5.3 自动配置原理
 
-<font color='red'>源码暂时略过</font>
+MultipartAutoConfiguration自动创建文件上传参数解析器`StandardServletMultipartResolver`
+
+DispatcherServlet中
+
+```java
+processedRequest = checkMultipart(request);
+```
+
+![5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.05/pics/5.png)
 
 ## 1.6 异常处理
 
@@ -401,22 +489,38 @@ spring.servlet.multipart.max-request-size=100MB
 - 默认情况下，Spring Boot提供`/error`处理所有错误的映射
 - 机器客户端，它将生成JSON响应，其中包含错误，HTTP状态和异常消息的详细信息。对于浏览器客户端，响应一个“ whitelabel”错误视图，以HTML格式呈现相同的数据
 
-![3](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.05/pics/3.png)
+![6](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.05/pics/6.png)
 
-![4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.05/pics/4.png)
+![7](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.05/pics/7.png)
+
+- 默认`/templates/error/`下的4xx，5xx页面会被自动解析
+
+![8](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.05/pics/8.png)
 
 - 要对其进行自定义，添加`View`解析为`error`
 - 要完全替换默认行为，可以实现 `ErrorController`并注册该类型的Bean定义，或添加`ErrorAttributes类型的组件`以使用现有机制但替换其内容
 
-- `/templates/error/`下的4xx，5xx页面会被自动解析
-
-![5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.05/pics/5.png)
-
 ### 1.6.2 原理
 
-<font color='red'>源码暂时略过</font>
+MVC异常自动配置类 `ErrorMvcAutoConfiguration` 
 
-### 1.6.3 几种异常处理方式
++ @ConditionalOnMissingBean情况下会放置组件`DefaultErrorAttributes` (id为errorAttributes)
+  + DefaultErrorAttributes类public class DefaultErrorAttributes implements ErrorAttributes, HandlerExceptionResolver
+  + DefaultErrorAttributes：定义错误页面中可以包含数据(异常明细，堆栈信息等)
+
++ 同样@ConditionalOnMissingBean情况下会放置组件`BasicErrorController`  (id为basicErrorController，决定了返回白页html或者Json数据)
+  + 处理默认 /error 路径的请求，页面响应 `new ModelAndView("error", model)`
+  + 容器中有组件 `View`(id为error，响应默认错误页)
+  + 容器中放组件 `BeanNameViewResolver`(视图解析器)，按照返回的视图名作为组件的id去容器中找`View`对象
+
++ 同样@ConditionalOnMissingBean情况下会放置组件`DefaultErrorViewResolver` (id为conventionErrorViewResolver)
+  + 如果发生异常错误，会以HTTP的状态码作为视图页地址(viewName)，找到真正的页面(error/404、5xx.html)
+
+### 1.6.3 异常处理流程原理
+
+<font color='red'>Par54暂时略过</font>
+
+### 1.6.4 几种异常处理方式
 
 1. error/404.html error/5xx.html；有精确的错误状态码页面就匹配精确，没有就找 4xx.html；如果都没有就触发白页
 
@@ -439,7 +543,7 @@ public class GlobalExceptionHandler {
 }
 ```
 
-3. @ResponseStatus+自定义异常 ；底层是 ResponseStatusExceptionResolver ，把responseStatus注解的信息底层调用 response.sendError(statusCode, resolvedReason)，tomcat发送的/error
+3. @ResponseStatus+自定义异常 ；底层是 ResponseStatusExceptionResolver ，把@ResponseStatus注解的信息底层调用 response.sendError(statusCode, resolvedReason)，tomcat发送的/error
 
 ```java
 @ResponseStatus(value= HttpStatus.FORBIDDEN, reason = "用户数量太多")
@@ -496,6 +600,10 @@ public class CustomerHandlerExceptionResolver implements HandlerExceptionResolve
     }
 }
 ```
+
+6. 
+
+![9](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.05/pics/9.png)
 
 ## 1.7 Web原生组件注入（Servlet、Filter、Listener）
 
@@ -604,7 +712,17 @@ public class MyRegistConfig {
 
 定义好Servlet、Filter和Listener
 
-## 1.8 嵌入式Servlet容器
+### 1.7.3 DispatcherServlet注入原理
+
+![10](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.05/pics/10.png)
+
+DispatcherServlet也是通过RegistrationBean注册进来的
+
+通过RegistrationBean自定义的Servlet不会被Spring拦截器拦截的原因如下：
+
+![11](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.05/pics/11.png)
+
+## 1.8 嵌入式Servlet容器-切换Web服务器
 
 Spring Boot默认使用Tomcat服务器，若需更改其他服务器，则修改工程pom.xml
 
@@ -642,7 +760,11 @@ public void customize(ConfigurableServletWebServerFactory server) {
 }
 ~~~
 
-## 1.9 定制化原理总结
+修改yml配置文件
+
+参看官方文档
+
+## <font color='red'>1.9 定制化原理总结</font>
 
 ### 1.9.1 几种方式
 
@@ -662,3 +784,5 @@ public class AdminWebConfig implements WebMvcConfigurer{
 ### 1.9.2 分析流程
 
 场景starter - `xxxxAutoConfiguration` - 导入xxx组件 - 绑定`xxxProperties` - 绑定配置文件项
+
+场景starter和绑定配置文件项是日常所需的，中间的是封装好的
