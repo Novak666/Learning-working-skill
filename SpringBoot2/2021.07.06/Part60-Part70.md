@@ -36,7 +36,7 @@
 
 - DataSourceAutoConfiguration ： 数据源的自动配置
   + 修改数据源相关的配置：**spring.datasource**
-  + **数据库连接池的配置，是自己容器中没有DataSource才自动配置的**
+  + **数据库连接池的配置，是自己容器中没有DataSource才自动配置的**(源码)
   + 底层配置好的连接池是：**HikariDataSource**
 
 ```java
@@ -111,6 +111,7 @@ druid官方github地址：https://github.com/alibaba/druid
 测试
 
 ```java
+@Configuration
 public class MyDataSourceConfig {
 
     // 默认的自动配置是判断容器中没有才会配@ConditionalOnMissingBean(DataSource.class)
@@ -238,6 +239,8 @@ spring:
 # 3. 整合MyBatis
 
 ## 3.1 配置文件方式
+
+能在配置文件中操作，背后还是源码决定的configuration(EnableConfigurationProperties)
 
 ## 3.2 注解方式
 
