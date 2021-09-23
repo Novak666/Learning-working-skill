@@ -247,7 +247,7 @@ Assertions.assertTimeout(Duration.ofMillis(1000), () -> Thread.sleep(500));
 }
 ```
 
-### 1.3.6 超时失败
+### 1.3.6 快速失败
 
 通过 fail 方法直接使得测试失败
 
@@ -676,7 +676,199 @@ public City saveCity(City city){
 }
 ```
 
-# 3. Profile，外部配置，自定义starter
+# 3. Profile，外部配置
 
 https://www.yuque.com/atguigu/springboot/tmvr0e
 
+# 4. 自定义starter
+
+<font color='red'>Part83自定义starter讲得非常好</font>
+
+首先简单复习下自动配置原理
+
+创建一个empty project，命名boot-09-customer-starter，包含2个模块，分别是atguigu-hello-spring-boot-starter(启动器)和atguigu-hello-spring-boot-starter-autoconfigure(自动配置包)，启动器只包含一些坐标，没有源代码，真正的代码在autoconfigure自动配置包中
+
+## 4.1 atguigu-hello-spring-boot-starter
+
+pom.xml
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.atguigu</groupId>
+    <artifactId>atguigu-hello-spring-boot-starter</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.atguigu</groupId>
+            <artifactId>atguigu-hello-spring-boot-starter-autoconfigure</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+</project>
+```
+
+## 4.2 atguigu-hello-spring-boot-starter-autoconfigure
+
+删掉没用的文件，包括启动主程序、配置文件、test文件夹等
+
+模块结构如下：
+
+![4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.07/pics/4.png)
+
+HelloServiceAutoConfiguration
+
+```java
+@Configuration
+@EnableConfigurationProperties(HelloProperties.class)
+public class HelloServiceAutoConfiguration {
+
+    @ConditionalOnMissingBean(HelloService.class)
+    @Bean
+    public HelloService helloService() {
+        return new HelloService();
+    }
+
+}
+```
+
+HelloProperties
+
+```java
+@ConfigurationProperties("atguigu.hello")
+public class HelloProperties {
+
+    private String prefix;
+    private String suffix;
+
+    public String getPrefix() {
+        return prefix;
+    }
+
+    public void setPrefix(String prefix) {
+        this.prefix = prefix;
+    }
+
+    public String getSuffix() {
+        return suffix;
+    }
+
+    public void setSuffix(String suffix) {
+        this.suffix = suffix;
+    }
+}
+```
+
+HelloService
+
+```java
+public class HelloService {
+
+    @Autowired
+    HelloProperties helloProperties;
+
+    public String sayHello(String username) {
+        return helloProperties.getPrefix() + " " + username + " " + helloProperties.getSuffix();
+    }
+
+}
+```
+
+spring.factories
+
+```properties
+# Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.atguigu.hello.auto.HelloServiceAutoConfiguration
+```
+
+# 5. SpringBoot启动原理分析
+
+先是源码一直step into
+
+```java
+public SpringApplication(ResourceLoader resourceLoader, Class<?>... primarySources) {
+   this.resourceLoader = resourceLoader;
+   Assert.notNull(primarySources, "PrimarySources must not be null");
+   this.primarySources = new LinkedHashSet<>(Arrays.asList(primarySources));
+   this.webApplicationType = WebApplicationType.deduceFromClasspath();
+   this.bootstrapRegistryInitializers = getBootstrapRegistryInitializersFromSpringFactories();
+   setInitializers((Collection) getSpringFactoriesInstances(ApplicationContextInitializer.class));
+   setListeners((Collection) getSpringFactoriesInstances(ApplicationListener.class));
+   this.mainApplicationClass = deduceMainApplicationClass();
+}
+```
+
+以上内容是创建SpringApplication
+
+![5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.07/pics/5.png)
+
+接下来是run过程
+
+```java
+public static ConfigurableApplicationContext run(Class<?>[] primarySources, String[] args) {
+    return (new SpringApplication(primarySources)).run(args);
+}
+```
+
+```java
+/**
+ * Run the Spring application, creating and refreshing a new
+ * {@link ApplicationContext}.
+ * @param args the application arguments (usually passed from a Java main method)
+ * @return a running {@link ApplicationContext}
+ */
+public ConfigurableApplicationContext run(String... args) {
+   StopWatch stopWatch = new StopWatch();
+   stopWatch.start();
+   DefaultBootstrapContext bootstrapContext = createBootstrapContext();
+   ConfigurableApplicationContext context = null;
+   configureHeadlessProperty();
+   SpringApplicationRunListeners listeners = getRunListeners(args);
+   listeners.starting(bootstrapContext, this.mainApplicationClass);
+   try {
+      ApplicationArguments applicationArguments = new DefaultApplicationArguments(args);
+      ConfigurableEnvironment environment = prepareEnvironment(listeners, bootstrapContext, applicationArguments);
+      configureIgnoreBeanInfo(environment);
+      Banner printedBanner = printBanner(environment);
+      context = createApplicationContext();
+      context.setApplicationStartup(this.applicationStartup);
+      prepareContext(bootstrapContext, context, environment, listeners, applicationArguments, printedBanner);
+      refreshContext(context);
+      afterRefresh(context, applicationArguments);
+      stopWatch.stop();
+      if (this.logStartupInfo) {
+         new StartupInfoLogger(this.mainApplicationClass).logStarted(getApplicationLog(), stopWatch);
+      }
+      listeners.started(context);
+      callRunners(context, applicationArguments);
+   }
+   catch (Throwable ex) {
+      handleRunFailure(context, ex, listeners);
+      throw new IllegalStateException(ex);
+   }
+
+   try {
+      listeners.running(context);
+   }
+   catch (Throwable ex) {
+      handleRunFailure(context, ex, null);
+      throw new IllegalStateException(ex);
+   }
+   return context;
+}
+```
+
+![6](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.07/pics/6.png)
+
+![7](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.07/pics/7.png)
+
+SpringBoot启动图
+
+https://www.processon.com/view/link/59812124e4b0de2518b32b6e
