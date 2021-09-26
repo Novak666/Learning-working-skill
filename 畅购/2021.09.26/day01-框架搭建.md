@@ -13,8 +13,6 @@
 
 近年来，世界经济正向数字化转型，大力发展数字经济成为全球共识。党的十九大报告明确提出要建设“数字中国”“网络强国”，我国数字经济发展进入新阶段，市场规模位居全球第二，数字经济与实体经济深度融合，有力促进了供给侧结构性改革。电子商务是数字经济的重要组成部分，是数字经济最活跃、最集中的表现形式之一。2017年，在政府和市场共同推动下，我国电子商务发展更加注重效率、质量和创新，取得了一系列新的进展，在壮大数字经济、共建“一带一路”、助力乡村振兴、带动创新创业、促进经济转型升级等诸多方面发挥了重要作用，成为我国经济增长的新动力。
 
-https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/SpringBoot2/2021.07.05/pics/3.png
-
 ![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/1.png)
 
 ![2](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/2.png)
@@ -104,13 +102,13 @@ B2B2C是一种电子商务类型的网络购物商业模式，B是BUSINESS的简
 
 网站前台静态原型演示，打开`资料\页面\前台\project-changgou-portal-fis3-master`，首页`index.html`
 
-![1559111851979](image\1559111851979.png)
+![4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/4.png)
 
 网站管理后台静态原型演示：
 
- ![1584504976863](image/1584504976863.png)
+ ![5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/5.png)
 
-![1559112046165](image\1559112046165.png)
+![6](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/6.png)
 
 线上地址：
 
@@ -137,7 +135,7 @@ http://admin-changgou-java.itheima.net/
 
 把精力放在html5，css3，vuejs，webpack，nodejs，Google V8引擎，javascript多线程，模块化，面向切面编程，设计模式，浏览器兼容性，性能优化等等。
 
-![1559553886871](image\1559553886871.png)
+![7](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/7.png)
 
 我们在本课程中提供与项目课程配套的管理后台的前端代码，但是不讲解前端的内容。这样我们会将更多的精力放在**后端代码**的开发上！
 
@@ -159,11 +157,11 @@ swagger文档的使用:
 
 ### 2.2.2 技术选型
 
-![1560087134452](image\1560087134452.png)
+![8](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/8.png)
 
 ### 2.2.3 系统架构图
 
-![1608535307571](images/1608535307571.png)
+![9](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/9.png)
 
 # 3. 畅购-框架搭建
 
@@ -183,27 +181,17 @@ swagger文档的使用:
 
 (1)打开虚拟机:
 
-![1577412892055](image/abc.png)
+![10](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/10.png)
 
-
-
-![1584423331895](image/1584423331895.png)
-
-
-
-
+![11](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/11.png)
 
 (2)点击启动，并选择 [已移动]
 
-![1584423369391](image/1584423369391.png)
-
-
+![12](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/12.png)
 
 (3)编辑网络编辑器:
 
-![1577412994867](image/1577412994867.png)
-
-
+![13](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/13.png)
 
 (4)使用时候，直接打开 输入用户名和密码即可
 
@@ -217,11 +205,11 @@ swagger文档的使用:
 
 数据库脚本：`资料\数据库脚本`
 
-![1564094555825](image\1564094555825.png)
+![14](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/14.png)
 
 ## 3.2 项目结构说明
 
-![1584505209554](image/1584505209554.png)
+![15](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/15.png)
 
 分析:
 
@@ -285,11 +273,11 @@ web服务工程，对应功能模块如需要调用多个微服务，可以将�
 
 新建Empty Project
 
-![1](C:\Users\HASEE\Desktop\pics\1.png)
+![16](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/16.png)
 
 新建Module(maven)
 
-![2](C:\Users\HASEE\Desktop\pics\2.png)
+![17](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/17.png)
 
 创建父工程changgou-parent，pom.xml文件中增加配置
 
@@ -411,7 +399,7 @@ web服务工程，对应功能模块如需要调用多个微服务，可以将�
 
 changgou-parent右键新建Module，changgou-common
 
-![3](C:\Users\HASEE\Desktop\pics\3.png)
+![18](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/18.png)
 
 changgou-common-db、changgou-eureka、changgou-service、changgou-service-api、changgou-gateway、changgou-web同理
 
@@ -425,7 +413,7 @@ pom.xml中打pom包
 
 项目结构如下：
 
-![1564024579642](image\1564024579642.png)
+![19](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/19.png)
 
 ## 3.4 Eureka微服务搭建
 
@@ -497,7 +485,7 @@ public class EurekaServerApplication {
 
 测试访问`http://localhost:7001/`,效果如下：
 
-![1560412105435](image\1560412105435.png)
+![20](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/20.png)
 
 ## 3.5 公共模块搭建
 
@@ -610,8 +598,6 @@ public class Result<T> {
 }
 ```
 
-
-
 在entity包下建立类用于承载分页的数据结果
 
 ```java
@@ -635,11 +621,9 @@ public class PageResult<T> {
 }
 ```
 
-
-
 当然，我们还可以将其他工具类都一起倒入到工程中，以后会用到，将`资料\工具类`中的所有类直接导入到entity包下。
 
-![1564023015741](image\1564023015741.png)
+![21](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/21.png)
 
 ## 3.6 数据访问工程搭建
 
@@ -697,7 +681,7 @@ public class PageResult<T> {
 
 创建changgou-service-api子模块changgou-service-goods-api，并将`资料\javabean\changgou-service-goods-api`中的Pojo导入到工程中。
 
-![1560416099767](image\1560416099767.png)
+![22](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/22.png)
 
 修改父工程changgou-service-api的pom.xml，添加`persistence-api`和`changgou-common`的依赖，代码如下：
 
@@ -808,7 +792,7 @@ public class GoodsApplication {
 
 启动`changgou-service-goods` 再访问`<http://localhost:7001/>`效果如下：
 
-![1564037101313](image\1564037101313.png)
+![23](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/23.png)
 
 # 4. 商品微服务-品牌增删改查
 
@@ -1033,7 +1017,7 @@ public class BrandController {
 
 测试：http://localhost:18081/brand
 
-![1560443629855](image\1560443629855.png)
+![24](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/24.png)
 
 ### 4.3.2 根据ID查询品牌
 
@@ -1084,7 +1068,7 @@ public Result<Brand> findById(@PathVariable Integer id){
 
 测试：<http://localhost:18081/brand/14026>
 
-![1560443736710](image\1560443736710.png)
+![25](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/25.png)
 
 ### 4.3.3 新增品牌
 
@@ -1132,7 +1116,7 @@ public Result add(@RequestBody Brand brand){
 
 测试：http://localhost:18081/brand
 
-![1560443988970](image\1560443988970.png)
+![26](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/26.png)
 
 ### 4.3.4 修改品牌
 
@@ -1184,7 +1168,7 @@ public Result update(@RequestBody Brand brand,@PathVariable Integer id){
 
 测试：http://localhost:18081/brand/325415
 
-![1560444209790](image\1560444209790.png)
+![27](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/27.png)
 
 ### 4.3.5 删除品牌
 
@@ -1232,7 +1216,7 @@ public Result delete(@PathVariable Integer id){
 
 测试：http://localhost:18081/brand/325415
 
-![1560444351992](image\1560444351992.png)
+![28](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/28.png)
 
 ### 4.3.6 品牌列表条件查询
 
@@ -1319,7 +1303,7 @@ public Result<List<Brand>> findList(@RequestBody(required = false) Brand brand){
 
 测试：http://localhost:18081/brand/search
 
-![1560445027032](image\1560445027032.png)
+![29](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/29.png)
 
 ### 4.3.7 品牌列表分页查询
 
@@ -1376,7 +1360,7 @@ public Result<PageInfo> findPage(@PathVariable  int page, @PathVariable  int siz
 
 测试：http://localhost:18081/brand/search/1/3
 
-![1560446429340](image\1560446429340.png)
+![30](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/30.png)
 
 ### 4.3.8 品牌列表条件+分页查询
 
@@ -1438,7 +1422,7 @@ public Result<PageInfo> findPage(@RequestBody(required = false) Brand brand, @Pa
 
 测试：http://localhost:18081/brand/search/1/3
 
-![1560446545220](image\1560446545220.png)
+![31](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/31.png)
 
 ### 4.3.9 公共异常处理
 
