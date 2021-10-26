@@ -222,7 +222,7 @@ public void MatchAllQuery() throws Exception {
 ### 1.3.6 字符串查询
 
 1. 只能查询字符串，从字符串类型字段进行查询
-2. 不指定字段查询的时候，先进行使用默认的标准分词器进行分词，再进行查询(中文中使用不多)
+2. 不指定字段查询的时候，先进行使用默认的标准分词器进行分词，再进行查询(中文中使用不多，因为搜索的关键词是标准分析器，倒排索引里是ik分词器，所以不准确)
 3. 如果指定了字段，则使用之前的映射设置的分词器来进行分词，当然也可以指定分词器
 
 ```java
@@ -436,7 +436,7 @@ public void boolQuery(){// {}  where not condit1  contion
 }
 ```
 
-+ MUST必须满足某条件，但是需要查询和计算文档的匹配度的分数，速度要慢
++ MUST必须满足某条件，但是需要查询和计算文档的匹配度的分数，排序，速度要慢
 
 + FILTER必须满足某条件，但是不需要计算匹配度分数，那么优化查询效率，方便缓存
 
@@ -731,3 +731,6 @@ public class TestDataEs {
 }
 ```
 
+# 3. 总结
+
+![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.06.05/pics/1.png)
