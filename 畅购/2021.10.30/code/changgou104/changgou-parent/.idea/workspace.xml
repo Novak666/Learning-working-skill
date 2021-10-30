@@ -1,0 +1,1187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0d1ac428-d308-4d34-85f5-4d3bbbae8935" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/classes/" />
+    <ignored path="$PROJECT_DIR$/changgou-common-db/target/" />
+    <ignored path="$PROJECT_DIR$/changgou-service/target/" />
+    <ignored path="$PROJECT_DIR$/changgou-web/target/" />
+    <ignored path="$PROJECT_DIR$/changgou-service/changgou-service-goods/target/" />
+    <ignored path="$PROJECT_DIR$/changgou-service-api/changgou-service-goods-api/target/" />
+    <ignored path="$PROJECT_DIR$/changgou-gateway/target/" />
+    <ignored path="$PROJECT_DIR$/changgou-core/changgou-core-controller/target/" />
+    <ignored path="$PROJECT_DIR$/changgou-common/target/" />
+    <ignored path="$PROJECT_DIR$/changgou-service/changgou-service-file/target/" />
+    <ignored path="$PROJECT_DIR$/changgou-core/changgou-core-service/target/" />
+    <ignored path="$PROJECT_DIR$/changgou-core/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/changgou-eureka/target/" />
+    <ignored path="$PROJECT_DIR$/changgou-service-api/target/" />
+    <ignored path="$PROJECT_DIR$/changgou-service/changgou-service-canal/target/" />
+    <ignored path="$PROJECT_DIR$/changgou-service/changgou-service-content/target/" />
+    <ignored path="$PROJECT_DIR$/changgou-service-api/changgou-service-content-api/target/" />
+    <ignored path="$PROJECT_DIR$/../code-template/target/" />
+    <ignored path="$PROJECT_DIR$/changgou-service/changgou-service-search/target/" />
+    <ignored path="$PROJECT_DIR$/changgou-service-api/changgou-service-search-api/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="changgou-parent" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-search/src/main/java/com/changgou/search/service/impl/SkuServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1456">
+              <caret line="70" column="25" selection-start-line="70" selection-start-column="25" selection-end-line="70" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.6.RELEASE/spring-data-commons-2.1.6.RELEASE.jar!/org/springframework/data/domain/Slice.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-search/src/main/java/com/changgou/search/controller/SkuController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="412">
+              <caret line="43" column="29" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-search/src/main/java/com/changgou/SearchApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="15" selection-start-line="15" selection-end-line="15" selection-end-column="62" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-goods/src/main/java/com/changgou/goods/service/SkuService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-goods/src/main/java/com/changgou/goods/service/impl/SkuServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="588">
+              <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-goods/src/main/java/com/changgou/goods/controller/SkuController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="728">
+              <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-goods/src/main/java/com/changgou/goods/dao/SkuMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-search/src/main/java/com/changgou/search/dao/SkuEsMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-search/src/main/java/com/changgou/search/service/SkuService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>goods</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>content</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/changgou-service/changgou-service-content/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/../code-template/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/changgou-service-api/changgou-service-content-api/src/main/java/com/changgou/content/pojo/ContentCategory.java" />
+        <option value="$PROJECT_DIR$/changgou-service/changgou-service-content/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou-service/changgou-service-content/src/main/java/com/changgou/ContentApplication.java" />
+        <option value="$PROJECT_DIR$/changgou-service/changgou-service-canal/src/main/java/com/changgou/canal/listenser/MyEventListener.java" />
+        <option value="$PROJECT_DIR$/changgou-service-api/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou-service-api/changgou-service-content-api/src/main/java/com/changgou/content/feign/ContentFeign.java" />
+        <option value="$PROJECT_DIR$/changgou-service/changgou-service-content/src/main/java/com/changgou/content/controller/ContentController.java" />
+        <option value="$PROJECT_DIR$/changgou-service/changgou-service-canal/src/main/java/com/changgou/CanalApplication.java" />
+        <option value="$PROJECT_DIR$/changgou-service/changgou-service-canal/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou-service/changgou-service-canal/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/changgou-service/changgou-service-canal/src/main/java/com/changgou/canal/listenser/CanalDataEventListener.java" />
+        <option value="$PROJECT_DIR$/changgou-service/changgou-service-search/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/changgou-service-api/changgou-service-search-api/src/main/java/com/changgou/search/pojo/SkuInfo.java" />
+        <option value="$PROJECT_DIR$/changgou-service-api/changgou-service-search-api/src/main/java/com/changgou/search/pojo/dao/SkuEsMapper.java" />
+        <option value="$PROJECT_DIR$/changgou-service/changgou-service-search/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou-service/changgou-service-search/src/main/java/com/changgou/search/dao/SkuEsMapper.java" />
+        <option value="$PROJECT_DIR$/changgou-service-api/changgou-service-goods-api/src/main/java/com/changgou/goods/feign/SkuFeign.java" />
+        <option value="$PROJECT_DIR$/changgou-service/changgou-service-goods/src/main/java/com/changgou/goods/controller/SkuController.java" />
+        <option value="$PROJECT_DIR$/changgou-service/changgou-service-goods/src/main/java/com/changgou/goods/service/SkuService.java" />
+        <option value="$PROJECT_DIR$/changgou-service/changgou-service-goods/src/main/java/com/changgou/goods/service/impl/SkuServiceImpl.java" />
+        <option value="$PROJECT_DIR$/changgou-service-api/changgou-service-search-api/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou-service/changgou-service-search/src/main/java/com/changgou/SearchApplication.java" />
+        <option value="$PROJECT_DIR$/changgou-service/changgou-service-search/src/main/java/com/changgou/search/controller/SkuController.java" />
+        <option value="$PROJECT_DIR$/changgou-service/changgou-service-search/src/main/java/com/changgou/search/service/SkuService.java" />
+        <option value="$PROJECT_DIR$/changgou-service/changgou-service-search/src/main/java/com/changgou/search/service/SkuServiceImpl.java" />
+        <option value="$PROJECT_DIR$/changgou-service/changgou-service-search/src/main/java/com/changgou/search/service/impl/SkuServiceImpl.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\apache-maven-3.5.2\maven_repository" />
+        <option name="mavenHome" value="D:/apache-maven-3.5.2" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.5.2\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1939" />
+    <option name="height" value="1049" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-goods" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-goods" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-goods" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-goods" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-goods" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-goods" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou" type="462c0819:PsiDirectoryNode" />
+              <item name="goods" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-goods" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou" type="462c0819:PsiDirectoryNode" />
+              <item name="goods" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-goods" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou" type="462c0819:PsiDirectoryNode" />
+              <item name="goods" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-goods" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou" type="462c0819:PsiDirectoryNode" />
+              <item name="goods" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-goods" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-search" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-search" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-search" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-search" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-search" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-search" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou" type="462c0819:PsiDirectoryNode" />
+              <item name="search" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-search" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou" type="462c0819:PsiDirectoryNode" />
+              <item name="search" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-search" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou" type="462c0819:PsiDirectoryNode" />
+              <item name="search" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-search" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou" type="462c0819:PsiDirectoryNode" />
+              <item name="search" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-search" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou" type="462c0819:PsiDirectoryNode" />
+              <item name="search" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-search" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-api" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-goods-api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-api" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-goods-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-api" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-goods-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-api" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-goods-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-api" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-goods-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="goods" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-api" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-goods-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="goods" type="462c0819:PsiDirectoryNode" />
+              <item name="feign" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-api" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-goods-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="goods" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-api" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-search-api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-api" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-search-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-api" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-search-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-api" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-search-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-api" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou-service-search-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/changgou-service/changgou-service-content/src/main/java/com/changgou/content" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15925059" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.changgou.search.service" />
+      <recent name="com.changgou.search.service.impl" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\IdeaProjects\changgou104\changgou-parent\changgou-service\changgou-service-content\src\main\java\com\changgou\content" />
+      <recent name="G:\IdeaProjects\changgou104\changgou-parent\changgou-service-api\changgou-service-content-api\src\main\java\com\changgou\content\pojo" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SearchApplication-18085">
+    <configuration name="CodeApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.itheima.CodeApplication" />
+      <module name="code-template" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itheima.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CanalApplication-18083" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="changgou-service-canal" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.changgou.CanalApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContentApplication-18084" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="changgou-service-content" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.changgou.ContentApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaServerApplication-7001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="changgou-eureka" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.changgou.EurekaServerApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileApplication-18082" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="changgou-service-file" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.changgou.FileApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GoodsApplication-18081" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="changgou-service-goods" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.changgou.GoodsApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SearchApplication-18085" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="changgou-service-search" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.changgou.SearchApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.CodeApplication" />
+      <item itemvalue="Spring Boot.EurekaServerApplication-7001" />
+      <item itemvalue="Spring Boot.CanalApplication-18083" />
+      <item itemvalue="Spring Boot.SearchApplication-18085" />
+      <item itemvalue="Spring Boot.ContentApplication-18084" />
+      <item itemvalue="Spring Boot.FileApplication-18082" />
+      <item itemvalue="Spring Boot.GoodsApplication-18081" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CodeApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0d1ac428-d308-4d34-85f5-4d3bbbae8935" name="Default Changelist" comment="" />
+      <created>1634177584104</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1634177584104</updated>
+      <workItem from="1634177587138" duration="7320000" />
+      <workItem from="1634259336128" duration="816000" />
+      <workItem from="1634516941818" duration="594000" />
+      <workItem from="1634602761031" duration="9611000" />
+      <workItem from="1634865229127" duration="594000" />
+      <workItem from="1634953151218" duration="668000" />
+      <workItem from="1635059193128" duration="594000" />
+      <workItem from="1635123201379" duration="662000" />
+      <workItem from="1635208996743" duration="646000" />
+      <workItem from="1635381394314" duration="13768000" />
+      <workItem from="1635468108931" duration="13858000" />
+      <workItem from="1635553930014" duration="1190000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="50321000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49646392" visible="true" weight="0.2600536" />
+      <window_info id="Structure" order="1" sideWeight="0.50353605" side_tool="true" weight="0.17962466" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.06506365" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info anchor="bottom" id="Problems" order="12" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Database Changes" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="15" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.3297587" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/changgou-service-api/changgou-service-content-api/src/main/java/com/changgou/content/pojo/ContentCategory.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-content/src/main/java/com/changgou/content/service/ContentCategoryService.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-content/src/main/java/com/changgou/content/service/ContentService.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.4.RELEASE/spring-boot-autoconfigure-2.1.4.RELEASE.jar!/org/springframework/boot/autoconfigure/web/servlet/DispatcherServletAutoConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1524">
+          <caret line="149" column="33" selection-start-line="149" selection-start-column="33" selection-end-line="149" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-content/src/main/java/com/changgou/content/dao/ContentCategoryMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-content/src/main/java/com/changgou/content/service/impl/ContentCategoryServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-content/src/main/java/com/changgou/content/dao/ContentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.4.RELEASE/spring-boot-autoconfigure-2.1.4.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="152" column="29" selection-start-line="152" selection-start-column="29" selection-end-line="152" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.4.RELEASE/spring-boot-autoconfigure-2.1.4.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/web/servlet/DispatcherServletAutoConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="63" column="3" selection-start-line="63" selection-start-column="3" selection-end-line="63" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service-api/changgou-service-content-api/changgou-service-content-api.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-content/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-content/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-content/src/main/java/com/changgou/ContentApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-content/src/main/java/com/changgou/content/service/impl/ContentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/otter/canal.protocol/1.0.25/canal.protocol-1.0.25.jar!/com/alibaba/otter/canal/protocol/CanalEntry.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7887">
+          <caret line="8110" column="21" selection-start-line="8110" selection-start-column="21" selection-end-line="8110" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service-api/changgou-service-content-api/src/main/java/com/changgou/content/pojo/com/changgou/content/feign.java" />
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-content/src/main/java/com/changgou/content/controller/ContentCategoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service-api/changgou-service-content-api/src/main/java/com/changgou/content/pojo/Content.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-canal/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-canal/src/main/java/com/changgou/CanalApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-content/src/main/java/com/changgou/content/controller/ContentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service-api/changgou-service-content-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-core/changgou-core-controller/src/main/java/com/changgou/core/AbstractCoreController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1624">
+          <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-canal/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service-api/changgou-service-content-api/src/main/java/com/changgou/content/feign/ContentFeign.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-canal/src/main/java/com/changgou/canal/listenser/CanalDataEventListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service-api/changgou-service-search-api/src/main/java/com/changgou/search/pojo/SkuInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service-api/changgou-service-search-api/src/main/java/com/changgou/search/pojo/dao/SkuEsMapper.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.6.RELEASE/spring-web-5.1.6.RELEASE-sources.jar!/org/springframework/web/bind/annotation/RestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service-api/changgou-service-goods-api/src/main/java/com/changgou/goods/pojo/Album.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-search/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service-api/changgou-service-goods-api/src/main/java/com/changgou/goods/feign/SkuFeign.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-goods/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-goods/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-goods/src/main/java/com/changgou/GoodsApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-search/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service-api/changgou-service-search-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-search/src/main/java/com/changgou/search/service/SkuServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-search/src/main/java/com/changgou/search/service/impl/SkuServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1456">
+          <caret line="70" column="25" selection-start-line="70" selection-start-column="25" selection-end-line="70" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.6.RELEASE/spring-data-commons-2.1.6.RELEASE.jar!/org/springframework/data/domain/Slice.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-search/src/main/java/com/changgou/SearchApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="15" selection-start-line="15" selection-end-line="15" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-goods/src/main/java/com/changgou/goods/service/SkuService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-goods/src/main/java/com/changgou/goods/service/impl/SkuServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-goods/src/main/java/com/changgou/goods/controller/SkuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="728">
+          <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-goods/src/main/java/com/changgou/goods/dao/SkuMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-search/src/main/java/com/changgou/search/dao/SkuEsMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-search/src/main/java/com/changgou/search/service/SkuService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou-service/changgou-service-search/src/main/java/com/changgou/search/controller/SkuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="43" column="29" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>changgou-service-search</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.19977802" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
