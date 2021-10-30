@@ -38,7 +38,7 @@
 
 ## 1.1 SPU与SKU概念
 
-**SPU = Standard Product Unit  （标准产品单位）**
+**SPU = Standard Product Unit（标准产品单位）**
 
 * 概念 : SPU 是商品信息聚合的最小单位，是一组可复用、易检索的标准化信息的集合，该集合描述了一个产品的特性。
 
