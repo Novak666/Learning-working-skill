@@ -421,3 +421,9 @@ FastDFS的架构，处理图片的方法，微服务解耦，还有公共接口�
 # 2021.10.19
 
 OpenResty、Redis、MySQL多级缓存，Nginx限流，Canal同步
+
+
+
+# 2021.10.30
+
+从数据库查询商品信息，存入Elasticsearch；发送CRUD请求实现对Elasticsearch的搜索
