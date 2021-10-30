@@ -9,7 +9,7 @@
 
 - 关键词搜索
 
-# 1. Elasticsearch 安装 
+# 1. Elasticsearch安装 
 
 docker安装elasticsearch
 
