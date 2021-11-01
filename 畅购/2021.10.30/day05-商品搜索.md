@@ -1678,7 +1678,38 @@ SELECT category_name FROM  tb_sku WHERE name LIKE '%手机%' GROUP BY category_n
 
 ![42](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.10.30/pics/42.png)
 
-我们每次执行搜索的时候，需要显示商品分类名称，这里要显示的分类名称其实就是符合搜素条件的所有商品的分类集合，我们可以按照上面的实现思路，使用ES根据分组名称做一次分组查询即可实现。
+我们每次执行搜索的时候，需要显示商品分类名称，这里要显示的分类名称其实就是符合搜素条件的所有商品的分类集合，我们可以按照上面的实现思路，使用ES根据分组名称做一次分组查询即可实现
+
+```
+思路：
+	根据ES实现一个聚合查询，类似于数据库中的分组查询
+	数据库：select category_name from tb_sku where name like '%华为%' group by category_name
+	
+es中：
+# 查询 分组查询 根据商品分类来进行分组 查询分类的列表
+GET /skuinfo/docs/_search
+{
+  "query": {
+    "match": {
+      "name": "华为"
+    }
+  },
+  "aggs": {
+    "abc": {
+      "terms": {
+        "field": "categoryName",
+        "size": 10
+      }
+    }
+  }
+}
+当搜索的时候应该就要实现分类查询 得出列表 返回给前端
+
+
+请求：/search  POST
+参数：map={"keywords":"华为"}
+返回值：map={"rows":[{},{}],total:177,totalPages:78,categoryList:["笔记本","电视"]}
+```
 
 ## 6.2 分类分组统计实现
 
