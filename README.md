@@ -427,3 +427,9 @@ OpenResty、Redis、MySQL多级缓存，Nginx限流，Canal同步
 # 2021.10.30
 
 从数据库查询商品信息，存入Elasticsearch；发送CRUD请求实现对Elasticsearch的搜索
+
+
+
+# 2021.10.31
+
+对ES进行商品分类，品牌统计，规格统计，品牌筛选，规格过滤，价格区间查询，搜索分页，搜索排序，高亮显示
