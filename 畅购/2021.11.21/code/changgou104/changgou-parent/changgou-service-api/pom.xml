@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>changgou-parent</artifactId>
+        <groupId>com.changgou</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>changgou-service-api</artifactId>
+    <packaging>pom</packaging>
+    <description>所有的api(pojo.feign)所在的工程的父工程 聚合工程 方便统一管理所有的pojo和feign</description>
+    <modules>
+        <module>changgou-service-goods-api</module>
+        <module>changgou-service-content-api</module>
+        <module>changgou-service-search-api</module>
+        <module>changgou-service-user-api</module>
+        <module>changgou-service-order-api</module>
+    </modules>
+
+    <dependencies>
+        <!--jpa的注解-->
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>persistence-api</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.changgou</groupId>
+            <artifactId>changgou-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+</project>
