@@ -237,7 +237,7 @@ public class ConsumerApp {
 
 DiscoveryClient动态获取
 
-```
+```java
 @RestController
 @RequestMapping("/order")
 public class OrderController {
@@ -308,6 +308,8 @@ eureka:
 
 ### 2.3.2 server
 
+自我保护机制，不会剔除不活跃的服务
+
 ```yaml
 server:
   enable-self-preservation: false # 关闭自我保护机制
@@ -323,6 +325,8 @@ server:
 1. 准备两个Eureka Server
 2. 分别进行配置，相互注册
 3. Eureka Client分别注册到这两个Eureka Server中
+
+<font color='red'>注意修改hosts文件</font>
 
 eureka-server1
 
@@ -347,7 +351,7 @@ spring:
 
 eureka-server2
 
-```
+```yaml
 server:
   port: 8762
 
