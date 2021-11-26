@@ -12,7 +12,6 @@
 3. 在启动类添加@EnableFeignClients注解，开启Feign功能
 4. 测试调用
 
-1. 在消费端引入open-feign依赖
 
 ```xml
 <!--feign-->
@@ -184,7 +183,6 @@ public class FeignLogConfig {
 2. 定义降级方法，使用@HystrixCommand注解配置降级方法
 3. 在启动类上开启Hystrix功能的注解，@EnableCircuitBreaker
 
-1. 在服务提供方，引入hystrix依赖
 
 ```xml
 <!-- hystrix -->
@@ -368,7 +366,7 @@ feign:
   + 认证复杂，每个服务都要进行认证
   + http请求不同服务次数增加，性能不高
 
-+ 网关就是系统的入口，封装了应用程序的内部结构，为客户端提供统一服务，一些与业务本身功能无关的公共逻辑可以在这里实现，诸如认证、鉴权、监控、缓存、负载均衡、流量管控、路由转发等
++ <font color='red'>网关就是系统的入口，封装了应用程序的内部结构，为客户端提供统一服务，一些与业务本身功能无关的公共逻辑可以在这里实现，诸如认证、鉴权、监控、缓存、负载均衡、流量管控、路由转发等</font>
 + 在目前的网关解决方案里，有Nginx+Lua、Netflix Zuul、Spring Cloud Gateway等等
 
 ![5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.05.20/pics/5.png)
@@ -380,7 +378,6 @@ feign:
 3. 编写配置文件
 4. 启动测试
 
-1. 搭建网关模块，引入依赖：starter-gateway
 
 ```xml
 <dependencies>
