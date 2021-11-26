@@ -17,12 +17,11 @@
 
 config server：
 
-1. 使用github创建远程仓库，上传配置文件
+1. 使用github创建远程仓库，上传配置文件<font color='red'>(外部配置文件在云端)</font>
 2. 搭建config server模块，导入相关依赖
 3. 编写配置，设置gitee远程仓库地址
 4. 测试访问远程配置文件
 
-2. 搭建config server模块，导入相关依赖
 
 ```xml
 <dependencies>
@@ -81,7 +80,6 @@ config client：
 3. 获取配置值
 4. 启动测试
 
-1. 导入starter-config依赖
 
 ```xml
 <!--config client -->
@@ -271,7 +269,6 @@ management:
 3. 定义消息发送业务类。添加@EnableBinding(Source.class)，注入MessageChannel output，完成消息发送
 4. 编写启动类，测试
 
-1. 创建消息生产者模块，引入依赖starter-stream-rabbit
 
 ```xml
 <dependencies>
