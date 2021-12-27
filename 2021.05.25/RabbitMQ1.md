@@ -56,7 +56,7 @@ JMS即Java消息服务(Java Message Service)应用程序接口，是一个Java�
 1. 快速持久化：通过磁盘顺序读写与零拷贝机制，可以在O(1)的系统开销下进行消息持久化
 2. 高吞吐：在一台普通的服务器上既可以达到10W/s的吞吐速率
 3. 高堆积：支持topic下消费者较长时间离线，消息堆积量大
-4. 完全的分布式系统：Broker、Producer、Consumer都原生自动支持分布式，依赖zookeeper自动实现复杂均衡
+4. 完全的分布式系统：Broker、Producer、Consumer都原生自动支持分布式，依赖zookeeper自动实现负载均衡
 5. 支持Hadoop数据并行加载：对于像Hadoop的一样的日志数据和离线分析系统，但又要求实时处理的限制，这是一个可行的解决方案
 
 + RocketMQ：RocketMQ的前身是Metaq，当Metaq3.0发布时，产品名称改为RocketMQ。RocketMQ是一款分布式、队列模型的消息中间件，具有以下特点：
@@ -179,7 +179,7 @@ read：一个正则表达式，用户对符合该正则表达式的所有资源�
 
 生产者的创建分为如下几个步骤：
 
-```properties
+```
 //创建链接工厂对象
 //设置RabbitMQ服务主机地址,默认localhost
 //设置RabbitMQ服务端口,默认5672
@@ -271,7 +271,7 @@ public class Producer {
 
 消费者创建可以按照如下步骤实现：
 
-```properties
+```
 //创建链接工厂对象
 //设置RabbitMQ服务主机地址,默认localhost
 //设置RabbitMQ服务端口,默认5672
