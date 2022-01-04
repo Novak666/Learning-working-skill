@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p th:text="${hello}">xianshihello world</p>
+
+<form>
+    输入姓名:<p th:text="${user.name}"></p>
+    输入ID:<p th:text="${user.id}"></p>
+    输入地址:<p th:text="${user.address}"></p>
+</form>
+<table>
+    <tr>
+        <td>id</td>
+        <td>姓名</td>
+        <td>地址</td>
+        <td>下标</td>
+    </tr>
+    <tr th:each="abc,mystat:${users}">
+        <td th:text="${abc.id}"></td>
+        <td th:text="${abc.name}">zhangsan</td>
+        <td th:text="${abc.address}">深圳</td>
+        <td th:text="${mystat.index+1}">深圳</td>
+    </tr>
+</table>
+<a href="http://www.itheima.com?id=1&name=2">去黑马</a><br>
+<a th:href="@{/test/hello(id=1,name=2)}">去黑马</a><br>
+<a th:href="@{/test/hello(id=${key1},name=${key2})}">去黑马</a><br>
+<a th:href="@{${url}}">去黑马</a><br>
+<a th:href="@{${url}(id=${key1},name=${key2})}">去黑马</a><br>
+
+<div>
+    <div th:each="entry:${dataMap}">
+        key: <span th:text="${entry.key}"></span>
+        ;
+        value:<span th:text="${entry.value}"></span>
+    </div>
+</div>
+
+<br>
+
+日期：<span th:text="${#dates.format(date,'yyyy年MM月dd HH:mm:ss')}"></span>
+
+<br>
+
+<div th:if="${age}>18">当年龄超过18岁展示</div>
+
+<br>
+<button onclick="login()">点我</button>
+
+
+</body>
+<!--内联-->
+<script th:inline="javascript">
+    var age = [[${age}]];
+    var login = function () {
+        alert(age);
+    }
+</script>
+</body>
+</html>
