@@ -76,11 +76,11 @@ CREATE TABLE `tb_seckill_order` (
 
 当然，上面实现的思路只是一种最简单的方式，并未考虑其中一些问题，例如并发状况容易产生的问题。我们看看下面这张思路更严谨的图：
 
-![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2022.01.04/pics/1.png)
+![1](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2022.01.04/pics/1.png)
 
 # 2. 秒杀商品压入缓存
 
-![2](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2022.01.04/pics/2.png)
+![2](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2022.01.04/pics/2.png)
 
 我们这里秒杀商品列表和秒杀商品详情都是从Redis中取出来的，所以我们首先要将符合参与秒杀的商品定时查询出来，并将数据存入到Redis缓存中。
 
@@ -187,7 +187,7 @@ hystrix:
 
 将生成的Dao文件和Pojo文件导入到工程中，如下图：
 
-![3](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2022.01.04/pics/3.png)
+![3](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2022.01.04/pics/3.png)
 
 (4) 启动类配置
 
@@ -322,7 +322,7 @@ W 表示离指定日期的最近那个工作日(周一至周五). 例如在日�
 
 ### 2.3.2 时间菜单分析
 
-![4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2022.01.04/pics/4.png)
+![4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2022.01.04/pics/4.png)
 
 我们将商品数据从数据库中查询出来，并存入Redis缓存，但页面每次显示的时候，只显示当前正在秒杀以及往后延时2个小时、4个小时、6个小时、8个小时的秒杀商品数据。我们要做的第一个事是计算出秒杀时间菜单，这个菜单是从后台获取的。
 
@@ -515,7 +515,7 @@ public class SeckillGoodsPushTask {
 
 Redis数据如下：
 
-![5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2022.01.04/pics/5.png)
+![5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2022.01.04/pics/5.png)
 
 设置redis的序列化机制：
 
@@ -541,21 +541,21 @@ public class SeckillApplication {
 }
 ```
 
-![6](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2022.01.04/pics/6.png)
+![6](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2022.01.04/pics/6.png)
 
 再删除redis数据进行测试结果如下：
 
- ![7](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2022.01.04/pics/7.png)
+ ![7](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2022.01.04/pics/7.png)
 
 # 3. 秒杀频道页
 
-![8](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2022.01.04/pics/8.png)
+![8](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2022.01.04/pics/8.png)
 
 秒杀频道首页，显示正在秒杀的和未开始秒杀的商品（已经开始或者还没开始，未结束的秒杀商品）
 
 ## 3.1 秒杀时间菜单
 
-![9](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2022.01.04/pics/9.png)
+![9](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2022.01.04/pics/9.png)
 
 如上图，时间菜单需要根据当前时间动态加载，时间菜单的计算上面功能中已经实现，在DateUtil工具包中。我们只需要将时间菜单获取，然后响应到页面，页面根据对应的数据显示即可。
 
@@ -582,11 +582,11 @@ public class SeckillGoodsController {
 
 http://localhost:18084/seckill/goods/menus
 
-![10](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2022.01.04/pics/10.png)
+![10](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2022.01.04/pics/10.png)
 
 ## 3.2 秒杀频道页
 
-![9](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2022.01.04/pics/9.png)
+![9](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2022.01.04/pics/9.png)
 
 秒杀频道页是指将对应时区的秒杀商品从Reids缓存中查询出来，并到页面显示。对应时区秒杀商品存储的时候以Hash类型进行了存储，key=SeckillGoods_2019010112，value=每个商品详情。
 
@@ -653,7 +653,7 @@ public List<SeckillGoods> list(String time){
 
 http://localhost:18093/seckillGoods/list?time=2022010418
 
-![11](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2022.01.04/pics/11.png)
+![11](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2022.01.04/pics/11.png)
 
 # 4. 秒杀详情页
 
@@ -710,7 +710,7 @@ public SeckillGoods one(String time,Long id){
 
 http://localhost:18084/seckill/goods/one?id=1131814843662340096&time=2019052414
 
-![12](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2022.01.04/pics/12.png)
+![12](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2022.01.04/pics/12.png)
 
 # 5. 下单实现
 
@@ -846,7 +846,7 @@ public class SeckillOrderController {
 
 ## 6.1  实现思路分析
 
-![13](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2022.01.04/pics/13.png)
+![13](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2022.01.04/pics/13.png)
 
 在审视秒杀中，操作一般都是比较复杂的，而且并发量特别高，比如，检查当前账号操作是否已经秒杀过该商品，检查该账号是否存在存在刷单行为，记录用户操作日志等。
 
@@ -910,17 +910,17 @@ public class AsyncConfig implements AsyncConfigurer {
 
 修改秒杀抢单SeckillOrderServiceImpl代码，注入MultiThreadingCreateOrder,并调用createOrder方法，代码如下：
 
-![14](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2022.01.04/pics/14.png)
+![14](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2022.01.04/pics/14.png)
 
 使用Postman测试如下：
 
 http://localhost:18084/seckill/order/add?id=1131814847898587136&time=2019052510
 
-![15](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2022.01.04/pics/15.png)
+![15](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2022.01.04/pics/15.png)
 
 ## 6.3 多线程抢单
 
-![16](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2022.01.04/pics/16.png)
+![16](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2022.01.04/pics/16.png)
 
 用户每次下单的时候，我们都让他们先进行排队，然后采用多线程的方式创建订单，排队我们可以采用Redis的队列实现，多线程下单我们可以采用Spring的异步实现。 
 
@@ -928,7 +928,7 @@ http://localhost:18084/seckill/order/add?id=1131814847898587136&time=2019052510
 
 代码如下：
 
-![17](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2022.01.04/pics/17.png)
+![17](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2022.01.04/pics/17.png)
 
 上图代码如下：
 
@@ -1078,7 +1078,7 @@ public class SeckillOrderServiceImpl implements SeckillOrderService {
 
 多线程每次从队列中获取数据，分别获取用户名和订单商品编号以及商品秒杀时间段，进行下单操作，代码如下：
 
-![18](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2022.01.04/pics/18.png)
+![18](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2022.01.04/pics/18.png)
 
 上图代码如下：
 
@@ -1117,7 +1117,7 @@ public void createOrder(){
 
 修改SeckillOrderServiceImpl的add方法，记录状态，代码如下：
 
-![19](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2022.01.04/pics/19.png)
+![19](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2022.01.04/pics/19.png)
 
 上图代码如下：
 
@@ -1133,7 +1133,7 @@ redisTemplate.boundHashOps(SystemConstants.SEC_KILL_USER_STATUS_KEY).put(usernam
 
 多线程抢单更新状态，修改MultiThreadingCreateOrder的createOrder方法，代码如下：
 
-![20](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2022.01.04/pics/20.png)
+![20](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2022.01.04/pics/20.png)
 
 上图代码如下：
 
@@ -1174,7 +1174,7 @@ public SeckillStatus queryStatus(String username) {
 
 修改SeckillOrderController,添加如下查询方法：
 
-![21](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2022.01.04/pics/21.png)
+![21](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2022.01.04/pics/21.png)
 
 上图代码如下：
 
@@ -1205,8 +1205,8 @@ public Result queryStatus(){
 
 http://localhost:18084/seckill/order/query
 
-![22](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2022.01.04/pics/22.png)
+![22](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2022.01.04/pics/22.png)
 
 # 7. 总结
 
-![23](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2022.01.04/pics/23.png)
+![23](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2022.01.04/pics/23.png)
