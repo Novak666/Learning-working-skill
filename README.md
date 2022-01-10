@@ -493,3 +493,9 @@ Redis设计与实现：Redis底层数据结构，RDB与AOF持久化，主从复�
 # 2022.01.06
 
 秒杀之Redis分布锁解决超卖，秒杀微服务的改造(增加秒杀队列等)
+
+
+
+# 2022.01.10
+
+Eureka集群，Redis Cluster，RabbitMQ集群一些介绍和使用
