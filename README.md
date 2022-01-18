@@ -499,3 +499,9 @@ Redis设计与实现：Redis底层数据结构，RDB与AOF持久化，主从复�
 # 2022.01.10
 
 Eureka集群，Redis Cluster，RabbitMQ集群一些介绍和使用
+
+
+
+# 2022.01.18
+
+MySQL企业级分布式数据库架构实践
