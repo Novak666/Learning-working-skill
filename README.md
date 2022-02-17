@@ -402,7 +402,7 @@ Vue异步通信，Promise、Fetch、Axios、async和await的用法
 
 # 2021.09.26
 
-畅购工程搭建(注意模块间的依赖关系)，通用Mapper(Pojo的抽取)，基本的CRUD(注意Result统一，公共异常类处理)
+系统架构图，畅购工程搭建(注意模块间的依赖关系)，通用Mapper(Pojo的抽取)，基本的CRUD(注意Result统一，公共异常类处理)
 
 
 

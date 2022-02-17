@@ -161,6 +161,8 @@ swagger文档的使用:
 
 ### 2.2.3 系统架构图
 
+<font color='red'>重要</font>
+
 ![9](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.26/pics/9.png)
 
 # 3. 畅购-框架搭建
