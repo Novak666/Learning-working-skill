@@ -26,7 +26,7 @@
 
 FastDFS是一个开源的轻量级[分布式文件系统](https://baike.baidu.com/item/%E5%88%86%E5%B8%83%E5%BC%8F%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/1250388)，它对文件进行管理，功能包括：文件存储、文件同步、文件访问（文件上传、文件下载）等，解决了大容量存储和负载均衡的问题。特别适合以文件为载体的在线服务，如相册网站、视频网站等等。
 
-FastDFS为互联网量身定制，充分考虑了冗余备份、负载均衡、线性扩容等机制，并注重高可用、高性能等指标，使用FastDFS很容易搭建一套高性能的文件服务器集群提供文件上传、下载等服务。
+FastDFS为互联网量身定制，充分考虑了<font color='red'>冗余备份、负载均衡、线性扩容</font>等机制，并注重高可用、高性能等指标，使用FastDFS很容易搭建一套高性能的文件服务器集群提供文件上传、下载等服务。
 
 FastDFS 架构包括 Tracker server 和 Storage server。客户端请求 Tracker server 进行文件上传、下载，通过Tracker server 调度最终由 Storage server 完成文件上传和下载。
 
@@ -58,15 +58,15 @@ store_path0 则是 M00，如果配置了 store_path1 则是 M01，以此类推�
 
 ### 1.1.3 微服务的好处
 
-将图片上传下载的模块独立出去，解耦的好处之一就是做集群会省很多服务器、扩展维护升级方便，其他业务微服务通过feign进行调用
+<font color='red'>将图片上传下载的模块独立出去，解耦的好处之一就是做集群会省很多服务器、扩展维护升级方便，其他业务微服务通过feign进行调用</font>
 
 ![4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.28/pics/4.png)
 
-### 1.1.1 总结
+### 1.1.4 总结
 
 ![5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.09.28/pics/5.png)
 
-一共是用户请求、上传和下载3种方式
+<font color='red'>一共是用户请求、上传、下载和访问4种方式</font>
 
 而本项目是将文件微服务做成独立一个模块
 
@@ -780,6 +780,8 @@ public class FastDFSClient {
 ```
 
 ### 1.4.3 文件上传
+
+<font color='red'>重要</font>
 
 1.在前端创建一个form 表单 设置enctype="mult-part/form-data"
 
