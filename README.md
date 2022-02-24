@@ -424,7 +424,10 @@ Vue异步通信，Promise、Fetch、Axios、async和await的用法
 
 # 2021.10.19
 
-OpenResty、Redis、MySQL多级缓存，Nginx限流，Canal同步
+1. 小测试：请求发到OpenResty(基于Nginx的高性能Web服务器)，OpenResty在配置文件中转发给对应的lua脚本，查MySQL中的数据，缓存至Redis中
+2. OpenResty(Nginx)和Redis多级缓存案例
+3. Nginx限流：控制速率或者控制连接数
+4. Canal基于MySQL复制功能，可以作为slave监听MySQL的数据变化。为了解耦，Canal客户端服务不直接连接数据库查询，而是远程调用另一个微服务去查询变化的数据，最后更新Redis中的缓存，实现同步
 
 
 

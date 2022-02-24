@@ -88,8 +88,8 @@ Lua 是一种轻量小巧的脚本语言，用标准C语言编写并以源代码
 - Web 应用脚本
 - 扩展和数据库插件如：MySQL Proxy 和 MySQL WorkBench
 - 安全系统，如入侵检测系统
-- redis中嵌套调用实现类似事务的功能
-- web容器中应用处理一些过滤、缓存等等的逻辑，例如nginx
+- <font color='red'>redis中嵌套调用实现类似事务的功能</font>
+- <font color='red'>web容器中应用处理一些过滤、缓存等等的逻辑，例如nginx</font>
 
 ## 2.4 lua的安装
 
@@ -550,7 +550,7 @@ vi nginx.conf
 
 (1)查询数据库的数据 将数据存储到redis中
 
-思路：请求发到openresty，openresty接收请求，转发给lua脚本来处理
+<font color='red'>思路：请求发到openresty，openresty接收请求，转发给lua脚本来处理</font>
 
 参数：id -- 指定广告分类的id
 返回值：json
@@ -644,7 +644,7 @@ server {
 
 需求：
 
-​	先从openresty的缓存中的数据，如果能获取直接返回。如果获取不到，再从redis中获取数据。如果能获取，将redis的数据存储到openresty中，再返回；如果获取不到redis中的数据，再从mysql中获取，将数据存储到redis中，再返回
+​	<font color='red'>先从openresty的缓存中的数据，如果能获取直接返回。如果获取不到，再从redis中获取数据。如果能获取，将redis的数据存储到openresty中，再返回；如果获取不到redis中的数据，再从mysql中获取，将数据存储到redis中，再返回</font>
 思路：
 ​	请求到openresty，openresty接收请求，转发给lua脚本来处理，lua脚本的逻辑就是需求
 请求：/read_content
@@ -1138,6 +1138,8 @@ canal需要使用到mysql，我们需要先安装mysql，给大家发的虚拟�
 
 ## 6.2 搭建canal并实现监听数据的变化的步骤
 
+<font color='red'>重要</font>
+
 1. mysql 需要开启binlog (master角色)
 2. mysql 创建一个账号 用于salve专门使用，授予权限 slave的权限 远程授权
 3. 通过docker 安装canal-server 
@@ -1434,6 +1436,8 @@ public class CanalApplication {
 ![37](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.10.19/pics/37.png)
 
 ## 6.6 广告同步(作业)
+
+<font color='red'>同步架构图</font>
 
 ![38](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.10.19/pics/38.png)
 
