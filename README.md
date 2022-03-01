@@ -427,7 +427,7 @@ Vue异步通信，Promise、Fetch、Axios、async和await的用法
 1. 小测试：请求发到OpenResty(基于Nginx的高性能Web服务器)，OpenResty在配置文件中转发给对应的lua脚本，查MySQL中的数据，缓存至Redis中
 2. OpenResty(Nginx)和Redis多级缓存案例
 3. Nginx限流：控制速率或者控制连接数
-4. Canal基于MySQL复制功能，可以作为slave监听MySQL的数据变化。为了解耦，Canal客户端服务不直接连接数据库查询，而是远程调用另一个微服务去查询变化的数据，最后更新Redis中的缓存，实现同步
+4. Canal基于MySQL复制协议，可以作为slave监听MySQL的数据变化。为了解耦，Canal客户端服务不直接连接数据库查询，而是远程调用另一个微服务去查询变化的数据，最后更新Redis中的缓存，实现同步
 
 
 
@@ -451,7 +451,9 @@ Thymeleaf实现搜索页面渲染，商品详情生成静态页面
 
 # 2021.11.13
 
-网关的作用：跨域、过滤、限流，JWT登录解决方案
+1. 域名访问的基本原理
+2. 网关的跨域配置、过滤配置、限流配置
+3. 用户登录(鉴权)的思路分析，涉及JWT(为何使用JWT)、全局过滤器(用来解析令牌)
 
 
 

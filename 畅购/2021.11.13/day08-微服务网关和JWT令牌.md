@@ -44,7 +44,7 @@
 + 减少了客户端与各个微服务之间的交互次数
 + 易于统一授权。
 
-总结：微服务网关就是一个系统，通过暴露该微服务网关系统，方便我们进行统一的鉴权，安全控制，日志统一处理，易于监控的相关功能。
+<font color='red'>总结：微服务网关就是一个系统，通过暴露该微服务网关系统，方便我们进行统一的鉴权，安全控制，日志统一处理，限流，跨域，路由，易于监控的相关功能</font>。
 
 ## 1.2 微服务网关技术
 
@@ -219,13 +219,13 @@ spring:
 + JSONP的方式（了解） 利用JS的漏洞的实现跨域，而且只支持GET请求 不支持其他的请求。
 ```
 
-解决方式涉及到图如下：
+<font color='red'>跨域配置图如下：</font>
 
 ![3](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.11.13/pics/3.png)
 
 ![4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.11.13/pics/4.png)
 
-最终文件如下：
+<font color='red'>在网关中配置跨域，如下：</font>
 
 ```yaml
 spring:
@@ -1023,6 +1023,8 @@ public void testParseJwt(){
 ## 4.5 鉴权处理
 
 ### 4.5.1 思路分析
+
+<font color='red'>重要</font>
 
 ![31](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.11.13/pics/31.png)
 
