@@ -39,7 +39,14 @@
 
 用户访问的项目中，至少有3个微服务需要识别用户身份，如果用户访问每个微服务都登录一次就太麻烦了，为了提高用户的体验，我们需要实现让用户在一个系统中登录，其他任意受信任的系统都可以访问，这个功能就叫单点登录。
 
-单点登录（Single Sign On），简称为 SSO，是目前比较流行的企业业务整合的解决方案之一。 SSO的定义是在多个应用系统中，用户只需要登录一次就可以访问所有相互信任的应用系统    
+单点登录（Single Sign On），简称为 SSO，是目前比较流行的企业业务整合的解决方案之一。 SSO的定义是在多个应用系统中，用户只需要登录一次就可以访问所有相互信任的应用系统
+
+<font color='red'>单点登录回顾：</font>
+
+1. 去认证服务器登录，生成了令牌
+2. 携带令牌到微服务访问数据
+3. 微服务将token交给认证服务器做检查
+4. 检查通过返回用户名等信息，微服务拿到用户名，返回资源
 
 ## 1.3 第三方账号登录
 
@@ -103,47 +110,50 @@ OAUTH协议为用户资源的授权提供了一个安全的、开放而又简易
 Oauth协议目前发展到2.0版本，1.0版本过于复杂，2.0版本已得到广泛应用。
 参考：https://baike.baidu.com/item/oAuth/7153134?fr=aladdin
 Oauth协议：https://tools.ietf.org/html/rfc6749
-下边分析一个Oauth2认证的例子，黑马程序员网站使用微信认证的过程：
 
-![5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.11.17/pics/5.png)
-
-1.客户端请求第三方授权
-
-用户进入黑马程序的登录页面，点击微信的图标以微信账号登录系统，用户是自己在微信里信息的资源拥有者。
-
-![6](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.11.17/pics/6.png)
-
-点击“用QQ账号登录”出现一个二维码，此时用户扫描二维码，开始给黑马程序员授权。    
-
-![7](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.11.17/pics/7.png)
-
-2.资源拥有者同意给客户端授权
-
-资源拥有者扫描二维码表示资源拥有者同意给客户端授权，微信会对资源拥有者的身份进行验证， 验证通过后，QQ会询问用户是否给授权黑马程序员访问自己的QQ数据，用户点击“确认登录”表示同意授权，QQ认证服务器会 颁发一个授权码，并重定向到黑马程序员的网站。
-
-![8](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.11.17/pics/8.png)    
-
-3.客户端获取到授权码，请求认证服务器申请令牌 此过程用户看不到，客户端应用程序请求认证服务器，请求携带授权码。 
-
-4.认证服务器向客户端响应令牌 认证服务器验证了客户端请求的授权码，如果合法则给客户端颁发令牌，令牌是客户端访问资源的通行证。 此交互过程用户看不到，当客户端拿到令牌后，用户在黑马程序员看到已经登录成功。 
-
-5.客户端请求资源服务器的资源 客户端携带令牌访问资源服务器的资源。 黑马程序员网站携带令牌请求访问微信服务器获取用户的基本信息。 
-
-6.资源服务器返回受保护资源 资源服务器校验令牌的合法性，如果合法则向用户响应资源信息内容。 注意：资源服务器和认证服务器可以是一个服务也可以分开的服务，如果是分开的服务资源服务器通常要请求认证 服务器来校验令牌的合法性。    
-
-Oauth2.0认证流程如下： 引自Oauth2.0协议rfc6749 https://tools.ietf.org/html/rfc6749    
-
-![9](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.11.17/pics/9.png)
-
-Oauth2包括以下角色： 
+<font color='red'>Oauth2包括以下角色： </font>
 
 1、客户端 本身不存储资源，需要通过资源拥有者的授权去请求资源服务器的资源，比如：畅购在线Android客户端、畅购在 线Web客户端（浏览器端）、微信客户端等。 
 
 2、资源拥有者 通常为用户，也可以是应用程序，即该资源的拥有者。 
 
-3、授权服务器（也称认证服务器） 用来对资源拥有的身份进行认证、对访问资源进行授权。客户端要想访问资源需要通过认证服务器由资源拥有者授 权后方可访问。 
+3、授权服务器（也称认证服务器）用来对资源拥有的身份进行认证、对访问资源进行授权。客户端要想访问资源需要通过认证服务器由资源拥有者授 权后方可访问。 
 
 4、资源服务器 存储资源的服务器，比如，畅购网用户管理服务器存储了畅购网的用户信息等。客户端最终访问资源服务器获取资源信息。    
+
+<font color='red'>下边分析一个Oauth2认证的例子，黑马程序员网站使用微信认证的过程：</font>
+
+![5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.11.17/pics/5.png)
+
+1.客户端请求第三方授权
+
+用户进入黑马程序的登录页面，点击qq的图标以qq账号登录系统，黑马会重定向到qq认证服务器上
+
+![6](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.11.17/pics/6.png)
+
+点击“用qq账号登录”出现一个二维码，此时用户扫描二维码(或者账号密码登录)
+
+![7](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.11.17/pics/7.png)
+
+2.用户同意给客户端授权
+
+用户登录后，qq会询问用户是否给授权黑马程序员登录(访问自己的qq数据)，用户点击“确认登录”表示同意授权，qq认证服务器会颁发一个授权码，并重定向到黑马程序员的网站
+
+![8](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.11.17/pics/8.png)    
+
+3.客户端获取到授权码，携带授权码向认证服务器申请令牌(此过程用户看不到)
+
+4.认证服务器向客户端响应令牌，认证服务器验证了客户端请求的授权码，如果合法则给客户端颁发令牌，令牌是客户端访问资源的通行证。 此交互过程用户看不到，当客户端拿到令牌后，用户在黑马程序员看到已经登录成功
+
+5.客户端请求资源服务器的资源 客户端(黑马程序员网站)携带令牌请求访问qq用户服务器获取用户的基本信息
+
+6.资源服务器返回受保护资源 资源服务器校验令牌的合法性，如果合法则向用户响应资源信息内容。 注意：资源服务器和认证服务器可以是一个服务也可以分开的服务，如果是分开的服务资源服务器通常要请求认证服务器来校验令牌的合法性
+
+7.黑马程序员网站自动生成一个默认账号密码登录成功
+
+Oauth2.0的抽象认证流程如下： 引自Oauth2.0协议rfc6749 https://tools.ietf.org/html/rfc6749    
+
+![9](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.11.17/pics/9.png)
 
 ### 2.2.2 Oauth2在项目的应用
 
@@ -708,7 +718,7 @@ public class ParseJwtTest {
 ![39](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.11.17/pics/39.png)执行流程： 
 
 ```
-1、用户在登录页面中进行登录，请求认证服务 ，认证服务一是客户端二是认证服务期。
+1、用户在登录页面中进行登录，请求认证服务 ，认证服务一是客户端二是认证服务器
 2、认证服务认证通过，生成jwt令牌，将jwt令牌及相关信息写入cookie
 3、用户访通过网关访问微服务1（资源服务器），带着cookie到网关 
 4、网关从cookie获取token，如果存在token，则校验token合法性，如果不合法则拒绝访问，否则放行 
@@ -996,4 +1006,6 @@ public class AuthController {
 
 # 6. 总结
 
-![43](C:\Users\HASEE\Desktop\pics\43.png)
+<font color='red'>重要</font>
+
+![43](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.11.17/pics/43.png)
