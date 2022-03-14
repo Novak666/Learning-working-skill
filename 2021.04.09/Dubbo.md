@@ -90,7 +90,7 @@ RPC：Remote Procedure Call远程过程调用。有非常多的协议和技术�
 
 SOA(Service- Oriented Architecture面向服务的架构)是一个组件模型，它将应用程序的不同功能单元(称为服务)进行拆分，并通过这些服务之间定义良好的接口和契约联系起来
 
-ESB(Enterparise Servce Bus)企业服务总线，服务中介。主要是提供了一一个服务于服务之间的交互。ESB包含的功能如：负载均衡，流量控制，加密处理，服务的监控，异常处理，监控告急等等
+ESB(Enterparise Servce Bus)企业服务总线，服务中介。主要是提供了一个服务于服务之间的交互。ESB包含的功能如：负载均衡，流量控制，加密处理，服务的监控，异常处理，监控告急等等
 
 ![4](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/2021.04.09/pics/4.png)
 
