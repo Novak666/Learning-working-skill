@@ -121,7 +121,7 @@ Oauth协议：https://tools.ietf.org/html/rfc6749
 
 4、资源服务器 存储资源的服务器，比如，畅购网用户管理服务器存储了畅购网的用户信息等。客户端最终访问资源服务器获取资源信息。    
 
-<font color='red'>下边分析一个Oauth2认证的例子，黑马程序员网站使用微信认证的过程：</font>
+<font color='red'>下边分析一个使用Oauth2.0技术进行第三方登录的案例，黑马程序员网站使用微信认证的过程：</font>
 
 ![5](https://raw.githubusercontent.com/Novak666/Learning-working-skill/main/畅购/2021.11.17/pics/5.png)
 
@@ -168,6 +168,8 @@ Oauth2是一个标准的开放的授权协议，应用程序可以根据自己�
 4、畅购微服务之间访问资源，例如：微服务A访问微服务B的资源，B访问A的资源（OK）
 
 ## 2.3 Spring security Oauth2认证解决方案 
+
+<font color='red'>重要</font>
 
 本项目采用 Spring security + Oauth2完成用户认证及用户授权，Spring security 是一个强大的和高度可定制的身份验证和访问控制框架，Spring security 框架集成了Oauth2协议，下图是项目认证架构图：    
 
